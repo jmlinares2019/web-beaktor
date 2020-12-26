@@ -1,0 +1,13 @@
+body{
+    section, div{
+        border: 1px solid brown;
+    }
+}
+
+
+@media (min-width: 1200px){
+
+    .container{
+        max-width: 1380px;
+    }
+}
