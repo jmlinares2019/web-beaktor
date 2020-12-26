@@ -1,7 +1,3 @@
-body section, body div {
-  border: 1px solid brown;
-}
-
 @font-face {
   font-family: 'Dsignes';
   src: local("DsignesRegular"), url("/assets/fonts/DsignesRegular.woff2") format("woff2"), url("/assets/fonts/DsignesRegular.woff") format("woff");
@@ -16,5 +12,33 @@ body section, body div {
   font-weight: bold;
   font-style: normal;
   font-display: swap;
+}
+
+body {
+  font-family: "Dsignes", sans-serif;
+}
+
+body section, body div {
+  border: 1px solid brown;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1380px;
+  }
+}
+
+.navbar {
+  max-height: 50px;
+  background-color: black;
+}
+
+.navbar .nav-center > .nav-item {
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+
+.navbar .cart {
+  width: 40px;
 }
 /*# sourceMappingURL=main.css.map */
