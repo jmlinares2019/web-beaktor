@@ -54,44 +54,52 @@ footer {
   color: white;
 }
 
-footer h2 {
+footer .container {
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+footer .container h2 {
   font-size: 0.8rem;
   font-weight: bold;
 }
 
-footer a, footer p {
+footer .container a, footer .container p {
   font-size: 0.7rem;
+  padding-bottom: 0;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
 }
 
-footer .back-up {
+footer .container .back-up {
   width: 30px;
   -webkit-filter: brightness(10);
           filter: brightness(10);
 }
 
-footer .footer-menus {
+footer .container .footer-menus {
   padding-top: 40px;
 }
 
-footer .footer-menus ul {
+footer .container .footer-menus ul {
   list-style-type: none;
   -webkit-padding-start: 0;
           padding-inline-start: 0;
 }
 
-footer .social {
+footer .container .social {
   padding: 0;
 }
 
-footer .social .social-icon {
+footer .container .social .social-icon {
   padding-right: 15px;
 }
 
-footer .social .social-icon img {
+footer .container .social .social-icon img {
   width: 30px;
 }
 
-footer .footer-legal a {
+footer .container .footer-legal a {
   padding-right: 2.5rem;
 }
 /*# sourceMappingURL=main.css.map */
