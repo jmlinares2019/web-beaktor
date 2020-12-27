@@ -3,51 +3,59 @@ footer{
     background-color: black;
     color: white;
 
-    h2{
-        font-size: 0.8rem;
-        font-weight: bold;
-    }
+    .container{
 
-    a,p{
-        font-size: 0.7rem;
-    }
-
-    .back-up{
-        width: 30px;
-        filter: brightness(10);
-    }
-
-    .footer-menus{
-
-        padding-top: 40px;
-        
-        ul{
-            list-style-type: none;
-            padding-inline-start: 0;
+        padding: {
+            top: 20px;
+            bottom: 40px; 
         }
-    }
 
-    .social{
-        padding: 0;
-
-        .social-icon{
-            padding-right: 15px;
-
-            img{
-                width: 30px;
+        h2{
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+    
+        a,p{
+            font-size: 0.7rem;
+            padding-bottom: 0;
+            margin-block-end: 0;
+        }
+    
+        .back-up{
+            width: 30px;
+            filter: brightness(10);
+        }
+    
+        .footer-menus{
+    
+            padding-top: 40px;
+            
+            ul{
+                list-style-type: none;
+                padding-inline-start: 0;
             }
-
+        }
+    
+        .social{
+            padding: 0;
+    
+            .social-icon{
+                padding-right: 15px;
+    
+                img{
+                    width: 30px;
+                }
+    
+            }  
+            
         }
         
-        
-    }
-
-    
-    
-    .footer-legal{
-        
-        a{
-            padding-right: 2.5rem;
+        .footer-legal{
+            
+            a{
+                padding-right: 2.5rem;
+            }
         }
     }
+  
 }
