@@ -1,5 +1,11 @@
-body section, body div {
-  border: 1px solid brown;
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: inherit;
+  text-decoration: none;
 }
 
 @font-face {
@@ -16,5 +22,84 @@ body section, body div {
   font-weight: bold;
   font-style: normal;
   font-display: swap;
+}
+
+body {
+  font-family: "Dsignes", sans-serif;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1380px;
+  }
+}
+
+.navbar {
+  max-height: 50px;
+  background-color: black;
+}
+
+.navbar .nav-center > .nav-item {
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+
+.navbar .cart {
+  width: 40px;
+}
+
+footer {
+  margin-top: 1000px;
+  background-color: black;
+  color: white;
+}
+
+footer .container {
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+footer .container h2 {
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+footer .container a, footer .container p {
+  font-size: 0.7rem;
+  padding-bottom: 0;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+}
+
+footer .container .back-up {
+  width: 30px;
+  -webkit-filter: brightness(10);
+          filter: brightness(10);
+}
+
+footer .container .footer-menus {
+  padding-top: 40px;
+}
+
+footer .container .footer-menus ul {
+  list-style-type: none;
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
+}
+
+footer .container .social {
+  padding: 0;
+}
+
+footer .container .social .social-icon {
+  padding-right: 15px;
+}
+
+footer .container .social .social-icon img {
+  width: 30px;
+}
+
+footer .container .footer-legal a {
+  padding-right: 2.5rem;
 }
 /*# sourceMappingURL=main.css.map */
