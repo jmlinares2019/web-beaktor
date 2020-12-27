@@ -5,13 +5,49 @@ footer{
 
     h2{
         font-size: 0.8rem;
+        font-weight: bold;
     }
 
-    a{
+    a,p{
         font-size: 0.7rem;
     }
 
-    .social-icon > img{
-        width: 40px;
+    .back-up{
+        width: 30px;
+        filter: brightness(10);
+    }
+
+    .footer-menus{
+
+        padding-top: 40px;
+        
+        ul{
+            list-style-type: none;
+            padding-inline-start: 0;
+        }
+    }
+
+    .social{
+        padding: 0;
+
+        .social-icon{
+            padding-right: 15px;
+
+            img{
+                width: 30px;
+            }
+
+        }
+        
+        
+    }
+
+    
+    
+    .footer-legal{
+        
+        a{
+            padding-right: 2.5rem;
+        }
     }
 }
