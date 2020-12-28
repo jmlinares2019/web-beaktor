@@ -1,6 +1,14 @@
 .navbar{
-    max-height: 50px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+    height: 54px;
     background-color: black;
+
+    .nav-link{
+        color: white !important;
+    }
 
     .nav-center > .nav-item{
         padding: {
