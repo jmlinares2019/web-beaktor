@@ -1,3 +1,18 @@
-body{
-    font-family: $main-font;
+/*------ CONTACTO ------ */
+
+#contacto{
+
+    .main-wrapper{
+        padding-top: 70px;
+
+        h2{
+            font-size: $regular;
+            font-weight: bold;
+        }
+
+        .contact-email{
+            color: $grey; 
+            text-decoration: underline; 
+        }
+    }
 }
