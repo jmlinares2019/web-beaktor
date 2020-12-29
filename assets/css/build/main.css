@@ -4,6 +4,7 @@ html {
 
 html body {
   font-family: "Dsignes", sans-serif;
+  counter-reset: subsection;
 }
 
 html body a {
@@ -47,6 +48,40 @@ html body a:hover {
   text-decoration: underline;
 }
 
+/*------- INFO LEGAL -------- */
+#legal div, #legal section, #legal header, #legal main {
+  border: 1px solid brown;
+}
+
+#legal .main-wrapper {
+  padding-top: 170px;
+}
+
+#legal .main-wrapper h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  padding-bottom: 45px;
+  border-bottom: 1px solid #AFADAD;
+}
+
+#legal .main-wrapper h3 {
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-top: 35px;
+}
+
+#legal .main-wrapper h3::before {
+  counter-increment: subsection;
+  content: counter(subsection) ". ";
+}
+
+#legal .main-wrapper .no-bullets {
+  list-style-type: none;
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
+}
+
 @media (min-width: 1200px) {
   .container {
     max-width: 1380px;
@@ -77,6 +112,7 @@ html body a:hover {
 
 header {
   height: 355px;
+  width: 100%;
   padding-top: 50px;
   background-image: url(/assets/img/header_beaktor.jpg);
   background-size: contain;
