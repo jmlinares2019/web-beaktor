@@ -16,3 +16,40 @@
         }
     }
 }
+
+/*------- INFO LEGAL -------- */
+
+#legal{
+
+    div,section, header, main{
+        border: 1px solid brown
+    }
+
+    .main-wrapper{
+        padding-top: 170px;
+
+        h2{
+            font-size: $big;
+            font-weight: bold;
+            padding-bottom: 45px;
+            border-bottom: 1px solid $grey;
+        }
+
+        h3{
+            font-size: 1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            padding-top: 35px;
+
+            &::before{
+                counter-increment: subsection;
+                content: counter(subsection) ". ";
+            }
+        }
+
+        .no-bullets{
+            list-style-type: none;
+            padding-inline-start: 0;
+        }
+    }
+}
