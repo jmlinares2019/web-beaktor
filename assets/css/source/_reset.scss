@@ -3,6 +3,8 @@ html{
 
     body{
         font-family: $main-font;
+
+        counter-reset: subsection;
     
         a{
             color: inherit;
