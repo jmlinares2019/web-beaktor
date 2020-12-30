@@ -34,11 +34,11 @@
             padding-bottom: 45px;
             border-bottom: 1px solid $grey;
             &::before{
-                content: url(assets/img/vec/boton_menos_popup.svg);
+                content: url(../../img/vec/boton_menos_popup.svg);
                 display: inline-flex;
                 width: 20px;
                 position: absolute;
-                top: 0;
+                top: -5px;
                 left: -40px;
 
                 @include phone-only{

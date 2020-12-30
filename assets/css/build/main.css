@@ -106,13 +106,13 @@ html body a:hover {
 }
 
 #legal .main-wrapper h2.section-title::before {
-  content: url(assets/img/vec/boton_menos_popup.svg);
+  content: url(../../img/vec/boton_menos_popup.svg);
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
   width: 20px;
   position: absolute;
-  top: 0;
+  top: -5px;
   left: -40px;
 }
 
