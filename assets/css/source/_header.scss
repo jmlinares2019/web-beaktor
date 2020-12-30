@@ -1,9 +1,9 @@
 .hero{
     @extend %hero;
-    background-image: url(assets/img/header_beaktor.jpg);
+    background-image: url(../../img/header_beaktor.jpg);
 
     @include tablet-portrait-down{
-        background-image: url(assets/img/header_beaktor_mobile.jpg);
+        background-image: url(../../img/header_beaktor_mobile.jpg);
     }
 
     .hero-title{

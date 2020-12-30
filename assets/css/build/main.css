@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Dsignes';
-  src: local("DsignesRegular"), url("assets/fonts/DsignesRegular.woff2") format("woff2"), url("assets/fonts/DsignesRegular.woff") format("woff");
+  src: local("DsignesRegular"), url("../../fonts/DsignesRegular.woff2") format("woff2"), url("../../fonts/DsignesRegular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: 'DsignesBold';
-  src: local("DsignesBold"), url("assets/fonts/DsignesBold.woff2") format("woff2"), url("assets/fonts/DsignesBold.woff") format("woff");
+  src: local("DsignesBold"), url("../../fonts/DsignesBold.woff2") format("woff2"), url("../../fonts/DsignesBold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -171,12 +171,12 @@ html body a:hover {
 }
 
 .hero {
-  background-image: url(assets/img/header_beaktor.jpg);
+  background-image: url(../../img/header_beaktor.jpg);
 }
 
 @media (max-width: 767.98px) {
   .hero {
-    background-image: url(assets/img/header_beaktor_mobile.jpg);
+    background-image: url(../../img/header_beaktor_mobile.jpg);
   }
 }
 
