@@ -1,6 +1,10 @@
 html{ 
     font-size: 20px; // sets rem size
 
+    @include tablet-landscape-down{
+        font-size: 16px;
+    }
+
     body{
         font-family: $main-font;
 

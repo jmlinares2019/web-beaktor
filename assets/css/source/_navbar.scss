@@ -10,10 +10,15 @@
         color: white !important;
     }
 
-    .nav-center > .nav-item{
-        padding: {
-            left: 1.5em;
-            right: 1.5em;
+    .navbar-brand > img{
+        width: 150px;
+    }
+
+    .navbar-collapse{
+        background-color: black;
+    
+        .nav-item{
+            padding: 0;
         }
     }
 
