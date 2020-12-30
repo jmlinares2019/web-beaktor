@@ -14,6 +14,39 @@
   font-display: swap;
 }
 
+.hero {
+  height: 355px;
+  width: 100%;
+  padding-top: 50px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-color: #f9f9f9;
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .hero {
+    height: 300px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .hero {
+    height: 250px;
+    background-color: transparent;
+  }
+}
+
+.hero .hero-title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  background-color: #212529;
+  background-image: -webkit-gradient(linear, left top, right top, from(#FAD0C5), to(#99BCCE));
+  background-image: linear-gradient(to right, #FAD0C5, #99BCCE);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 html {
   font-size: 20px;
 }
@@ -65,21 +98,39 @@ html body a:hover {
   }
 }
 
-#legal .main-wrapper h2 {
+#legal .main-wrapper h2.section-title {
   font-size: 2.5rem;
   font-weight: bold;
   padding-bottom: 45px;
   border-bottom: 1px solid #AFADAD;
 }
 
-#legal .main-wrapper h3 {
+#legal .main-wrapper h2.section-title::before {
+  content: url(/assets/img/vec/boton_menos_popup.svg);
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 20px;
+  position: absolute;
+  top: 0;
+  left: -40px;
+}
+
+@media (max-width: 575.98px) {
+  #legal .main-wrapper h2.section-title::before {
+    top: -40px;
+    left: 0;
+  }
+}
+
+#legal .main-wrapper h3.subsection {
   font-size: 1rem;
   font-weight: bold;
   text-transform: uppercase;
   padding-top: 35px;
 }
 
-#legal .main-wrapper h3::before {
+#legal .main-wrapper h3.subsection::before {
   counter-increment: subsection;
   content: counter(subsection) ". ";
 }
@@ -119,33 +170,17 @@ html body a:hover {
   width: 40px;
 }
 
-header {
-  height: 355px;
-  width: 100%;
-  padding-top: 50px;
+.hero {
   background-image: url(/assets/img/header_beaktor.jpg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: bottom;
-  background-color: #f9f9f9;
-}
-
-@media (min-width: 768px) and (max-width: 991.98px) {
-  header {
-    height: 300px;
-  }
 }
 
 @media (max-width: 767.98px) {
-  header {
-    height: 250px;
+  .hero {
     background-image: url(/assets/img/header_beaktor_mobile.jpg);
   }
 }
 
-header h1.header-title {
-  font-size: 3.5rem;
-  font-weight: bold;
+.hero .hero-title {
   bottom: 40px;
 }
 
