@@ -1,0 +1,27 @@
+%hero{
+    height: 355px;
+    width: 100%;
+    padding-top: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-color: #f9f9f9;
+
+    @include tablet-portrait-to-landscape{
+        height: 300px;
+    }
+
+    @include tablet-portrait-down{
+        height: 250px;
+        background-color: transparent;
+    }
+}
+
+%hero-title{       
+    font-size: $huge;
+    font-weight: bold;
+    background-color: $bootsblack; // fallback
+    background-image: linear-gradient(to right, $pink, $beakblue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+} 
