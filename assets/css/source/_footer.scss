@@ -31,6 +31,8 @@ footer{
         .footer-menus{
     
             padding-top: 40px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid $grey;
             
             ul{
                 list-style-type: none;
@@ -40,12 +42,20 @@ footer{
     
         .social{
             padding: 0;
+            flex-wrap: wrap;
     
             .social-icon{
-                padding-right: 15px;
+                padding: {
+                    top: 10px;
+                    right: 0.5rem;
+                }
     
                 img{
                     width: 30px;
+
+                    @include tablet-landscape-down{
+                        width: 20px;
+                    }
                 }
     
             }  
@@ -53,10 +63,23 @@ footer{
         }
         
         .footer-legal{
+            padding-top: 40px;
+
+            .col-8{
+                flex-wrap: wrap;
+            }
             
             a{
-                padding-right: 2.5rem;
                 text-decoration: underline;
+                padding-right: 2.5rem;
+
+                @include tablet-portrait-to-desktop {
+                    padding-right: 1rem;
+                }
+
+                @include tablet-portrait-down{
+                    padding-right: .5rem;
+                }
             }
         }
     }
