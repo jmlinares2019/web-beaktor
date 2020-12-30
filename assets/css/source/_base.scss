@@ -1,7 +1,7 @@
 /*------ CONTACTO ------ */
 
 #contacto{
-    
+
     .main-wrapper{
         padding-top: 70px;
 
@@ -23,6 +23,10 @@
 
     .main-wrapper{
         padding-top: 170px;
+
+        @include phone-only{
+            padding-top: 80px;
+        }
 
         h2{
             font-size: $big;
