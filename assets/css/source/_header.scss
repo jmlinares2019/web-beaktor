@@ -1,25 +1,14 @@
-header{
-    height: 355px;
-    width: 100%;
-    padding-top: 50px;
+.hero{
+    @extend %hero;
     background-image: url(/assets/img/header_beaktor.jpg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-color: #f9f9f9;
-
-    @include tablet-portrait-to-landscape{
-        height: 300px;
-    }
 
     @include tablet-portrait-down{
-        height: 250px;
         background-image: url(/assets/img/header_beaktor_mobile.jpg);
     }
 
-    h1.header-title{
-        font-size: $huge;
-        font-weight: bold;
+    .hero-title{
+        @extend %hero-title;
         bottom: 40px;
+        
     }
 }
