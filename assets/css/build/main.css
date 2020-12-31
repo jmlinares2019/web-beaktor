@@ -72,6 +72,12 @@ html body a:hover {
   text-decoration: none;
 }
 
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1380px;
+  }
+}
+
 /*------ CONTACTO ------ */
 #contacto .main-wrapper {
   padding-top: 70px;

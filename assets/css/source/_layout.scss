@@ -1,6 +1,7 @@
-@media (min-width: 1200px){
+@include desktop-up{
 
     .container{
         max-width: 1380px;
     }
+    
 }
