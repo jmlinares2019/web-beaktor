@@ -47,6 +47,32 @@
   -webkit-text-fill-color: transparent;
 }
 
+#legal .main-wrapper h2.section-title::before {
+  content: url(../../img/vec/boton_mas_activo.svg);
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 20px;
+  position: absolute;
+  top: -5px;
+  left: -40px;
+  opacity: 0.3;
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
+}
+
+@media (max-width: 575.98px) {
+  #legal .main-wrapper h2.section-title::before {
+    top: -40px;
+    left: 0;
+  }
+}
+
+#legal .main-wrapper h2.open.section-title::before {
+  content: url(../../img/vec/boton_menos_popup.svg);
+  opacity: 1;
+}
+
 html {
   font-size: 20px;
 }
@@ -76,6 +102,17 @@ html body a:hover {
   .container {
     max-width: 1380px;
   }
+}
+
+/*----- GENERAL ------- */
+.hidden {
+  height: 0px;
+  opacity: 0;
+}
+
+.showing {
+  height: 100% !important;
+  opacity: 1;
 }
 
 /*------ CONTACTO ------ */
@@ -109,39 +146,28 @@ html body a:hover {
   font-weight: bold;
   padding-bottom: 45px;
   border-bottom: 1px solid #AFADAD;
+  cursor: pointer;
 }
 
-#legal .main-wrapper h2.section-title::before {
-  content: url(../../img/vec/boton_menos_popup.svg);
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  width: 20px;
-  position: absolute;
-  top: -5px;
-  left: -40px;
+#legal .main-wrapper .drop-down {
+  overflow: hidden;
+  -webkit-transition: height .3s, opacity .3s ease-out;
+  transition: height .3s, opacity .3s ease-out;
 }
 
-@media (max-width: 575.98px) {
-  #legal .main-wrapper h2.section-title::before {
-    top: -40px;
-    left: 0;
-  }
-}
-
-#legal .main-wrapper h3.subsection {
+#legal .main-wrapper .drop-down h3.subsection {
   font-size: 1rem;
   font-weight: bold;
   text-transform: uppercase;
   padding-top: 35px;
 }
 
-#legal .main-wrapper h3.subsection::before {
+#legal .main-wrapper .drop-down h3.subsection::before {
   counter-increment: subsection;
   content: counter(subsection) ". ";
 }
 
-#legal .main-wrapper .no-bullets {
+#legal .main-wrapper .drop-down .no-bullets {
   list-style-type: none;
   -webkit-padding-start: 0;
           padding-inline-start: 0;
