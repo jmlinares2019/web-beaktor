@@ -1,0 +1,25 @@
+#config{
+
+    div,section {
+        border: 1px solid brown;
+    }
+
+    .img-wrapper{
+        height: 560px;
+
+        img{
+            // height: 100%;
+            width: 100%;
+        }
+    }
+
+    #beakart-carousel img{
+        width: 400px !important;
+    }
+
+    .owl-stage{
+        display: flex !important;
+    }
+
+}
+
