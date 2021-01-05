@@ -24,7 +24,13 @@
     background-image: linear-gradient(to right, $pink, $beakblue);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-} 
+}
+
+%section-title{
+    font-size: $big;
+    font-weight: bold;
+    padding-bottom: 45px;
+}
 
 %dropdown-icon{
     content: url(../../img/vec/boton_mas_activo.svg);

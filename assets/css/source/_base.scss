@@ -41,9 +41,7 @@
         }
 
         h2.section-title{
-            font-size: $big;
-            font-weight: bold;
-            padding-bottom: 45px;
+            @extend %section-title;
             border-bottom: 1px solid $grey;
             cursor: pointer;
             &::before{
