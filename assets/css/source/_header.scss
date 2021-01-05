@@ -8,6 +8,9 @@
 
     .hero-title{
         @extend %hero-title;
+        &.downfont{
+            font-size: $big;
+        }
         bottom: 40px;
         
     }

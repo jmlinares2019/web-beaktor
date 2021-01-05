@@ -5,3 +5,9 @@ $(document).ready(function(){
       $(this).next('.drop-down').toggleClass('showing');
     });
   });
+
+// Owl Carousel
+
+$(document).ready(function(){
+  $(".owl-carousel").owlCarousel();
+});

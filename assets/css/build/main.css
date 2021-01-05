@@ -47,6 +47,12 @@
   -webkit-text-fill-color: transparent;
 }
 
+#legal .main-wrapper h2.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  padding-bottom: 45px;
+}
+
 #legal .main-wrapper h2.section-title::before {
   content: url(../../img/vec/boton_mas_activo.svg);
   display: -webkit-inline-box;
@@ -142,9 +148,6 @@ html body a:hover {
 }
 
 #legal .main-wrapper h2.section-title {
-  font-size: 2.5rem;
-  font-weight: bold;
-  padding-bottom: 45px;
   border-bottom: 1px solid #AFADAD;
   cursor: pointer;
 }
@@ -171,6 +174,28 @@ html body a:hover {
   list-style-type: none;
   -webkit-padding-start: 0;
           padding-inline-start: 0;
+}
+
+#config div, #config section {
+  border: 1px solid brown;
+}
+
+#config .img-wrapper {
+  height: 560px;
+}
+
+#config .img-wrapper img {
+  width: 100%;
+}
+
+#config #beakart-carousel img {
+  width: 400px !important;
+}
+
+#config .owl-stage {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
 }
 
 .navbar {
@@ -214,6 +239,10 @@ html body a:hover {
 
 .hero .hero-title {
   bottom: 40px;
+}
+
+.hero .hero-title.downfont {
+  font-size: 2.5rem;
 }
 
 footer {
