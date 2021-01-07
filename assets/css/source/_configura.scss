@@ -4,22 +4,181 @@
         border: 1px solid brown;
     }
 
-    .img-wrapper{
-        height: 560px;
+    // General
+
+    section:not(.container){
+        padding-top: 120px;
+    }
+
+    .section-title{
+        @extend %section-title;
+    }
+
+    #cotas{
 
         img{
-            // height: 100%;
-            width: 100%;
+            height: 570px !important;
         }
     }
 
-    #beakart-carousel img{
-        width: 400px !important;
+    #beakart,
+    #customize,
+    #custom-models{
+
+        img{
+            width: 325px;
+        }
     }
 
-    .owl-stage{
-        display: flex !important;
+    // End general
+
+    #models-table{
+
+        .table-row{
+            padding: {
+                top: 45px;
+                bottom: 45px;
+            }
+
+            .col-2{
+
+                .row-name{
+                    color: $grey;
+                    &::before{
+                        @extend %row-icon;
+                    }
+                    
+                }
+
+                .row{
+                    flex-direction: column;
+    
+                    .row-icon > img{
+                        width: 35px;
+                    }
+            
+                    .row-name{
+                        padding-top: 1rem;
+                        color: $grey;
+                    }
+                }
+    
+            } 
+        } 
+
+        #table-header h3{
+            font-weight: bold;
+        }
+
+        #table-iluminacion p{
+            margin-bottom: 0;
+        }
+
+        #table-iluminacion ul.feat-list,
+        #table-conexiones ul.feat-list{
+            padding-inline-start: 0.9em;
+            font-weight: bold;
+        }
+
+        #table-colores,
+        #table-materiales{
+
+            .col-9 .col-6 > .row{
+                width: 100%;
+                padding-left: 15px;
+
+                .swatch{
+                    width: 45px;
+                    height: 45px;
+                    padding: 0;
+                    margin-right: 0.5em;
+                    border-radius: .5em;
+    
+                    img{
+                        width: 100%;
+                    }
+    
+                    &.blue{
+                        background-color: $blueswatch;
+                    }
+                    &.pink{
+                        background-color: $pinkswatch;
+                    }
+                    &.green{
+                        background-color: $greenswatch;
+                    }
+                    &.grey{
+                        background-color: $greyswacth;
+                    }
+    
+                }
+            }
+
+        }
+
+        #table-dimensiones{
+            
+            ul.feat-list{
+                list-style-type: none;
+                padding-inline-start: 0;
+            }
+        }
+
+        #table-cotas{
+
+            img{
+                width: 285px;
+            }
+        }
+
+        #table-buttons{
+            padding-top: 90px;
+
+            button{
+                @extend %beak-button;
+            }
+        }
+        
     }
+
+    #beakart-carousel{
+
+        background-image: url(../../img/beakart_frame.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+
+        .owl-stage{
+            display: flex !important;
+    
+            img{
+                width: 340px !important;
+                margin: auto;
+                padding-top: 0.3rem;
+            }
+        }
+
+    } 
+
+    #customize{
+
+        .customize-img{
+            align-self: flex-end;
+        }
+    }
+
+   #download{
+       
+        .download-btns{
+           padding-top: 45px;
+           display: flex;
+           justify-content: space-between;
+
+           button{
+               @extend %beak-button;
+           }
+        }
+
+   }
 
 }
 
