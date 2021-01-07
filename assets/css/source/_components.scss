@@ -21,7 +21,7 @@
     font-size: $huge;
     font-weight: bold;
     background-color: $bootsblack; // fallback
-    background-image: linear-gradient(to right, $pink, $beakblue);
+    background-image: linear-gradient(to right, $beakpink, $beakblue);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -50,5 +50,59 @@
     &.open{
         content: url(../../img/vec/boton_menos_popup.svg);
         opacity: 1;
+    }
+}
+
+%beak-button{
+    position: relative;
+    font-size: 0.9rem;
+    font-weight: bold;
+    background-color: transparent;
+    border-color: $grey;
+    border-radius: 5px;
+    padding: {
+        left: 1rem;
+        right: 1rem;
+    }
+    &:hover{
+        background-image: linear-gradient(90deg, $beakpink, $beakblue);
+        &::after{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            -webkit-mask-image: linear-gradient(180deg, transparent, black);
+            background-image: linear-gradient(90deg, $beakflesh, $beakgreen);
+            mix-blend-mode: color;
+        }
+    }
+    &:active{
+        box-shadow: inset .1em .1em 20px 0px #00000020;
+    }
+}
+
+%row-icon{
+    display: block;
+    width: 35px;
+    position: absolute;
+    top: -30px;
+    &.iluminacion{
+        content: url('../../img/vec/iluminacion.svg');
+    }
+    &.conexiones{
+        content: url('../../img/vec/conexiones.svg');
+        width: 25px;
+    }
+    &.colores{
+        content: url('../../img/vec/colores.svg');
+    }
+    &.materiales{
+        content: url('../../img/vec/materiales.svg');
+    }
+    &.dimensiones{
+        content: url('../../img/vec/dimensiones.svg');
+        width: 25px;
     }
 }

@@ -75,7 +75,7 @@
     </div>
   </header>
 
-  <main class="container">
+  <section class="container">
       <section id="cotas" class="row-wrapper">
         <div class="col-9 m-auto">
             <div class="row">
@@ -103,16 +103,16 @@
               <div class="col-9 m-auto">
                   <div class="row">
                     <div class="col-6">
-                        <h2>Elige el BEAKTOR que mejor se adapte a ti</h2>
+                        <h2 class="section-title">Elige el BEAKTOR que mejor se adapte a ti</h2>
                     </div>
                   </div>
                   <div class="row">
                       <div class="col-6 m-auto d-flex">
                           <div class="img-wrapper">
-                              <img src="assets/img/beaktor_conference.png" alt="beaktor-conference">
+                              <img class="w-100" src="assets/img/beaktor_conference.png" alt="beaktor-conference">
                           </div>
                           <div class="img-wrapper">
-                              <img src="assets/img/beaktor_work.png" alt="beaktor-work">
+                              <img class="w-100" src="assets/img/beaktor_work.png" alt="beaktor-work">
                           </div>
                       </div>
                   </div>
@@ -121,8 +121,8 @@
       </section>
 
       <section id="models-table" class="row-wrapper">
-          <div class="row table-row">
-              <div class="col-2">Encabezado fila</div>
+          <div id="table-header" class="row table-row border-bottom">
+              <div class="col-2"></div>
               <div class="col-9 d-flex">
                   <div class="row w-100">
                     <div class="col-6 conference-col">
@@ -135,18 +135,10 @@
               </div>
               <div class="col-1"></div>
           </div>
-          <div class="row table-row">
+          <div id="table-iluminacion" class="row table-row border-bottom">
             <div class="col-2">
-                <div class="row">
-                    <div class="row-icon">
-                        <img src="assets/img/vec/iluminacion.svg" alt="iluminación">
-                    </div>
-                    <div class="row-name">
-                        <span>Iluminación</span>
-                    </div>
-                </div> 
+              <span class="row-name iluminacion">Iluminación</span>
             </div>
-
             <div class="col-9 d-flex">
                 <div class="row w-100">
                     <div class="col-6 conference-col">
@@ -169,16 +161,9 @@
             <div class="col-1"></div>
           </div>
 
-          <div class="row table-row">
+          <div id="table-conexiones" class="row table-row border-bottom">
             <div class="col-2">
-                <div class="row">
-                    <div class="row-icon">
-                        <img src="assets/img/vec/conexiones.svg" alt="conexiones">
-                    </div>
-                    <div class="row-name">
-                        <span>Conexiones</span>
-                    </div>
-                </div> 
+              <span class="row-name conexiones">Conexiones</span>
             </div>
             <div class="col-9 d-flex">
                 <div class="row w-100">
@@ -199,31 +184,24 @@
             <div class="col-1"></div>
           </div>
 
-          <div class="row table-row">
+          <div id="table-colores" class="row table-row border-bottom">
             <div class="col-2">
-                <div class="row w-100">
-                    <div class="col row-icon">
-                        <img src="assets/img/vec/colores.svg" alt="colores-disponoibles">
-                    </div>
-                    <div class="col row-name">
-                        <span>Colores disponibles</span>
-                    </div>
-                </div>  
+              <span class="row-name colores">Colores disponibles</span>
             </div>
             <div class="col-9 d-flex">
                 <div class="row w-100">
                     <div class="col-6 conference-col">
                         <div class="row">
-                            <div class="col-3 color-swatch">muestra</div>
-                            <div class="col-3 color-swatch">muestra</div>
-                            <div class="col-3 color-swatch">muestra</div>
-                            <div class="col-3 color-swatch">muestra</div>
+                            <div class="swatch color-swatch blue"></div>
+                            <div class="swatch color-swatch pink"></div>
+                            <div class="swatch color-swatch green"></div>
+                            <div class="swatch color-swatch grey"></div>
                         </div>
                     </div>
                     <div class="col-6 work-col">
                         <div class="row">
-                            <div class="col-3 color-swatch">muestra</div>
-                            <div class="col-3 color-swatch">muestra</div>
+                            <div class="swatch color-swatch blue"></div>
+                            <div class="swatch color-swatch grey"></div>
                         </div>
                     </div>
                 </div>
@@ -231,35 +209,32 @@
             <div class="col-1"></div>
           </div>
 
-          <div class="row table-row">
+          <div id="table-materiales" class="row table-row border-bottom">
             <div class="col-2">
-                <div class="row w-100">
-                    <div class="col row-icon">
-                        <img src="assets/img/vec/materiales.svg" alt="materiales">
-                    </div>
-                    <div class="col row-name">
-                        <span>Materiales</span>
-                    </div>
-                </div>
+              <span class="row-name materiales">Materiales</span>
             </div>
             <div class="col-9 d-flex">
                 <div class="row w-100">
                     <div class="col-6 conference-col">
                         <div class="row">
-                            <div class="col-3 mat-swatch">
+                            <div class="swatch mat-swatch">
                                 <img src="assets/img/muestra_madera.png" alt="muestra-madera">
                             </div>
-                            <div class="col-3 mat-swatch">muestra</div>
-                            <div class="col-3 mat-swatch">muestra</div>
+                            <div class="swatch mat-swatch">
+                              <img src="assets/img/muestra_forbo.png" alt="muestra-forbo">
+                            </div>
+                            <div class="swatch mat-swatch green"></div>
                         </div>
                     </div>
                     <div class="col-6 work-col">
                         <div class="row">
-                            <div class="col-3 mat-swatch">
+                            <div class="swatch mat-swatch">
                                 <img src="assets/img/muestra_madera.png" alt="muestra-madera">
                             </div>
-                            <div class="col-3 mat-swatch">muestra</div>
-                            <div class="col-3 mat-swatch">muestra</div>
+                            <div class="swatch mat-swatch">
+                              <img src="assets/img/muestra_forbo.png" alt="muestra-forbo">
+                            </div>
+                            <div class="swatch mat-swatch grey"></div>
                         </div>
                     </div>
                 </div>
@@ -267,33 +242,26 @@
             <div class="col-1"></div>
           </div>
 
-          <div class="row table-row">
+          <div id="table-dimensiones" class="row table-row">
             <div class="col-2">
-                <div class="row w-100">
-                    <div class="col row-icon">
-                        <img src="assets/img/vec/dimensiones.svg" alt="dimensiones-peso">
-                    </div>
-                    <div class="col row-name">
-                        <span>Dimensiones y peso</span>
-                    </div>
-                </div>
+              <span class="row-name dimensiones">Dimensiones y peso</span>
             </div>
             <div class="col-9 d-flex">
                 <div class="row w-100">
                     <div class="col-6 conference-col">
                         <ul class="feat-list">
-                            <li><strong>Alto:</strong>155,6 cm</li>
-                            <li><strong>Ancho:</strong>105 cm</li>
-                            <li><strong>Fondo:</strong>24,3 cm</li>
-                            <li><strong>Peso:</strong>39,5 kg</li>
+                            <li><strong>Alto:</strong> 155,6 cm</li>
+                            <li><strong>Ancho:</strong> 105 cm</li>
+                            <li><strong>Fondo:</strong> 24,3 cm</li>
+                            <li><strong>Peso:</strong> 39,5 kg</li>
                         </ul>
                     </div>
                     <div class="col-6 work-col">
                         <ul class="feat-list">
-                            <li><strong>Alto:</strong>155,6 cm</li>
-                            <li><strong>Ancho:</strong>105 cm</li>
-                            <li><strong>Fondo:</strong>24,3 cm</li>
-                            <li><strong>Peso:</strong>39,5 kg</li>
+                            <li><strong>Alto:</strong> 155,6 cm</li>
+                            <li><strong>Ancho:</strong> 105 cm</li>
+                            <li><strong>Fondo:</strong> 24,3 cm</li>
+                            <li><strong>Peso:</strong> 39,5 kg</li>
                         </ul>
                     </div>
                 </div>
@@ -301,7 +269,7 @@
             <div class="col-1"></div>
           </div>
 
-          <div class="row table-row">
+          <div id="table-cotas" class="row table-row">
             <div class="col-2"></div>
             <div class="col-9 d-flex">
                 <div class="row w-100">
@@ -320,7 +288,7 @@
             <div class="col-1"></div>
           </div>
 
-          <div class="row table-row">
+          <div id="table-buttons" class="row table-row">
             <div class="col-2"></div>
             <div class="col-9 d-flex">
                 <div class="row w-100">
@@ -351,20 +319,20 @@
                         <p>Su superficie cerrada se puede personalizar con el accesorio Beakart, un soporte con microventosas que se pega y se despega con facilidad.</p>
                         <p>Su imagen se puede cambiar tantas veces como se desee, permitiendo a BEAKTOR convertirse en una mágica obra de arte o en un elemento complementario para la decoración del hogar.</p>
                     </div>
-                    <div class="col-6 beakart-img">
-                        <img class="w-100" src="assets/img/beakart_beaktor.png" alt="beakart">
+                    <div class="col-6 text-right beakart-img">
+                        <img src="assets/img/beakart_beaktor.png" alt="beakart">
                     </div>
                 </div>
             </div>
         </div>
       </section>
-  </main>
+  </section>
 
   <!-- Section carousel -->
 
-  <div class="container-fluid">
+  <section class="container-fluid">
 
-      <section id="beakart-carousel" class="row-wrapper">
+      <div id="beakart-carousel" class="row-wrapper">
           <div class="owl-carousel owl-theme">
                 <img src="assets/img/beakart_1.jpg" alt="beakart">
                 <img src="assets/img/beakart_2.jpg" alt="beakart">
@@ -373,12 +341,13 @@
                 <img src="assets/img/beakart_2.jpg" alt="beakart">
                 <img src="assets/img/beakart_3.jpg" alt="beakart">
           </div>
-      </section>
+      </div>
 
-</div>
+  </section>
 
     <!-- End Section carousel -->
 
+    <section class="container">
       <section id="customize" class="row-wrapper">
         <div class="row">
             <div class="col-9 m-auto">
@@ -388,8 +357,8 @@
                         <p>El panel de herramientas de BEAKTOR es totalmente adaptable. Incorpora diferentes accesorios que encajan en la superficie multiperforada y que están diseñados para servir de soporte a pantallas, móviles, tabletas, documentos y otros elementos ligeros de escritorio.</p>
                         <p>El panel de herramientas de BEAKTOR es totalmente adaptable. Incorpora diferentes accesorios que encajan en la superficie multiperforada y que están diseñados para servir de soporte a pantallas, móviles, tabletas, documentos y otros elementos ligeros de escritorio.</p>
                     </div>
-                    <div class="col-6 customize-img">
-                        <img class="w-100" src="assets/img/beaktor_accesorios.png" alt="beaktor-accesorios">
+                    <div class="col-6 text-right customize-img">
+                        <img src="assets/img/beaktor_accesorios.png" alt="beaktor-accesorios">
                     </div>
                 </div>
             </div>
@@ -400,13 +369,13 @@
           <div class="row">
               <div class="col">
                   <div class="row">
-                      <div class="col-4 img-wrapper">
+                      <div class="col-4 text-right img-wrapper">
                           <img src="assets/img/beaktor_conference.png" alt="beaktor-custom-1">
                       </div>
-                      <div class="col-4 img-wrapper">
+                      <div class="col-4 text-center img-wrapper">
                         <img src="assets/img/beaktor_conference.png" alt="beaktor-custom-1">
                     </div>
-                    <div class="col-4 img-wrapper">
+                    <div class="col-4 text-left img-wrapper">
                         <img src="assets/img/beaktor_conference.png" alt="beaktor-custom-1">
                     </div>
                   </div>
@@ -416,18 +385,24 @@
 
       <section id="download" class="row-wrapper">
           <div class="row">
-              <div class="col-9 m-auto">
-                  <h3 class="section-title">Descarga nuestro catálogo y descubre más</h3>
-                  <img src="assets/img/catalogo.jpg" alt="catálogo-beaktor">
-                  <div class="download-btns">
-                      <a href="#"><button>Descargar</button></a>
-                      <a href="#"><button>Ver más</button></a>  
-                  </div>
+            <div class="col-9 m-auto">
+              <div class="row flex-column">
+                <div class="col-5 download-text">
+                  <h3 class="section-title">Descarga nuestro <span class="d-block">catálogo y </span>descubre más</h3>
+                </div>
+                <div class="col-7 download-img">
+                  <img class="w-100" src="assets/img/catalogo.jpg" alt="catálogo-beaktor">
+                </div>
+                <div class="col-3 download-btns">
+                  <a href="#"><button>Descargar</button></a>
+                  <a href="#"><button>Ver más</button></a>  
+                </div>
               </div>
+            </div>
           </div>
       </section>
 
-  </main>
+  </section>
 
   <footer>
     <div class="container">
