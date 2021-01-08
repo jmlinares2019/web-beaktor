@@ -23,7 +23,7 @@
 
         img{
 
-            height: 415px;
+            height: 330px;
             
             @include phone-only{
                 margin-bottom: 20px;
@@ -35,6 +35,17 @@
 
             @include tablet-landscape-up{
                 height: 570px;
+            }
+            
+        }
+    }
+
+    #cotas-details{
+
+        .col-sm-9{
+
+            @include phone-only{
+                padding: 0;
             }
             
         }
@@ -53,7 +64,26 @@
         }
     }
 
-    // End general
+    #choose-models{
+
+        .col-sm-6{ // give ownn class-name!
+
+            @include phone-only{
+                padding-top: 40px;
+            }
+        }
+
+        img.back{
+            left: 15%;
+            top: -15%;
+            z-index: -1;
+
+            @include phone-up{
+                left: 40%;
+                top: -25%;
+            }
+        }
+    }
 
     #models-table{
 
