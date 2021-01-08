@@ -38,13 +38,24 @@
 }
 
 .hero .hero-title {
-  font-size: 3.5rem;
   font-weight: bold;
   background-color: #212529;
   background-image: -webkit-gradient(linear, left top, right top, from(#FAD0C5), to(#99BCCE));
   background-image: linear-gradient(to right, #FAD0C5, #99BCCE);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-size: 3.5rem;
+  bottom: 40px;
+}
+
+.hero .downfont.hero-title {
+  font-size: 2.5rem;
+}
+
+@media (max-width: 767.98px) {
+  .hero .long-text.hero-title {
+    bottom: 0;
+  }
 }
 
 #legal .main-wrapper h2.section-title, #config .section-title {
@@ -79,7 +90,7 @@
   opacity: 1;
 }
 
-#config #models-table #table-buttons button, #config #download .download-btns button {
+#config #models-table #table-buttons .btn-wrapper button, #config #beakart-carousel .btn-wrapper button, #config #download .download-btns button {
   position: relative;
   font-size: 0.9rem;
   font-weight: bold;
@@ -90,12 +101,12 @@
   padding-right: 1rem;
 }
 
-#config #models-table #table-buttons button:hover, #config #download .download-btns button:hover {
+#config #models-table #table-buttons .btn-wrapper button:hover, #config #beakart-carousel .btn-wrapper button:hover, #config #download .download-btns button:hover {
   background-image: -webkit-gradient(linear, left top, right top, from(#FAD0C5), to(#99BCCE));
   background-image: linear-gradient(90deg, #FAD0C5, #99BCCE);
 }
 
-#config #models-table #table-buttons button:hover::after, #config #download .download-btns button:hover::after {
+#config #models-table #table-buttons .btn-wrapper button:hover::after, #config #beakart-carousel .btn-wrapper button:hover::after, #config #download .download-btns button:hover::after {
   content: '';
   position: absolute;
   top: 0;
@@ -109,36 +120,36 @@
   mix-blend-mode: color;
 }
 
-#config #models-table #table-buttons button:active, #config #download .download-btns button:active {
+#config #models-table #table-buttons .btn-wrapper button:active, #config #beakart-carousel .btn-wrapper button:active, #config #download .download-btns button:active {
   -webkit-box-shadow: inset .1em .1em 20px 0px #00000020;
           box-shadow: inset .1em .1em 20px 0px #00000020;
 }
 
-#config #models-table .table-row .col-2 .row-name::before {
+#config #models-table .table-row .row-name::before {
   display: block;
   width: 35px;
   position: absolute;
   top: -30px;
 }
 
-#config #models-table .table-row .col-2 .iluminacion.row-name::before {
+#config #models-table .table-row .iluminacion.row-name::before {
   content: url("../../img/vec/iluminacion.svg");
 }
 
-#config #models-table .table-row .col-2 .conexiones.row-name::before {
+#config #models-table .table-row .conexiones.row-name::before {
   content: url("../../img/vec/conexiones.svg");
   width: 25px;
 }
 
-#config #models-table .table-row .col-2 .colores.row-name::before {
+#config #models-table .table-row .colores.row-name::before {
   content: url("../../img/vec/colores.svg");
 }
 
-#config #models-table .table-row .col-2 .materiales.row-name::before {
+#config #models-table .table-row .materiales.row-name::before {
   content: url("../../img/vec/materiales.svg");
 }
 
-#config #models-table .table-row .col-2 .dimensiones.row-name::before {
+#config #models-table .table-row .dimensiones.row-name::before {
   content: url("../../img/vec/dimensiones.svg");
   width: 25px;
 }
@@ -245,26 +256,97 @@ html body a:hover {
 }
 
 #config section:not(.container) {
-  padding-top: 120px;
+  padding-top: 80px;
 }
 
-#config #cotas img {
-  height: 570px !important;
+@media (min-width: 768px) {
+  #config section:not(.container) {
+    padding-top: 120px;
+  }
+}
+
+#config #cotas img,
+#config #cotas-details img {
+  height: 330px;
+}
+
+@media (max-width: 575.98px) {
+  #config #cotas img,
+  #config #cotas-details img {
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+  #config #cotas img,
+  #config #cotas-details img {
+    height: 350px;
+  }
+}
+
+@media (min-width: 992px) {
+  #config #cotas img,
+  #config #cotas-details img {
+    height: 570px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  #config #cotas-details .col-sm-9 {
+    padding: 0;
+  }
 }
 
 #config #beakart img,
-#config #customize img,
-#config #custom-models img {
+#config #customize img {
   width: 325px;
+}
+
+@media (max-width: 1199.98px) {
+  #config #beakart img,
+  #config #customize img {
+    width: 250px;
+  }
+}
+
+#config #choose-models .col-sm-6 {
+  padding-top: 40px;
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+  #config #choose-models .col-sm-6 {
+    padding-top: 100px;
+  }
+}
+
+@media (min-width: 992px) {
+  #config #choose-models .col-sm-6 {
+    padding-top: 200px;
+  }
+}
+
+#config #choose-models img.back {
+  left: 15%;
+  top: -15%;
+  z-index: -1;
+}
+
+@media (min-width: 576px) {
+  #config #choose-models img.back {
+    left: 40%;
+    top: -25%;
+  }
+}
+
+@media (max-width: 575.98px) {
+  #config #models-table {
+    overflow-x: scroll;
+  }
 }
 
 #config #models-table .table-row {
   padding-top: 45px;
   padding-bottom: 45px;
-}
-
-#config #models-table .table-row .col-2 .row-name {
-  color: #AFADAD;
 }
 
 #config #models-table .table-row .col-2 .row {
@@ -283,6 +365,17 @@ html body a:hover {
   color: #AFADAD;
 }
 
+#config #models-table .table-row .row-name {
+  color: #AFADAD;
+}
+
+@media (max-width: 575.98px) {
+  #config #models-table .table-row .col-md-9 > .row {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+}
+
 #config #models-table #table-header h3 {
   font-weight: bold;
 }
@@ -298,14 +391,14 @@ html body a:hover {
   font-weight: bold;
 }
 
-#config #models-table #table-colores .col-9 .col-6 > .row,
-#config #models-table #table-materiales .col-9 .col-6 > .row {
+#config #models-table #table-colores .col-sm-6 .row,
+#config #models-table #table-materiales .col-sm-6 .row {
   width: 100%;
   padding-left: 15px;
 }
 
-#config #models-table #table-colores .col-9 .col-6 > .row .swatch,
-#config #models-table #table-materiales .col-9 .col-6 > .row .swatch {
+#config #models-table #table-colores .col-sm-6 .row .swatch,
+#config #models-table #table-materiales .col-sm-6 .row .swatch {
   width: 45px;
   height: 45px;
   padding: 0;
@@ -313,28 +406,36 @@ html body a:hover {
   border-radius: .5em;
 }
 
-#config #models-table #table-colores .col-9 .col-6 > .row .swatch img,
-#config #models-table #table-materiales .col-9 .col-6 > .row .swatch img {
+@media (max-width: 991.98px) {
+  #config #models-table #table-colores .col-sm-6 .row .swatch,
+  #config #models-table #table-materiales .col-sm-6 .row .swatch {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+#config #models-table #table-colores .col-sm-6 .row .swatch img,
+#config #models-table #table-materiales .col-sm-6 .row .swatch img {
   width: 100%;
 }
 
-#config #models-table #table-colores .col-9 .col-6 > .row .swatch.blue,
-#config #models-table #table-materiales .col-9 .col-6 > .row .swatch.blue {
+#config #models-table #table-colores .col-sm-6 .row .swatch.blue,
+#config #models-table #table-materiales .col-sm-6 .row .swatch.blue {
   background-color: #7595B3;
 }
 
-#config #models-table #table-colores .col-9 .col-6 > .row .swatch.pink,
-#config #models-table #table-materiales .col-9 .col-6 > .row .swatch.pink {
+#config #models-table #table-colores .col-sm-6 .row .swatch.pink,
+#config #models-table #table-materiales .col-sm-6 .row .swatch.pink {
   background-color: #F6D0D5;
 }
 
-#config #models-table #table-colores .col-9 .col-6 > .row .swatch.green,
-#config #models-table #table-materiales .col-9 .col-6 > .row .swatch.green {
+#config #models-table #table-colores .col-sm-6 .row .swatch.green,
+#config #models-table #table-materiales .col-sm-6 .row .swatch.green {
   background-color: #CBD6D0;
 }
 
-#config #models-table #table-colores .col-9 .col-6 > .row .swatch.grey,
-#config #models-table #table-materiales .col-9 .col-6 > .row .swatch.grey {
+#config #models-table #table-colores .col-sm-6 .row .swatch.grey,
+#config #models-table #table-materiales .col-sm-6 .row .swatch.grey {
   background-color: #D4D3D4;
 }
 
@@ -348,31 +449,95 @@ html body a:hover {
   width: 285px;
 }
 
-#config #models-table #table-buttons {
-  padding-top: 90px;
+@media (min-width: 1200px) {
+  #config #models-table #table-buttons {
+    padding-top: 90px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  #config #models-table #table-buttons .btn-wrapper {
+    text-align: center;
+  }
+}
+
+#config #beakart .beakart-img {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
 }
 
 #config #beakart-carousel {
   background-image: url(../../img/beakart_frame.jpg);
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center top;
+  background-size: contain;
+  height: 360px;
 }
 
 #config #beakart-carousel .owl-stage {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important;
+  padding-top: 10px;
 }
 
 #config #beakart-carousel .owl-stage img {
-  width: 340px !important;
   margin: auto;
   padding-top: 0.3rem;
+  width: 340px !important;
+}
+
+@media (max-width: 575.98px) {
+  #config #beakart-carousel .owl-stage img {
+    width: 85% !important;
+  }
+}
+
+#config #beakart-carousel .btn-wrapper {
+  bottom: -40px;
+  left: 37.5%;
+}
+
+@media (min-width: 576px) and (max-width: 1199.98px) {
+  #config #beakart-carousel .btn-wrapper {
+    bottom: -60px;
+    left: 45%;
+  }
+}
+
+@media (min-width: 1200px) {
+  #config #beakart-carousel .btn-wrapper {
+    bottom: -80px;
+    left: 47%;
+  }
 }
 
 #config #customize .customize-img {
   -ms-flex-item-align: end;
       align-self: flex-end;
+}
+
+@media (max-width: 767.98px) {
+  #config #custom-models {
+    overflow-x: scroll;
+  }
+}
+
+@media (max-width: 767.98px) {
+  #config #custom-models .row.imgs-wrapper {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+}
+
+#config #custom-models .row.imgs-wrapper img {
+  width: 100%;
+}
+
+@media (max-width: 767.98px) {
+  #config #custom-models .row.imgs-wrapper img {
+    width: 250px;
+  }
 }
 
 #config #download .download-btns {
@@ -383,6 +548,13 @@ html body a:hover {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media (max-width: 767.98px) {
+  #config #download .download-btns {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
 }
 
 .navbar {
@@ -422,14 +594,6 @@ html body a:hover {
   .hero {
     background-image: url(../../img/header_beaktor_mobile.jpg);
   }
-}
-
-.hero .hero-title {
-  bottom: 40px;
-}
-
-.hero .hero-title.downfont {
-  font-size: 2.5rem;
 }
 
 footer {
