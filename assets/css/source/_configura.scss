@@ -42,7 +42,7 @@
 
     #cotas-details{
 
-        .col-sm-9{
+        .col-sm-9{ // give own class-name!
 
             @include phone-only{
                 padding: 0;
@@ -52,24 +52,29 @@
     }
 
     #beakart,
-    #customize,
-    #custom-models{
+    #customize{
 
         img{
             width: 325px;
 
             @include desktop-down{
-                width: 100%;
+                width: 250px;
             }
         }
     }
 
     #choose-models{
 
-        .col-sm-6{ // give ownn class-name!
+        .col-sm-6{ // give own class-name!
 
-            @include phone-only{
-                padding-top: 40px;
+            padding-top: 40px;
+
+            @include phone-to-tablet-landscape{
+                padding-top: 100px;
+            }
+
+            @include tablet-landscape-up{
+                padding-top: 200px;
             }
         }
 
@@ -87,7 +92,9 @@
 
     #models-table{
 
-        overflow: scroll;
+        @include phone-only{
+            overflow-x: scroll;
+        }
 
         .table-row{
             padding: {
@@ -95,7 +102,7 @@
                 bottom: 45px;
             }
 
-            .col-2{
+            .col-2{ // give ownn class-name!
 
                 .row{
                     flex-direction: column;
@@ -120,7 +127,7 @@
                 
             }
 
-            .col-md-9 > .row{
+            .col-md-9 > .row{ // give own class-name!
 
                 @include phone-only{
                     flex-wrap: nowrap;
@@ -145,7 +152,7 @@
         #table-colores,
         #table-materiales{
 
-            .col-sm-6 .row{
+            .col-sm-6 .row{ // give own class-name!
                 width: 100%;
                 padding-left: 15px;
 
@@ -198,7 +205,10 @@
         }
 
         #table-buttons{
-            padding-top: 90px;
+
+            @include desktop-up{
+                padding-top: 90px;
+            }
 
             .btn-wrapper{
                 @include phone-only{
@@ -225,15 +235,23 @@
 
         background-image: url(../../img/beakart_frame.jpg);
         background-repeat: no-repeat;
-        background-position: center;
+        background-position: center top;
+        background-size: contain;
+        height: 360px;
 
         .owl-stage{
             display: flex !important;
+            padding-top: 10px;
     
             img{
-                width: 340px !important;
                 margin: auto;
                 padding-top: 0.3rem;
+                width: 340px !important;
+
+                @include phone-only{
+                    width: 85% !important;
+                }
+
             }
         }
 
@@ -243,6 +261,28 @@
 
         .customize-img{
             align-self: flex-end;
+        }
+    }
+
+    #custom-models{
+
+        @include tablet-portrait-down{
+            overflow-x: scroll;
+        }
+
+        .row.imgs-wrapper{
+            
+            @include tablet-portrait-down{
+                flex-wrap: nowrap;
+            }
+
+            img{
+                width: 100%;
+
+                @include tablet-portrait-down{
+                    width: 250px;
+                }
+            }
         }
     }
 
