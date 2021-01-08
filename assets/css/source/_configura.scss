@@ -7,17 +7,36 @@
     // General
 
     section:not(.container){
-        padding-top: 120px;
+        padding-top: 80px;
+
+        @include tablet-portrait-up{
+            padding-top: 120px;
+        }
     }
 
     .section-title{
         @extend %section-title;
     }
 
-    #cotas{
+    #cotas,
+    #cotas-details{
 
         img{
-            height: 570px !important;
+
+            height: 415px;
+            
+            @include phone-only{
+                margin-bottom: 20px;
+            }
+
+            @include phone-to-tablet-landscape{
+                height: 350px;
+            }
+
+            @include tablet-landscape-up{
+                height: 570px;
+            }
+            
         }
     }
 
