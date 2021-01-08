@@ -18,12 +18,21 @@
 }
 
 %hero-title{       
-    font-size: $huge;
     font-weight: bold;
     background-color: $bootsblack; // fallback
     background-image: linear-gradient(to right, $beakpink, $beakblue);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-size: $huge;
+    &.downfont{
+        font-size: $big;
+    }
+    bottom: 40px;
+    &.long-text{
+        @include tablet-portrait-down{
+            bottom: 0;
+        }
+    }
 }
 
 %section-title{
