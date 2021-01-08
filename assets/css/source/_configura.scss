@@ -255,6 +255,25 @@
             }
         }
 
+        .btn-wrapper{
+            bottom: -40px;
+            left: 37.5%;
+
+            @include phone-to-desktop{
+                bottom: -60px;
+                left: 45%;
+            }
+
+            @include desktop-up{
+                bottom: -80px;
+                left: 47%;
+            }
+
+            button{
+                @extend %beak-button;
+            }
+        }
+
     } 
 
     #customize{
