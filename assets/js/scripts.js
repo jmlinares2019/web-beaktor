@@ -6,12 +6,14 @@ $(document).ready(function(){
     });
   });
 
-// Owl Carousel
+// BeakArt Owl Carousel
 
 var owlOptions = {
   loop: true,
   center: true,
-  //margin: 10,
+  autoplay: true,
+  autoplayTimeout: 1000,
+  autoplayHoverPause: true,
   responsiveClass: true,
   responsive: {
     0:{
@@ -23,7 +25,7 @@ var owlOptions = {
     1200:{
         items:3
     }
-}
+  } 
 }
 
 $(document).ready(function(){
