@@ -67,8 +67,8 @@
   <header class="hero">
     <div class="container h-100 p-0">
         <div class="row w-100 h-100 m-auto">
-            <div class="col-sm-8 col-md-10 col-lg-5 h-100 m-auto position-relative">
-                <h1 class="position-absolute hero-title downfont">Descubre lo que <span class="d-block">BEAKTOR puede hacer por ti</span></h1>
+            <div class="col-md-10 col-lg-5 h-100 m-auto position-relative">
+                <h1 class="position-absolute hero-title downfont long-text">Descubre lo que <span class="d-block">BEAKTOR <span class="d-block d-sm-inline">puede hacer por ti</span></span></h1>
             </div>
             <div class="col-md-5 col-lg-5"></div>
         </div>
@@ -77,42 +77,54 @@
 
   <section class="container">
       <section id="cotas" class="row-wrapper">
-        <div class="col-9 m-auto">
+        <div class="col-12 col-xl-9 m-auto">
             <div class="row">
-                <div class="col-3">
+                <div class="col-5 col-sm-3 order-sm-1">
                     <div class="img-wrapper text-right">
                         <img src="assets/img/vec/beaktor_perfil1.svg" alt="perfil-izquierdo-beaktor">
                     </div>
                 </div>
-                <div class="col-6">
-                    <div class="img-wrapper text-center">
-                        <img src="assets/img/vec/beaktor_central.svg" alt="frontal-beaktor">
-                    </div>
-                </div>
-                <div class="col-3">
+                
+                <div class="col-7 col-sm-3 order-sm-3">
                     <div class="img-wrapper">
                         <img src="assets/img/vec/beaktor_perfil2.svg" alt="perfil-derecho-beaktor">
                     </div>
+                </div>
+
+                <div class="col-12 col-sm-6 order-sm-2">
+                  <div class="img-wrapper text-center">
+                      <img src="assets/img/vec/beaktor_central.svg" alt="frontal-beaktor">
+                  </div>
                 </div>
             </div>
         </div>
       </section>
 
+      <section id="cotas-details" class="row-wrapper">
+        <div class="col-12 col-xl-9 m-auto">
+          <div class="row">
+            <div class="col-12 col-sm-9 m-auto">
+              <div class="img-wrapper text-center">
+                <img src="assets/img/vec/beaktor_indicadores.svg" alt="frontal-beaktor-detalles">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="choose-models" class="row-wrapper">
           <div class="row wrapper">
-              <div class="col-9 m-auto">
+              <div class="col-12 col-md-9 m-auto position-relative">
                   <div class="row">
-                    <div class="col-6">
+                    <div class="col-12 col-md-9 col-xl-6">
                         <h2 class="section-title">Elige el BEAKTOR que mejor se adapte a ti</h2>
                     </div>
                   </div>
                   <div class="row">
-                      <div class="col-6 m-auto d-flex">
-                          <div class="img-wrapper">
+                      <div class="col-9 col-sm-6 m-auto d-flex">
+                          <div class="img-wrapper position-relative">
                               <img class="w-100" src="assets/img/beaktor_conference.png" alt="beaktor-conference">
-                          </div>
-                          <div class="img-wrapper">
-                              <img class="w-100" src="assets/img/beaktor_work.png" alt="beaktor-work">
+                              <img class="w-100 position-absolute back" src="assets/img/beaktor_work.png" alt="beaktor-work">
                           </div>
                       </div>
                   </div>
@@ -122,13 +134,13 @@
 
       <section id="models-table" class="row-wrapper">
           <div id="table-header" class="row table-row border-bottom">
-              <div class="col-2"></div>
-              <div class="col-9 d-flex">
+              <div class="col-2 d-none d-md-block"></div>
+              <div class="col-md-9 d-flex">
                   <div class="row w-100">
-                    <div class="col-6 conference-col">
+                    <div class="col-12 col-sm-6 conference-col">
                         <h3 class="model-name">BEAKTOR Conference</h3>
                     </div>
-                    <div class="col-6 work-col">
+                    <div class="col-12 col-sm-6 work-col">
                         <h3 class="model-name">BEAKTOR Work</h3>
                     </div>
                   </div>
@@ -136,12 +148,13 @@
               <div class="col-1"></div>
           </div>
           <div id="table-iluminacion" class="row table-row border-bottom">
-            <div class="col-2">
+            <div class="col-2 d-none d-md-block">
               <span class="row-name iluminacion">Iluminación</span>
             </div>
-            <div class="col-9 d-flex">
+            <div class="col-md-9 d-flex">
                 <div class="row w-100">
-                    <div class="col-6 conference-col">
+                    <div class="col-12 col-sm-6 conference-col">
+                        <span class="d-block d-md-none row-name iluminacion">Iluminación</span>
                         <p>2 iluminaciones con panel táctil</p>
                         <ul class="feat-list">
                             <li>Lámpara LED para trabajo</li>
@@ -149,7 +162,8 @@
                             <li>Lámpara LED de ambiente</li>
                         </ul>
                     </div>
-                    <div class="col-6 work-col">
+                    <div class="col-12 col-sm-6 work-col">
+                        <span class="d-block d-md-none row-name iluminacion">Iluminación</span>
                         <p>2 iluminaciones con panel táctil</p>
                         <ul class="feat-list">
                             <li>Lámpara LED para trabajo</li>
@@ -162,19 +176,21 @@
           </div>
 
           <div id="table-conexiones" class="row table-row border-bottom">
-            <div class="col-2">
+            <div class="col-2 d-none d-md-block">
               <span class="row-name conexiones">Conexiones</span>
             </div>
-            <div class="col-9 d-flex">
+            <div class="col-md-9 d-flex">
                 <div class="row w-100">
-                    <div class="col-6 conference-col">
+                    <div class="col-12 col-sm-6 conference-col">
+                        <span class="d-block d-md-none row-name conexiones">Conexiones</span>
                         <ul class="feat-list">
                             <li>2 Tomas de corriente tipo-E</li>
                             <li>1 Puerto USB</li>
                             <li>1 Puerto USB-C</li>
                         </ul>
                     </div>
-                    <div class="col-6 work-col">
+                    <div class="col-12 col-sm-6 work-col">
+                        <span class="d-block d-md-none row-name conexiones">Conexiones</span>
                         <ul class="feat-list">
                             <li>2 Tomas de corriente tipo-E</li>
                         </ul>
@@ -185,12 +201,13 @@
           </div>
 
           <div id="table-colores" class="row table-row border-bottom">
-            <div class="col-2">
+            <div class="col-2 d-none d-md-block">
               <span class="row-name colores">Colores disponibles</span>
             </div>
-            <div class="col-9 d-flex">
+            <div class="col-md-9 d-flex">
                 <div class="row w-100">
-                    <div class="col-6 conference-col">
+                    <div class="col-12 col-sm-6 conference-col">
+                        <span class="d-block d-md-none row-name colores">Colores disponibles</span>
                         <div class="row">
                             <div class="swatch color-swatch blue"></div>
                             <div class="swatch color-swatch pink"></div>
@@ -198,7 +215,8 @@
                             <div class="swatch color-swatch grey"></div>
                         </div>
                     </div>
-                    <div class="col-6 work-col">
+                    <div class="col-12 col-sm-6 work-col">
+                        <span class="d-block d-md-none row-name colores">Colores disponibles</span>
                         <div class="row">
                             <div class="swatch color-swatch blue"></div>
                             <div class="swatch color-swatch grey"></div>
@@ -210,12 +228,13 @@
           </div>
 
           <div id="table-materiales" class="row table-row border-bottom">
-            <div class="col-2">
+            <div class="col-2 d-none d-md-block">
               <span class="row-name materiales">Materiales</span>
             </div>
-            <div class="col-9 d-flex">
+            <div class="col-md-9 d-flex">
                 <div class="row w-100">
-                    <div class="col-6 conference-col">
+                    <div class="col-12 col-sm-6 conference-col">
+                        <span class="d-block d-md-none row-name materiales">Materiales</span>
                         <div class="row">
                             <div class="swatch mat-swatch">
                                 <img src="assets/img/muestra_madera.png" alt="muestra-madera">
@@ -226,7 +245,8 @@
                             <div class="swatch mat-swatch green"></div>
                         </div>
                     </div>
-                    <div class="col-6 work-col">
+                    <div class="col-12 col-sm-6 work-col">
+                        <span class="d-block d-md-none row-name materiales">Materiales</span>
                         <div class="row">
                             <div class="swatch mat-swatch">
                                 <img src="assets/img/muestra_madera.png" alt="muestra-madera">
@@ -243,12 +263,13 @@
           </div>
 
           <div id="table-dimensiones" class="row table-row">
-            <div class="col-2">
+            <div class="col-2 d-none d-md-block">
               <span class="row-name dimensiones">Dimensiones y peso</span>
             </div>
-            <div class="col-9 d-flex">
+            <div class="col-md-9 d-flex">
                 <div class="row w-100">
-                    <div class="col-6 conference-col">
+                    <div class="col-12 col-sm-6 conference-col">
+                        <span class="d-block d-md-none row-name dimensiones">Dimensiones y peso</span>
                         <ul class="feat-list">
                             <li><strong>Alto:</strong> 155,6 cm</li>
                             <li><strong>Ancho:</strong> 105 cm</li>
@@ -256,7 +277,8 @@
                             <li><strong>Peso:</strong> 39,5 kg</li>
                         </ul>
                     </div>
-                    <div class="col-6 work-col">
+                    <div class="col-12 col-sm-6 work-col">
+                        <span class="d-block d-md-none row-name dimensiones">Dimensiones y peso</span>
                         <ul class="feat-list">
                             <li><strong>Alto:</strong> 155,6 cm</li>
                             <li><strong>Ancho:</strong> 105 cm</li>
@@ -271,14 +293,14 @@
 
           <div id="table-cotas" class="row table-row">
             <div class="col-2"></div>
-            <div class="col-9 d-flex">
+            <div class="col-md-9 d-flex">
                 <div class="row w-100">
-                    <div class="col-6 conference-col">
+                    <div class="col-12 col-sm-6 conference-col">
                         <div class="img-wrapper cotas">
                             <img src="assets/img/vec/cotas_conference.svg" alt="cotas-conference">
                         </div>
                     </div>
-                    <div class="col-6 work-col">
+                    <div class="col-12 col-sm-6 work-col">
                         <div class="img-wrapper cotas">
                             <img src="assets/img/vec/cotas_work.svg" alt="cotas-work">
                         </div>
@@ -290,14 +312,14 @@
 
           <div id="table-buttons" class="row table-row">
             <div class="col-2"></div>
-            <div class="col-9 d-flex">
+            <div class="col-md-9 d-flex">
                 <div class="row w-100">
-                    <div class="col-6 conference-col">
+                    <div class="col-12 col-sm-6 conference-col">
                         <div class="btn-wrapper">
                             <a href="#"><button>Comprar</button></a>
                         </div>
                     </div>
-                    <div class="col-6 work-col">
+                    <div class="col-12 col-sm-6 work-col">
                         <div class="btn-wrapper">
                             <a href="#"><button>Comprar</button></a>
                         </div>
@@ -311,28 +333,29 @@
 
       <section id="beakart" class="row-wrapper">
         <div class="row">
-            <div class="col-9 m-auto d-flex">
+            <div class="col-sm-10 col-xl-9 m-auto d-flex">
                 <div class="row w-100">
-                    <div class="col-6 beakart-text">
+                    <div class="col-md-6 beakart-text">
                         <h2 class="section-title">BeakArt</h2>
                         <p>BEAKTOR puede convertirse en un soporte de arte.</p>
                         <p>Su superficie cerrada se puede personalizar con el accesorio Beakart, un soporte con microventosas que se pega y se despega con facilidad.</p>
                         <p>Su imagen se puede cambiar tantas veces como se desee, permitiendo a BEAKTOR convertirse en una mágica obra de arte o en un elemento complementario para la decoración del hogar.</p>
                     </div>
-                    <div class="col-6 text-right beakart-img">
+                    <div class="col-md-6 text-center text-sm-right beakart-img">
                         <img src="assets/img/beakart_beaktor.png" alt="beakart">
                     </div>
                 </div>
             </div>
         </div>
       </section>
+
   </section>
 
   <!-- Section carousel -->
 
   <section class="container-fluid">
 
-      <div id="beakart-carousel" class="row-wrapper">
+      <div id="beakart-carousel" class="position-relative row-wrapper">
           <div class="owl-carousel owl-theme">
                 <img src="assets/img/beakart_1.jpg" alt="beakart">
                 <img src="assets/img/beakart_2.jpg" alt="beakart">
@@ -340,6 +363,11 @@
                 <img src="assets/img/beakart_4.jpg" alt="beakart">
                 <img src="assets/img/beakart_2.jpg" alt="beakart">
                 <img src="assets/img/beakart_3.jpg" alt="beakart">
+          </div>
+          <div class="row position-absolute btn-wrapper">
+            <div class="col-1">
+              <a href="#"><button>Comprar</button></a> 
+            </div>
           </div>
       </div>
 
@@ -350,14 +378,14 @@
     <section class="container">
       <section id="customize" class="row-wrapper">
         <div class="row">
-            <div class="col-9 m-auto">
+            <div class="col-sm-10 col-xl-9 m-auto">
                 <div class="row w-100">
-                    <div class="col-6 customize-text">
+                    <div class="col-md-6 customize-text">
                         <h3 class="section-title">Personalizalo a tu gusto acorde a tus necesidades</h3>
                         <p>El panel de herramientas de BEAKTOR es totalmente adaptable. Incorpora diferentes accesorios que encajan en la superficie multiperforada y que están diseñados para servir de soporte a pantallas, móviles, tabletas, documentos y otros elementos ligeros de escritorio.</p>
                         <p>El panel de herramientas de BEAKTOR es totalmente adaptable. Incorpora diferentes accesorios que encajan en la superficie multiperforada y que están diseñados para servir de soporte a pantallas, móviles, tabletas, documentos y otros elementos ligeros de escritorio.</p>
                     </div>
-                    <div class="col-6 text-right customize-img">
+                    <div class="col-md-6 text-center text-sm-right customize-img">
                         <img src="assets/img/beaktor_accesorios.png" alt="beaktor-accesorios">
                     </div>
                 </div>
@@ -368,14 +396,14 @@
       <section id="custom-models" class="row-wrapper">
           <div class="row">
               <div class="col">
-                  <div class="row">
-                      <div class="col-4 text-right img-wrapper">
+                  <div class="row imgs-wrapper">
+                      <div class="col-md-4 text-right">
                           <img src="assets/img/beaktor_conference.png" alt="beaktor-custom-1">
                       </div>
-                      <div class="col-4 text-center img-wrapper">
+                      <div class="col-md-4 text-center">
                         <img src="assets/img/beaktor_conference.png" alt="beaktor-custom-1">
                     </div>
-                    <div class="col-4 text-left img-wrapper">
+                    <div class="col-md-4 text-left">
                         <img src="assets/img/beaktor_conference.png" alt="beaktor-custom-1">
                     </div>
                   </div>
@@ -385,15 +413,15 @@
 
       <section id="download" class="row-wrapper">
           <div class="row">
-            <div class="col-9 m-auto">
+            <div class="col-sm-9 m-auto">
               <div class="row flex-column">
-                <div class="col-5 download-text">
+                <div class="col-md-7 col-lg-5 download-text">
                   <h3 class="section-title">Descarga nuestro <span class="d-block">catálogo y </span>descubre más</h3>
                 </div>
-                <div class="col-7 download-img">
+                <div class="col-md-9 col-lg-7 download-img">
                   <img class="w-100" src="assets/img/catalogo.jpg" alt="catálogo-beaktor">
                 </div>
-                <div class="col-3 download-btns">
+                <div class="col-md-5 col-xl-3 download-btns">
                   <a href="#"><button>Descargar</button></a>
                   <a href="#"><button>Ver más</button></a>  
                 </div>
