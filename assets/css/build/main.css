@@ -154,6 +154,45 @@
   width: 25px;
 }
 
+#config #cotas img .plus-icon:hover::after, #config #cotas svg .plus-icon:hover::after,
+#config #cotas-details img .plus-icon:hover::after,
+#config #cotas-details svg .plus-icon:hover::after, #config #models-table #table-colores .col-sm-6 .row .swatch:hover::after,
+#config #models-table #table-materiales .col-sm-6 .row .swatch:hover::after {
+  display: inline;
+  position: absolute;
+  top: 0;
+  left: 60px;
+  width: 300px;
+  height: 150px;
+  padding: 15px;
+  background-color: white;
+  border: 1px solid #AFADAD;
+  border-radius: .5rem;
+  z-index: 1000;
+  -webkit-animation-name: fade-in;
+          animation-name: fade-in;
+  -webkit-animation-duration: .5s;
+          animation-duration: .5s;
+}
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 html {
   font-size: 20px;
 }
@@ -265,30 +304,52 @@ html body a:hover {
   }
 }
 
-#config #cotas img,
-#config #cotas-details img {
+#config #cotas img, #config #cotas svg,
+#config #cotas-details img,
+#config #cotas-details svg {
   height: 330px;
 }
 
 @media (max-width: 575.98px) {
-  #config #cotas img,
-  #config #cotas-details img {
+  #config #cotas img, #config #cotas svg,
+  #config #cotas-details img,
+  #config #cotas-details svg {
     margin-bottom: 20px;
   }
 }
 
 @media (min-width: 576px) and (max-width: 991.98px) {
-  #config #cotas img,
-  #config #cotas-details img {
+  #config #cotas img, #config #cotas svg,
+  #config #cotas-details img,
+  #config #cotas-details svg {
     height: 350px;
   }
 }
 
 @media (min-width: 992px) {
-  #config #cotas img,
-  #config #cotas-details img {
+  #config #cotas img, #config #cotas svg,
+  #config #cotas-details img,
+  #config #cotas-details svg {
     height: 570px;
   }
+}
+
+#config #cotas img .plus-icon, #config #cotas svg .plus-icon,
+#config #cotas-details img .plus-icon,
+#config #cotas-details svg .plus-icon {
+  position: relative;
+}
+
+#config #cotas img .plus-icon:hover, #config #cotas svg .plus-icon:hover,
+#config #cotas-details img .plus-icon:hover,
+#config #cotas-details svg .plus-icon:hover {
+  fill: #212529;
+}
+
+#config #cotas img .plus-icon:hover::after, #config #cotas svg .plus-icon:hover::after,
+#config #cotas-details img .plus-icon:hover::after,
+#config #cotas-details svg .plus-icon:hover::after {
+  content: 'Caca';
 }
 
 @media (max-width: 575.98px) {
@@ -399,6 +460,7 @@ html body a:hover {
 
 #config #models-table #table-colores .col-sm-6 .row .swatch,
 #config #models-table #table-materiales .col-sm-6 .row .swatch {
+  position: relative;
   width: 45px;
   height: 45px;
   padding: 0;
@@ -437,6 +499,11 @@ html body a:hover {
 #config #models-table #table-colores .col-sm-6 .row .swatch.grey,
 #config #models-table #table-materiales .col-sm-6 .row .swatch.grey {
   background-color: #D4D3D4;
+}
+
+#config #models-table #table-colores .col-sm-6 .row .swatch:hover::after,
+#config #models-table #table-materiales .col-sm-6 .row .swatch:hover::after {
+  content: "Lorem Ipsum";
 }
 
 #config #models-table #table-dimensiones ul.feat-list {
