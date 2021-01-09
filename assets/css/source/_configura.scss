@@ -21,7 +21,7 @@
     #cotas,
     #cotas-details{
 
-        img{
+        img,svg{
 
             height: 330px;
             
@@ -35,6 +35,18 @@
 
             @include tablet-landscape-up{
                 height: 570px;
+            }
+
+            .plus-icon{
+                position: relative;
+                &:hover{
+                    fill: $bootsblack;
+                    &::after{ // not working!
+                        @extend %tooltip;
+                        content: 'Caca';
+    
+                    }
+                }
             }
             
         }
@@ -157,6 +169,7 @@
                 padding-left: 15px;
 
                 .swatch{
+                    position: relative;
                     width: 45px;
                     height: 45px;
                     padding: 0;
@@ -184,8 +197,14 @@
                     &.grey{
                         background-color: $greyswacth;
                     }
-    
+
+                    &:hover::after{
+                        @extend %tooltip;
+                        content: $tooltip-one;
+                    }
+                        
                 }
+                
             }
         }
 
