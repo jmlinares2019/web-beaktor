@@ -251,7 +251,6 @@
     }
 
     #beakart-carousel{
-
         background-image: url(../../img/beakart_frame.jpg);
         background-repeat: no-repeat;
         background-position: center top;
@@ -319,6 +318,14 @@
 
                 @include tablet-portrait-down{
                     width: 250px;
+                }
+            }
+
+            .btn-wrapper{
+                padding-top: 40px;
+
+                button{
+                    @extend %beak-button;
                 }
             }
         }
