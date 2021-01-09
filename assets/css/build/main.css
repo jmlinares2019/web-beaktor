@@ -90,7 +90,7 @@
   opacity: 1;
 }
 
-#config #models-table #table-buttons .btn-wrapper button, #config #beakart-carousel .btn-wrapper button, #config #download .download-btns button {
+#config #models-table #table-buttons .btn-wrapper button, #config #beakart-carousel .btn-wrapper button, #config #custom-models .row.imgs-wrapper .btn-wrapper button, #config #download .download-btns button {
   position: relative;
   font-size: 0.9rem;
   font-weight: bold;
@@ -101,12 +101,12 @@
   padding-right: 1rem;
 }
 
-#config #models-table #table-buttons .btn-wrapper button:hover, #config #beakart-carousel .btn-wrapper button:hover, #config #download .download-btns button:hover {
+#config #models-table #table-buttons .btn-wrapper button:hover, #config #beakart-carousel .btn-wrapper button:hover, #config #custom-models .row.imgs-wrapper .btn-wrapper button:hover, #config #download .download-btns button:hover {
   background-image: -webkit-gradient(linear, left top, right top, from(#FAD0C5), to(#99BCCE));
   background-image: linear-gradient(90deg, #FAD0C5, #99BCCE);
 }
 
-#config #models-table #table-buttons .btn-wrapper button:hover::after, #config #beakart-carousel .btn-wrapper button:hover::after, #config #download .download-btns button:hover::after {
+#config #models-table #table-buttons .btn-wrapper button:hover::after, #config #beakart-carousel .btn-wrapper button:hover::after, #config #custom-models .row.imgs-wrapper .btn-wrapper button:hover::after, #config #download .download-btns button:hover::after {
   content: '';
   position: absolute;
   top: 0;
@@ -120,7 +120,7 @@
   mix-blend-mode: color;
 }
 
-#config #models-table #table-buttons .btn-wrapper button:active, #config #beakart-carousel .btn-wrapper button:active, #config #download .download-btns button:active {
+#config #models-table #table-buttons .btn-wrapper button:active, #config #beakart-carousel .btn-wrapper button:active, #config #custom-models .row.imgs-wrapper .btn-wrapper button:active, #config #download .download-btns button:active {
   -webkit-box-shadow: inset .1em .1em 20px 0px #00000020;
           box-shadow: inset .1em .1em 20px 0px #00000020;
 }
@@ -605,6 +605,10 @@ html body a:hover {
   #config #custom-models .row.imgs-wrapper img {
     width: 250px;
   }
+}
+
+#config #custom-models .row.imgs-wrapper .btn-wrapper {
+  padding-top: 40px;
 }
 
 #config #download .download-btns {
