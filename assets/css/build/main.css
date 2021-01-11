@@ -154,9 +154,8 @@
   width: 25px;
 }
 
-#config #cotas img .plus-icon:hover::after, #config #cotas svg .plus-icon:hover::after,
-#config #cotas-details img .plus-icon:hover::after,
-#config #cotas-details svg .plus-icon:hover::after, #config #models-table #table-colores .col-sm-6 .row .swatch:hover::after,
+#config #cotas .profile-col .plus-icon:hover::after,
+#config #cotas img .plus-icon:hover::after, #config #cotas svg .plus-icon:hover::after, #config #models-table #table-colores .col-sm-6 .row .swatch:hover::after,
 #config #models-table #table-materiales .col-sm-6 .row .swatch:hover::after {
   display: inline;
   position: absolute;
@@ -290,10 +289,6 @@ html body a:hover {
           padding-inline-start: 0;
 }
 
-#config div, #config section {
-  border: 1px solid brown;
-}
-
 #config section:not(.container) {
   padding-top: 80px;
 }
@@ -304,52 +299,192 @@ html body a:hover {
   }
 }
 
-#config #cotas img, #config #cotas svg,
-#config #cotas-details img,
-#config #cotas-details svg {
+#config #cotas {
+  overflow: hidden;
+  position: relative;
+}
+
+#config #cotas .profile-col,
+#config #cotas img, #config #cotas svg {
   height: 330px;
 }
 
 @media (max-width: 575.98px) {
-  #config #cotas img, #config #cotas svg,
-  #config #cotas-details img,
-  #config #cotas-details svg {
+  #config #cotas .profile-col,
+  #config #cotas img, #config #cotas svg {
     margin-bottom: 20px;
   }
 }
 
 @media (min-width: 576px) and (max-width: 991.98px) {
-  #config #cotas img, #config #cotas svg,
-  #config #cotas-details img,
-  #config #cotas-details svg {
+  #config #cotas .profile-col,
+  #config #cotas img, #config #cotas svg {
     height: 350px;
   }
 }
 
 @media (min-width: 992px) {
-  #config #cotas img, #config #cotas svg,
-  #config #cotas-details img,
-  #config #cotas-details svg {
+  #config #cotas .profile-col,
+  #config #cotas img, #config #cotas svg {
     height: 570px;
   }
 }
 
-#config #cotas img .plus-icon, #config #cotas svg .plus-icon,
-#config #cotas-details img .plus-icon,
-#config #cotas-details svg .plus-icon {
+#config #cotas .profile-col .plus-icon,
+#config #cotas img .plus-icon, #config #cotas svg .plus-icon {
   position: relative;
 }
 
-#config #cotas img .plus-icon:hover, #config #cotas svg .plus-icon:hover,
-#config #cotas-details img .plus-icon:hover,
-#config #cotas-details svg .plus-icon:hover {
+#config #cotas .profile-col .plus-icon:hover,
+#config #cotas img .plus-icon:hover, #config #cotas svg .plus-icon:hover {
   fill: #212529;
 }
 
-#config #cotas img .plus-icon:hover::after, #config #cotas svg .plus-icon:hover::after,
-#config #cotas-details img .plus-icon:hover::after,
-#config #cotas-details svg .plus-icon:hover::after {
-  content: 'Caca';
+#config #cotas .profile-col .plus-icon:hover::after,
+#config #cotas img .plus-icon:hover::after, #config #cotas svg .plus-icon:hover::after {
+  content: 'Text text';
+}
+
+#config #cotas #front-profile {
+  opacity: 1;
+}
+
+#config #cotas #front-profile.trigger-animation {
+  -webkit-animation-name: fade-out;
+          animation-name: fade-out;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+#config #cotas #left-profile {
+  right: 0;
+}
+
+#config #cotas #left-profile.trigger-animation {
+  -webkit-animation-name: slide-left;
+          animation-name: slide-left;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes slide-left {
+  0% {
+    right: 0;
+  }
+  100% {
+    right: 500px;
+  }
+}
+
+@keyframes slide-left {
+  0% {
+    right: 0;
+  }
+  100% {
+    right: 500px;
+  }
+}
+
+#config #cotas #right-profile {
+  left: 0;
+}
+
+#config #cotas #right-profile.trigger-animation {
+  -webkit-animation-name: slide-right;
+          animation-name: slide-right;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes slide-right {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 500px;
+  }
+}
+
+@keyframes slide-right {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 500px;
+  }
+}
+
+#config #cotas #cotas-details {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@media (max-width: 575.98px) {
+  #config #cotas #cotas-details {
+    top: auto;
+    bottom: 30px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #config #cotas #cotas-details {
+    left: 12.5%;
+  }
+}
+
+#config #cotas #cotas-details svg {
+  opacity: 0;
+}
+
+#config #cotas #cotas-details svg.trigger-animation {
+  -webkit-animation-name: fade-in;
+          animation-name: fade-in;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @media (max-width: 575.98px) {
@@ -386,16 +521,67 @@ html body a:hover {
   }
 }
 
-#config #choose-models img.back {
+#config #choose-models .col-sm-6 .img-wrapper {
+  position: relative;
+  width: 100%;
+  -webkit-transition: height 1s;
+  transition: height 1s;
+}
+
+#config #choose-models .col-sm-6 .img-wrapper.animate {
+  height: 310px;
+}
+
+#config #choose-models .col-sm-6 .img-wrapper img {
+  -webkit-transition: width, bottom, left, 1s ease-in-out;
+  transition: width, bottom, left, 1s ease-in-out;
+}
+
+#config #choose-models .col-sm-6 .img-wrapper img.front {
+  bottom: 0;
+  left: 0;
+}
+
+#config #choose-models .col-sm-6 .img-wrapper img.front.animate {
+  width: 195px !important;
+  position: absolute;
+  bottom: -125px;
+  left: -45%;
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  #config #choose-models .col-sm-6 .img-wrapper img.front.animate {
+    bottom: -30%;
+    left: -60%;
+  }
+}
+
+#config #choose-models .col-sm-6 .img-wrapper img.back {
+  position: absolute;
   left: 15%;
   top: -15%;
+  bottom: 50px;
   z-index: -1;
 }
 
 @media (min-width: 576px) {
-  #config #choose-models img.back {
+  #config #choose-models .col-sm-6 .img-wrapper img.back {
     left: 40%;
     top: -25%;
+  }
+}
+
+#config #choose-models .col-sm-6 .img-wrapper img.back.animate {
+  width: 195px !important;
+  top: auto;
+  bottom: -125px;
+  left: 60%;
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  #config #choose-models .col-sm-6 .img-wrapper img.back.animate {
+    bottom: -30%;
+    left: 50%;
   }
 }
 
