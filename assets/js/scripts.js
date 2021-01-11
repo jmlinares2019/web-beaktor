@@ -6,7 +6,21 @@ $(document).ready(function(){
     });
   });
 
-// BeakArt Owl Carousel
+// Congigura page scroll transitions
+
+function animar(){
+  $('#cotas-indicadores').addClass('trigger-animation');
+  $('#front-profile').addClass('trigger-animation');
+  $('#left-profile').addClass('trigger-animation');
+  $('#right-profile').addClass('trigger-animation');
+}
+
+function animar2(){
+  $('#animate-container').addClass('animate');
+  $('.beaktor').addClass('animate');
+}
+
+// Configura page BeakArt Owl Carousel
 
 var owlOptions = {
   loop: true,

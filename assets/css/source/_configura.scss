@@ -1,9 +1,5 @@
 #config{
 
-    div,section {
-        border: 1px solid brown;
-    }
-
     // General
 
     section:not(.container){
@@ -18,11 +14,14 @@
         @extend %section-title;
     }
 
-    #cotas,
-    #cotas-details{
+    // End General
 
+    #cotas{
+
+        overflow: hidden;
+        position: relative;
+        .profile-col,
         img,svg{
-
             height: 330px;
             
             @include phone-only{
@@ -43,13 +42,108 @@
                     fill: $bootsblack;
                     &::after{ // not working!
                         @extend %tooltip;
-                        content: 'Caca';
+                        content: 'Text text';
     
                     }
                 }
             }
             
         }
+
+        // Scroll-triggered animations
+
+        #front-profile{
+            opacity: 1;
+                &.trigger-animation{
+                    animation-name: fade-out;
+                    animation-duration: 2s;
+                    animation-fill-mode: forwards;
+                    animation-timing-function: ease-in-out;
+                    @keyframes fade-out{
+                        0%{
+                            opacity: 1;
+                        }
+                        100%{
+                            opacity: 0;
+                        }
+                    }
+                }
+        }
+        
+        #left-profile{
+            right: 0;
+            &.trigger-animation{
+                animation-name: slide-left;
+                animation-duration: 1s;
+                animation-fill-mode: forwards;
+                animation-timing-function: ease-in-out;
+                @keyframes slide-left{
+                    0%{
+                        right: 0;
+                    }
+                    100%{
+                        right: 500px;
+                    }
+                }
+            }
+            
+        }
+
+        #right-profile{
+            left: 0;
+            &.trigger-animation{
+                animation-name: slide-right;
+                animation-duration: 1s;
+                animation-fill-mode: forwards;
+                animation-timing-function: ease-in-out;
+                @keyframes slide-right{
+                    0%{
+                        left: 0;
+                    }
+                    100%{
+                        left: 500px;
+                    }
+                }
+            }
+            
+        }
+
+        #cotas-details{
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            @include phone-only{
+                top: auto;
+                bottom: 30px;
+            }
+
+            @include desktop-up{
+                left: 12.5%;
+            }
+
+            svg{
+                opacity: 0;
+                &.trigger-animation{
+                    animation-name: fade-in;
+                    animation-duration: 2s;
+                    animation-fill-mode: forwards;
+                    animation-timing-function: ease-in-out;
+                    @keyframes fade-in{
+                        0%{
+                            opacity: 0;
+                        }
+                        100%{
+                            opacity: 1;
+                        }
+                    }
+                }
+                    
+            }
+        }
+
+        // End scroll-triggered animations
+        
     }
 
     #cotas-details{
@@ -88,18 +182,62 @@
             @include tablet-landscape-up{
                 padding-top: 200px;
             }
-        }
 
-        img.back{
-            left: 15%;
-            top: -15%;
-            z-index: -1;
+            .img-wrapper{
+                position: relative;
+                width: 100%;
+                transition: height 1s;
+                &.animate{
+                    height: 310px;
+                }
 
-            @include phone-up{
-                left: 40%;
-                top: -25%;
+                img{
+                    transition: width, bottom, left, 1s ease-in-out;
+                }
+
+                img.front{
+                    bottom: 0;
+                    left: 0;
+                    &.animate{
+                        width: 195px !important;
+                        position: absolute;
+                        bottom: -125px;
+                        left: -45%;
+
+                        @include phone-to-tablet-portrait{
+                            bottom: -30%;
+                            left: -60%;
+                        }
+                    } 
+                }
+                
+                img.back{
+                    position: absolute; 
+                    left: 15%;
+                    top: -15%;
+                    bottom: 50px;
+                    z-index: -1;
+        
+                    @include phone-up{
+                        left: 40%;
+                        top: -25%;
+                    }
+                    &.animate{
+                        width: 195px !important;
+                        top: auto;
+                        bottom: -125px;
+                        left: 60%;
+
+                        @include phone-to-tablet-portrait{
+                            bottom: -30%;
+                            left: 50%;
+                        }
+                    }
+                }
             }
         }
+
+        
     }
 
     #models-table{
@@ -114,7 +252,7 @@
                 bottom: 45px;
             }
 
-            .col-2{ // give ownn class-name!
+            .col-2{ // give own class-name!
 
                 .row{
                     flex-direction: column;
