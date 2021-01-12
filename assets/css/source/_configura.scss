@@ -189,12 +189,8 @@
             .img-wrapper{
                 position: relative;
                 width: 100%;
-                transition: height 1s;
-                &.animate{
-                    height: 310px;
-                }
 
-                img{
+                img:not(.null){
                     transition: width, bottom, left, 1s ease-in-out;
                 }
 
@@ -212,6 +208,16 @@
                             left: -60%;
                         }
                     } 
+                }
+
+                img.null{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    &.animate{
+                        position: relative;
+                        opacity: 0;
+                    }
                 }
                 
                 img.back{
@@ -239,7 +245,6 @@
                 }
             }
         }
-
         
     }
 
