@@ -154,26 +154,6 @@
   width: 25px;
 }
 
-#config #cotas .profile-col .plus-icon:hover::after,
-#config #cotas img .plus-icon:hover::after, #config #cotas svg .plus-icon:hover::after, #config #models-table #table-colores .col-sm-6 .row .swatch:hover::after,
-#config #models-table #table-materiales .col-sm-6 .row .swatch:hover::after {
-  display: inline;
-  position: absolute;
-  top: 0;
-  left: 60px;
-  width: 300px;
-  height: 150px;
-  padding: 15px;
-  background-color: white;
-  border: 1px solid #AFADAD;
-  border-radius: .5rem;
-  z-index: 1000;
-  -webkit-animation-name: fade-in;
-          animation-name: fade-in;
-  -webkit-animation-duration: .5s;
-          animation-duration: .5s;
-}
-
 @-webkit-keyframes fade-in {
   0% {
     opacity: 0;
@@ -190,6 +170,107 @@
   100% {
     opacity: 1;
   }
+}
+
+#config #cotas #cotas-details #cotaModal, #config #models-table #swatchModal {
+  overflow: visible;
+  padding-right: 0 !important;
+}
+
+@media (max-width: 575.98px) {
+  #config #cotas #cotas-details #cotaModal, #config #models-table #swatchModal {
+    padding-top: 60px;
+  }
+}
+
+@media (min-width: 576px) {
+  #config #cotas #cotas-details #cotaModal, #config #models-table #swatchModal {
+    position: absolute;
+    top: -30px;
+    left: 100%;
+  }
+}
+
+#config #cotas #cotas-details #cotaModal .modal-content, #config #models-table #swatchModal .modal-content {
+  padding-left: 2rem;
+  position: relative;
+}
+
+#config #cotas #cotas-details #cotaModal .modal-content .modal-header, #config #models-table #swatchModal .modal-content .modal-header {
+  padding-bottom: 0 !important;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  border-color: transparent;
+}
+
+#config #cotas #cotas-details #cotaModal .modal-content .modal-header h5.modal-title, #config #models-table #swatchModal .modal-content .modal-header h5.modal-title {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+#config #cotas #cotas-details #cotaModal .modal-content .modal-header img, #config #models-table #swatchModal .modal-content .modal-header img {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 15px;
+  cursor: pointer;
+}
+
+@media (min-width: 992px) {
+  #config #cotas #cotas-details #cotaModal .modal-content .modal-header img, #config #models-table #swatchModal .modal-content .modal-header img {
+    width: 20px;
+  }
+}
+
+#config #cotas #cotas-details #cotaModal .modal-content .modal-body, #config #models-table #swatchModal .modal-content .modal-body {
+  font-size: 0.8rem;
+  color: #AFADAD;
+}
+
+html body .popover {
+  font-family: inherit;
+  top: 60px !important;
+}
+
+html body .popover .arrow::before, html body .popover .arrow::after {
+  content: none;
+}
+
+html body .popover .popover-header,
+html body .popover .popover-body {
+  padding-left: 2rem;
+}
+
+html body .popover .popover-header {
+  font-size: 0.9rem;
+  font-weight: bold;
+  background: transparent;
+  position: relative;
+}
+
+html body .popover .popover-header::before {
+  content: url(../../img/vec/boton_menos_popup.svg);
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  width: 15px;
+}
+
+@media (min-width: 992px) {
+  html body .popover .popover-header::before {
+    width: 20px;
+  }
+}
+
+
+html body .popover .popover-body {
+  font-size: 0.8rem;
+  color: #AFADAD;
+}
+
+html body .popover:hover {
+  cursor: pointer;
 }
 
 html {
@@ -215,6 +296,11 @@ html body a {
 html body a:hover {
   color: inherit;
   text-decoration: none;
+}
+
+html body.modal-open {
+  overflow: visible;
+  padding-right: 0 !important;
 }
 
 @media (min-width: 1200px) {
@@ -304,45 +390,42 @@ html body a:hover {
   position: relative;
 }
 
-#config #cotas .profile-col,
-#config #cotas img, #config #cotas svg {
+#config #cotas .profile-col, #config #cotas svg,
+#config #cotas img:not(.close-modal) {
   height: 330px;
 }
 
 @media (max-width: 575.98px) {
-  #config #cotas .profile-col,
-  #config #cotas img, #config #cotas svg {
+  #config #cotas .profile-col, #config #cotas svg,
+  #config #cotas img:not(.close-modal) {
     margin-bottom: 20px;
   }
 }
 
 @media (min-width: 576px) and (max-width: 991.98px) {
-  #config #cotas .profile-col,
-  #config #cotas img, #config #cotas svg {
+  #config #cotas .profile-col, #config #cotas svg,
+  #config #cotas img:not(.close-modal) {
     height: 350px;
   }
 }
 
 @media (min-width: 992px) {
-  #config #cotas .profile-col,
-  #config #cotas img, #config #cotas svg {
+  #config #cotas .profile-col, #config #cotas svg,
+  #config #cotas img:not(.close-modal) {
     height: 570px;
   }
 }
 
-#config #cotas .profile-col .plus-icon,
-#config #cotas img .plus-icon, #config #cotas svg .plus-icon {
+#config #cotas .profile-col .plus-icon, #config #cotas svg .plus-icon,
+#config #cotas img:not(.close-modal) .plus-icon {
   position: relative;
+  -webkit-transition: fill .5s;
+  transition: fill .5s;
 }
 
-#config #cotas .profile-col .plus-icon:hover,
-#config #cotas img .plus-icon:hover, #config #cotas svg .plus-icon:hover {
+#config #cotas .profile-col .plus-icon:hover, #config #cotas svg .plus-icon:hover,
+#config #cotas img:not(.close-modal) .plus-icon:hover {
   fill: #212529;
-}
-
-#config #cotas .profile-col .plus-icon:hover::after,
-#config #cotas img .plus-icon:hover::after, #config #cotas svg .plus-icon:hover::after {
-  content: 'Text text';
 }
 
 #config #cotas #front-profile {
@@ -485,6 +568,10 @@ html body a:hover {
   100% {
     opacity: 1;
   }
+}
+
+#config #cotas #cotas-details #cotaModal {
+  left: 0;
 }
 
 @media (max-width: 575.98px) {
@@ -652,6 +739,13 @@ html body a:hover {
   padding: 0;
   margin-right: 0.5em;
   border-radius: .5em;
+  cursor: pointer;
+}
+
+#config #models-table #table-colores .col-sm-6 .row .swatch:focus,
+#config #models-table #table-materiales .col-sm-6 .row .swatch:focus {
+  cursor: auto;
+  outline-width: 0px;
 }
 
 @media (max-width: 991.98px) {
@@ -685,11 +779,6 @@ html body a:hover {
 #config #models-table #table-colores .col-sm-6 .row .swatch.grey,
 #config #models-table #table-materiales .col-sm-6 .row .swatch.grey {
   background-color: #D4D3D4;
-}
-
-#config #models-table #table-colores .col-sm-6 .row .swatch:hover::after,
-#config #models-table #table-materiales .col-sm-6 .row .swatch:hover::after {
-  content: "Lorem Ipsum";
 }
 
 #config #models-table #table-dimensiones ul.feat-list {
@@ -818,7 +907,7 @@ html body a:hover {
   position: fixed;
   width: 100%;
   top: 0;
-  z-index: 1000;
+  z-index: 1055;
   height: 54px;
   background-color: black;
 }
