@@ -611,15 +611,9 @@ html body.modal-open {
 #config #choose-models .col-sm-6 .img-wrapper {
   position: relative;
   width: 100%;
-  -webkit-transition: height 1s;
-  transition: height 1s;
 }
 
-#config #choose-models .col-sm-6 .img-wrapper.animate {
-  height: 310px;
-}
-
-#config #choose-models .col-sm-6 .img-wrapper img {
+#config #choose-models .col-sm-6 .img-wrapper img:not(.null) {
   -webkit-transition: width, bottom, left, 1s ease-in-out;
   transition: width, bottom, left, 1s ease-in-out;
 }
@@ -641,6 +635,17 @@ html body.modal-open {
     bottom: -30%;
     left: -60%;
   }
+}
+
+#config #choose-models .col-sm-6 .img-wrapper img.null {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#config #choose-models .col-sm-6 .img-wrapper img.null.animate {
+  position: relative;
+  opacity: 0;
 }
 
 #config #choose-models .col-sm-6 .img-wrapper img.back {
