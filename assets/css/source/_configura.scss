@@ -14,6 +14,17 @@
         @extend %section-title;
     }
 
+    // Swatches tooltip-modals
+    &.modal-open{
+        overflow: visible;  // don't remove page scroll when modal is open
+        padding-right: 0 !important;
+    }
+
+    // Swatches tooltip-popovers
+    .popover{
+        @extend %tooltip-popover; // re-styles Bootstrap popovers 
+    }
+
     // End General
 
     #cotas{
@@ -412,18 +423,64 @@
 
         .owl-stage{
             display: flex !important;
-            padding-top: 10px;
+            padding-top: 5px;
+
+            @include phone-up{
+                padding-top: 10px;
+            }
     
             img{
                 margin: auto;
                 padding-top: 0.3rem;
-                width: 340px !important;
+                width: 390px !important;
 
                 @include phone-only{
-                    width: 85% !important;
+                    width: 90% !important;
                 }
 
             }
+        }
+
+        .owl-nav{
+
+            button{
+                position: absolute;
+                top: 35%;
+
+                span{
+                    font-size: 3rem;
+                    color: $grey;
+                }
+
+                &.owl-prev{
+                    left: 0;
+
+                    @include tablet-landscape-to-desktop{
+                        left: 22.5%;
+                    }
+
+                    @include desktop-up{
+                        left: 32.5%;
+                    }
+                }
+                &.owl-next{
+                    right: 0;
+
+                    @include tablet-landscape-to-desktop{
+                        right: 22.5%;
+                    }
+
+                    @include desktop-up{
+                        right: 32.5%;
+                    }
+                }
+                &:hover{
+                    background-color: transparent;
+                }
+    
+            }
+            
+
         }
 
         .btn-wrapper{
