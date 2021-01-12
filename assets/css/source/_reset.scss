@@ -19,6 +19,16 @@ html{
                 text-decoration: none;
             }
         }
+
+        &.modal-open{
+            overflow: visible;  // don't remove page scroll when modal is open
+            padding-right: 0 !important;
+        }
+
+        // Swatch Popovers
+        .popover{
+            @extend %tooltip-popover; // re-styles Bootstrap popovers 
+        }
     }
 
 }

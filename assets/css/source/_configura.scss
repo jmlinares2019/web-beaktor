@@ -20,8 +20,8 @@
 
         overflow: hidden;
         position: relative;
-        .profile-col,
-        img,svg{
+        .profile-col, svg,
+        img:not(.close-modal){
             height: 330px;
             
             @include phone-only{
@@ -38,13 +38,9 @@
 
             .plus-icon{
                 position: relative;
+                transition: fill .5s;
                 &:hover{
                     fill: $bootsblack;
-                    &::after{ // not working!
-                        @extend %tooltip;
-                        content: 'Text text';
-    
-                    }
                 }
             }
             
@@ -140,6 +136,13 @@
                 }
                     
             }
+
+            #cotaModal{
+                @extend %tooltip-modal;
+                //top: 215px;
+                left: 0;
+            }
+
         }
 
         // End scroll-triggered animations
@@ -313,6 +316,11 @@
                     padding: 0;
                     margin-right: 0.5em;
                     border-radius: .5em;
+                    cursor: pointer;
+                    &:focus{
+                        cursor: auto;
+                        outline-width: 0px;
+                    }
 
                     @include tablet-landscape-down{
                         width: 35px;
@@ -335,15 +343,17 @@
                     &.grey{
                         background-color: $greyswacth;
                     }
-
-                    &:hover::after{
-                        @extend %tooltip;
-                        content: $tooltip-one;
-                    }
                         
                 }
                 
             }
+        }
+
+        // Swatch Modals
+
+        #swatchModal{
+
+            @extend %tooltip-modal; // re-styles Bootstrap modals
         }
 
         #table-dimensiones{
