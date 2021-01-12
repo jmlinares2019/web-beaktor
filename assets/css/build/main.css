@@ -228,28 +228,28 @@
   color: #AFADAD;
 }
 
-html body .popover {
+#config .popover {
   font-family: inherit;
   top: 60px !important;
 }
 
-html body .popover .arrow::before, html body .popover .arrow::after {
+#config .popover .arrow::before, #config .popover .arrow::after {
   content: none;
 }
 
-html body .popover .popover-header,
-html body .popover .popover-body {
+#config .popover .popover-header,
+#config .popover .popover-body {
   padding-left: 2rem;
 }
 
-html body .popover .popover-header {
+#config .popover .popover-header {
   font-size: 0.9rem;
   font-weight: bold;
   background: transparent;
   position: relative;
 }
 
-html body .popover .popover-header::before {
+#config .popover .popover-header::before {
   content: url(../../img/vec/boton_menos_popup.svg);
   position: absolute;
   left: 10px;
@@ -258,18 +258,18 @@ html body .popover .popover-header::before {
 }
 
 @media (min-width: 992px) {
-  html body .popover .popover-header::before {
+  #config .popover .popover-header::before {
     width: 20px;
   }
 }
 
 
-html body .popover .popover-body {
+#config .popover .popover-body {
   font-size: 0.8rem;
   color: #AFADAD;
 }
 
-html body .popover:hover {
+#config .popover:hover {
   cursor: pointer;
 }
 
@@ -298,9 +298,8 @@ html body a:hover {
   text-decoration: none;
 }
 
-html body.modal-open {
-  overflow: visible;
-  padding-right: 0 !important;
+html body *:focus {
+  outline-width: 0px;
 }
 
 @media (min-width: 1200px) {
@@ -383,6 +382,11 @@ html body.modal-open {
   #config section:not(.container) {
     padding-top: 120px;
   }
+}
+
+#config.modal-open {
+  overflow: visible;
+  padding-right: 0 !important;
 }
 
 #config #cotas {
@@ -825,19 +829,71 @@ html body.modal-open {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important;
-  padding-top: 10px;
+  padding-top: 5px;
+}
+
+@media (min-width: 576px) {
+  #config #beakart-carousel .owl-stage {
+    padding-top: 10px;
+  }
 }
 
 #config #beakart-carousel .owl-stage img {
   margin: auto;
   padding-top: 0.3rem;
-  width: 340px !important;
+  width: 390px !important;
 }
 
 @media (max-width: 575.98px) {
   #config #beakart-carousel .owl-stage img {
-    width: 85% !important;
+    width: 90% !important;
   }
+}
+
+#config #beakart-carousel .owl-nav button {
+  position: absolute;
+  top: 35%;
+}
+
+#config #beakart-carousel .owl-nav button span {
+  font-size: 3rem;
+  color: #AFADAD;
+}
+
+#config #beakart-carousel .owl-nav button.owl-prev {
+  left: 0;
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  #config #beakart-carousel .owl-nav button.owl-prev {
+    left: 22.5%;
+  }
+}
+
+@media (min-width: 1200px) {
+  #config #beakart-carousel .owl-nav button.owl-prev {
+    left: 32.5%;
+  }
+}
+
+#config #beakart-carousel .owl-nav button.owl-next {
+  right: 0;
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  #config #beakart-carousel .owl-nav button.owl-next {
+    right: 22.5%;
+  }
+}
+
+@media (min-width: 1200px) {
+  #config #beakart-carousel .owl-nav button.owl-next {
+    right: 32.5%;
+  }
+}
+
+#config #beakart-carousel .owl-nav button:hover {
+  background-color: transparent;
 }
 
 #config #beakart-carousel .btn-wrapper {
