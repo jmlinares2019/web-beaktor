@@ -6,7 +6,26 @@ $(document).ready(function(){
     });
   });
 
-// Configura page scroll transitions (temporarily triggered onclick)
+// Configura page scroll transitions
+
+$(window).scroll(function(){
+  if (window.pageYOffset > 250){
+    $('#cotas-indicadores').addClass('trigger-animation');
+    $('#front-profile').addClass('trigger-animation');
+    $('#left-profile').addClass('trigger-animation');
+    $('#right-profile').addClass('trigger-animation');
+  }
+});
+
+$(window).scroll(function(){
+  console.log(window.pageYOffset);
+  if (window.pageYOffset > 850){
+    $('#animate-container').addClass('animate');
+    $('.beaktor').addClass('animate');
+  }
+});
+
+// Trigger by buttons
 
 function animar(){
   $('#cotas-indicadores').addClass('trigger-animation');
@@ -66,3 +85,5 @@ var owlOptions = {
 $(document).ready(function(){
   $(".owl-carousel").owlCarousel(owlOptions);
 });
+
+
