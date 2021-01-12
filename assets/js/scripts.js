@@ -45,6 +45,8 @@ var owlOptions = {
   loop: true,
   center: true,
   autoplay: true,
+  dots: false,
+  nav: true,
   autoplayTimeout: 1000,
   autoplayHoverPause: true,
   responsiveClass: true,
@@ -52,10 +54,10 @@ var owlOptions = {
     0:{
         items:1
     },
-    800:{
+    900:{
         items:2
     },
-    1200:{
+    1400:{
         items:3
     }
   } 
