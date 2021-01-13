@@ -39,18 +39,6 @@ function animar2(){
   $('.beaktor').addClass('animate');
 };
 
-// Tooltip-modals open @:hover
-
-/* $(document).ready(function(){
-  $('.swatch').hover(function(){
-    $('#swatchModal').addClass('show');
-    $('#swatchModal').css('display', 'block');
-  }, function(){
-    $('#swatchModal').removeClass('show');
-    $('#swatchModal').css('display', 'none');
-  });
-}); */
-
 // Initialize tooltip-popovers
 
 $(function () {
