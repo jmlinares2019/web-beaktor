@@ -9,6 +9,23 @@ $(document).ready(function(){
 // Configura page scroll transitions
 
 $(window).scroll(function(){
+    if ( $(window).width() > 992 ){ // responsive trigger 
+      if ( window.scrollY > 1200 ){
+        $('#animate-container').addClass('animate');
+        $('.beaktor').addClass('animate');
+      }
+    } else if ( $(window).width() < 991.98 && $(window).width() > 768 ){
+      if ( window.scrollY > 900 ){
+        $('#animate-container').addClass('animate');
+        $('.beaktor').addClass('animate');
+      }
+    } else if ( $(window).width() < 767.98 && $(window).width() > 576 ){
+      if ( window.scrollY > 750 ){
+        $('#animate-container').addClass('animate');
+        $('.beaktor').addClass('animate');
+      }
+    } 
+
   if (window.pageYOffset > 250){
     $('#cotas-indicadores').addClass('trigger-animation');
     $('#front-profile').addClass('trigger-animation');
@@ -16,28 +33,6 @@ $(window).scroll(function(){
     $('#right-profile').addClass('trigger-animation');
   }
 });
-
-$(window).scroll(function(){
-  console.log(window.pageYOffset);
-  if (window.pageYOffset > 850){
-    $('#animate-container').addClass('animate');
-    $('.beaktor').addClass('animate');
-  }
-});
-
-// Trigger by buttons
-
-function animar(){
-  $('#cotas-indicadores').addClass('trigger-animation');
-  $('#front-profile').addClass('trigger-animation');
-  $('#left-profile').addClass('trigger-animation');
-  $('#right-profile').addClass('trigger-animation');
-};
-
-function animar2(){
-  $('#animate-container').addClass('animate');
-  $('.beaktor').addClass('animate');
-};
 
 // Initialize tooltip-popovers
 
