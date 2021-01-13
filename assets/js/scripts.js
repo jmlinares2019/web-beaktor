@@ -6,31 +6,33 @@ $(document).ready(function(){
     });
   });
 
-// Configura page scroll transitions (temporarily triggered onclick)
+// Configura page scroll transitions
 
-function animar(){
-  $('#cotas-indicadores').addClass('trigger-animation');
-  $('#front-profile').addClass('trigger-animation');
-  $('#left-profile').addClass('trigger-animation');
-  $('#right-profile').addClass('trigger-animation');
-};
+$(window).scroll(function(){
+    if ( $(window).width() > 992 ){ // responsive trigger 
+      if ( window.scrollY > 1200 ){
+        $('#animate-container').addClass('animate');
+        $('.beaktor').addClass('animate');
+      }
+    } else if ( $(window).width() < 991.98 && $(window).width() > 768 ){
+      if ( window.scrollY > 900 ){
+        $('#animate-container').addClass('animate');
+        $('.beaktor').addClass('animate');
+      }
+    } else if ( $(window).width() < 767.98 && $(window).width() > 576 ){
+      if ( window.scrollY > 750 ){
+        $('#animate-container').addClass('animate');
+        $('.beaktor').addClass('animate');
+      }
+    } 
 
-function animar2(){
-  $('#animate-container').addClass('animate');
-  $('.beaktor').addClass('animate');
-};
-
-// Tooltip-modals open @:hover
-
-/* $(document).ready(function(){
-  $('.swatch').hover(function(){
-    $('#swatchModal').addClass('show');
-    $('#swatchModal').css('display', 'block');
-  }, function(){
-    $('#swatchModal').removeClass('show');
-    $('#swatchModal').css('display', 'none');
-  });
-}); */
+  if (window.pageYOffset > 250){
+    $('#cotas-indicadores').addClass('trigger-animation');
+    $('#front-profile').addClass('trigger-animation');
+    $('#left-profile').addClass('trigger-animation');
+    $('#right-profile').addClass('trigger-animation');
+  }
+});
 
 // Initialize tooltip-popovers
 
@@ -66,3 +68,5 @@ var owlOptions = {
 $(document).ready(function(){
   $(".owl-carousel").owlCarousel(owlOptions);
 });
+
+
