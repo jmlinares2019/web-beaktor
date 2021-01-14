@@ -37,8 +37,18 @@ $(window).scroll(function(){
 // Initialize tooltip-popovers
 
 $(function () {
-  $('[data-toggle="popover"]').popover()
-})
+  $('.left-popover').popover({
+    placement: 'left' 
+  });
+});
+
+$(function () {
+  $('.right-popover').popover({
+    placement: 'right' 
+  });
+});
+
+
   
 
 // Configura page BeakArt Owl Carousel
