@@ -148,12 +148,6 @@
                     
             }
 
-            #cotaModal{
-                @extend %tooltip-modal;
-                //top: 215px;
-                left: 0;
-            }
-
         }
 
         // End scroll-triggered animations
@@ -363,13 +357,6 @@
                 }
                 
             }
-        }
-
-        // Swatch Modals
-
-        #swatchModal{
-
-            @extend %tooltip-modal; // re-styles Bootstrap modals
         }
 
         #table-dimensiones{

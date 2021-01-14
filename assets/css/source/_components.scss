@@ -116,82 +116,23 @@
     }
 }
 
-%tooltip{
-    display: inline;
-    position: absolute;
-    top: 0;
-    left: 60px;
-    width: 300px;
-    height: 150px;
-    padding: 15px;
-    background-color: white;
-    border: 1px solid $grey;
-    border-radius: .5rem;
-    z-index: 1000;
-    animation-name: fade-in;
-    animation-duration: .5s;
-
-    @keyframes fade-in{
-        0%{
-            opacity: 0;
-        }
-        100%{
-            opacity: 1;
-        }
-    }
-}
-
-%tooltip-modal{
-    overflow: visible;
-    padding-right: 0 !important;
-
-    @include phone-only{
-        padding-top: 60px;
-    }
-
-    @include phone-up{
-        position: absolute;
-        top: -30px;
-        left: 100%;
-    }
-
-    .modal-content{
-        padding-left: 2rem;
-        position: relative;
-
-        .modal-header{
-            padding-bottom: 0 !important;
-            justify-content: flex-start;
-            border-color: transparent;
-
-            h5.modal-title{
-                font-size: 0.9rem;
-                font-weight: bold;
-            }
-
-            img{
-                position: absolute;
-                top: 20px;
-                left: 20px;
-                width: 15px;
-                cursor: pointer;
-
-                @include tablet-landscape-up{
-                    width: 20px;
-                }
-            }
-        }
-
-        .modal-body{
-            font-size: 0.8rem;
-            color: $grey;
-        }
-    }
-}
-
 %tooltip-popover{
     font-family: inherit;
     top: 60px !important;
+
+    @include desktop-up{
+        top: 90px !important;
+    }
+
+    @include phone-only{
+        top: -20% !important;
+        &.bs-popover-right:not(.swatch){
+            left: -15% !important;
+        }
+        &.bs-popover-left{
+            left: 15% !important;
+        }
+    }
 
     .arrow{
         &::before,
@@ -231,7 +172,6 @@
     &:hover{
         cursor: pointer;
     }
-
     
 }
 
