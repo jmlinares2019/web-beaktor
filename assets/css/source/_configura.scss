@@ -14,15 +14,9 @@
         @extend %section-title;
     }
 
-    // Swatches tooltip-modals
-    &.modal-open{
-        overflow: visible;  // don't remove page scroll when modal is open
-        padding-right: 0 !important;
-    }
-
-    // Swatches tooltip-popovers
+    // Swatches tooltip-popovers (re-styles Bootstrap's)
     .popover{
-        @extend %tooltip-popover; // re-styles Bootstrap popovers 
+        @extend %tooltip-popover;
     }
 
     //// End General
@@ -32,7 +26,7 @@
         overflow: hidden;
         position: relative;
         .profile-col, svg,
-        img:not(.close-modal){
+        img{
             height: 330px;
             
             @include phone-only{
