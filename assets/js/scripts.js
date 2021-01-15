@@ -48,9 +48,6 @@ $(function () {
   });
 });
 
-
-  
-
 // Configura page BeakArt Owl Carousel
 
 var owlOptions = {
@@ -59,18 +56,20 @@ var owlOptions = {
   autoplay: true,
   dots: false,
   nav: true,
-  autoplayTimeout: 1000,
   autoplayHoverPause: true,
   responsiveClass: true,
   responsive: {
     0:{
-        items:1
+        items: 1,
+        autoplayTimeout: 2000
     },
     900:{
-        items:2
+        items: 2,
+        autoplayTimeout: 1000 
     },
     1400:{
-        items:3
+        items: 3,
+        autoplayTimeout: 1000
     }
   } 
 }
@@ -78,5 +77,7 @@ var owlOptions = {
 $(document).ready(function(){
   $(".owl-carousel").owlCarousel(owlOptions);
 });
+
+
 
 
