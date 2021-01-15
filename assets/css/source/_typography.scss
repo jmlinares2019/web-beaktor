@@ -1,19 +1,19 @@
 @font-face {
     font-family: 'Dsignes';
-    src: local('DsignesRegular'),
-        url('../../fonts/DsignesRegular.woff2') format('woff2'),
-        url('../../fonts/DsignesRegular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
+    src: local('DsignesRegular'),
+        url('../../fonts/DsignesRegular.woff2') format('woff2'),
+        url('../../fonts/DsignesRegular.woff') format('woff');
 }
 
 @font-face {
-    font-family: 'DsignesBold';
-    src: local('DsignesBold'),
-        url('../../fonts/DsignesBold.woff2') format('woff2'),
-        url('../../fonts/DsignesBold.woff') format('woff');
+    font-family: 'Dsignes';
     font-weight: bold;
     font-style: normal;
     font-display: swap;
+    src: local('DsignesBold'),
+        url('../../fonts/DsignesBold.woff2') format('woff2'),
+        url('../../fonts/DsignesBold.woff') format('woff');
 }
