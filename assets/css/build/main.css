@@ -49,7 +49,7 @@
 }
 
 .hero .downfont.hero-title {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
 }
 
 @media (max-width: 767.98px) {
@@ -59,7 +59,7 @@
 }
 
 #legal .main-wrapper h2.section-title, #config .section-title {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   font-weight: bold;
   padding-bottom: 45px;
 }
@@ -859,11 +859,6 @@ html body *:focus {
   }
 }
 
-#config #customize .customize-img {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-}
-
 @media (max-width: 767.98px) {
   #config #custom-models {
     overflow-x: scroll;
@@ -999,6 +994,12 @@ footer .container h2, footer .container a, footer .container p {
 
 footer .container h2 {
   font-weight: bold;
+}
+
+footer .container a:hover {
+  color: #AFADAD;
+  -webkit-transition: color .5s;
+  transition: color .5s;
 }
 
 footer .container p {
