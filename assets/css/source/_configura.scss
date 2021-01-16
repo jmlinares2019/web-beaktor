@@ -249,6 +249,10 @@
 
     #models-table{
 
+        .border-bottom{ // Bootstrap class
+            padding-bottom: 45px; // adds property
+        }
+
         @include phone-only{
             overflow-x: scroll;
         }
