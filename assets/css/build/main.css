@@ -156,10 +156,10 @@
 
 #config .popover {
   font-family: inherit;
-  top: 60px !important;
+  top: 55px !important;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
   #config .popover {
     top: 90px !important;
   }
@@ -169,11 +169,15 @@
   #config .popover {
     top: -20% !important;
   }
-  #config .bs-popover-right.popover:not(.swatch) {
+  #config .bs-popover-right.popover {
     left: -15% !important;
   }
   #config .bs-popover-left.popover {
     left: 15% !important;
+  }
+  #config .bs-popover-top.popover {
+    left: 7.5% !important;
+    top: 0 !important;
   }
 }
 
@@ -318,12 +322,12 @@ html body *:focus {
           padding-inline-start: 0;
 }
 
-#config section:not(.container) {
+#config section:not(.container):not(#models-table) {
   padding-top: 80px;
 }
 
 @media (min-width: 768px) {
-  #config section:not(.container) {
+  #config section:not(.container):not(#models-table) {
     padding-top: 120px;
   }
 }
@@ -552,51 +556,48 @@ html body *:focus {
 
 @media (min-width: 992px) {
   #config #choose-models .col-sm-6 {
-    padding-top: 200px;
+    padding-top: 175px;
   }
 }
 
-#config #choose-models .col-sm-6 .img-wrapper {
+#config #choose-models .col-sm-6 #animate-container {
   position: relative;
   width: 100%;
 }
 
-#config #choose-models .col-sm-6 .img-wrapper img:not(.null) {
-  -webkit-transition: width, bottom, left, 1s ease-in-out;
-  transition: width, bottom, left, 1s ease-in-out;
-}
-
-#config #choose-models .col-sm-6 .img-wrapper img.front {
+#config #choose-models .col-sm-6 #animate-container img.front {
   bottom: 0;
   left: 0;
 }
 
-#config #choose-models .col-sm-6 .img-wrapper img.front.animate {
+#config #choose-models .col-sm-6 #animate-container img.front.animate {
   width: 195px !important;
   position: absolute;
-  bottom: -125px;
+  bottom: 0;
   left: -45%;
+  -webkit-transition: width, bottom, left, 1s ease-in-out;
+  transition: width, bottom, left, 1s ease-in-out;
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
-  #config #choose-models .col-sm-6 .img-wrapper img.front.animate {
+  #config #choose-models .col-sm-6 #animate-container img.front.animate {
     bottom: -30%;
     left: -60%;
   }
 }
 
-#config #choose-models .col-sm-6 .img-wrapper img.null {
+#config #choose-models .col-sm-6 #animate-container img.null {
   position: absolute;
   top: 0;
   left: 0;
 }
 
-#config #choose-models .col-sm-6 .img-wrapper img.null.animate {
+#config #choose-models .col-sm-6 #animate-container img.null.animate {
   position: relative;
   opacity: 0;
 }
 
-#config #choose-models .col-sm-6 .img-wrapper img.back {
+#config #choose-models .col-sm-6 #animate-container img.back {
   position: absolute;
   left: 15%;
   top: -15%;
@@ -605,24 +606,30 @@ html body *:focus {
 }
 
 @media (min-width: 576px) {
-  #config #choose-models .col-sm-6 .img-wrapper img.back {
+  #config #choose-models .col-sm-6 #animate-container img.back {
     left: 40%;
     top: -25%;
   }
 }
 
-#config #choose-models .col-sm-6 .img-wrapper img.back.animate {
+#config #choose-models .col-sm-6 #animate-container img.back.animate {
   width: 195px !important;
   top: auto;
-  bottom: -125px;
+  bottom: 0;
   left: 60%;
+  -webkit-transition: width, bottom, left, 1s ease-in-out;
+  transition: width, bottom, left, 1s ease-in-out;
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
-  #config #choose-models .col-sm-6 .img-wrapper img.back.animate {
+  #config #choose-models .col-sm-6 #animate-container img.back.animate {
     bottom: -30%;
     left: 50%;
   }
+}
+
+#config #models-table .border-bottom {
+  padding-bottom: 45px;
 }
 
 @media (max-width: 575.98px) {
