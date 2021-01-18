@@ -9,10 +9,16 @@ $(document).ready(function(){
 // Configura page scroll transitions
 
 $(window).scroll(function(){
+  // table models animation
     if ( $(window).width() > 992 ){ // responsive trigger 
       if ( window.scrollY > 1200 ){
         $('#animate-container').addClass('animate');
         $('.beaktor').addClass('animate');
+      } else {
+        if ( $('#animate-container').hasClass('animate') ){
+          $('#animate-container').removeClass('animate');
+          $('.beaktor').removeClass('animate');
+        }
       }
     } else if ( $(window).width() < 991.98 && $(window).width() > 768 ){
       if ( window.scrollY > 900 ){
@@ -25,7 +31,7 @@ $(window).scroll(function(){
         $('.beaktor').addClass('animate');
       }
     } 
-
+  // cotas animation
   if (window.pageYOffset > 250){
     $('#cotas-indicadores').addClass('trigger-animation');
     $('#front-profile').addClass('trigger-animation');
@@ -48,8 +54,17 @@ $(function () {
   });
 });
 
-
-  
+$(function () {
+  if ( $(window).width() < 576 ){
+    $('.color-popover').popover({
+      placement: 'top'
+    });
+  } else {
+    $('.color-popover').popover({
+      placement: 'right'
+    })
+  }
+});
 
 // Configura page BeakArt Owl Carousel
 
@@ -59,24 +74,28 @@ var owlOptions = {
   autoplay: true,
   dots: false,
   nav: true,
-  autoplayTimeout: 1000,
   autoplayHoverPause: true,
   responsiveClass: true,
   responsive: {
     0:{
-        items:1
+        items: 1,
+        autoplayTimeout: 2000
     },
     900:{
-        items:2
+        items: 2,
+        autoplayTimeout: 1000 
     },
     1400:{
-        items:3
+        items: 3,
+        autoplayTimeout: 1000
     }
   } 
 }
 
-$(document).ready(function(){
+$('#config').ready(function(){
   $(".owl-carousel").owlCarousel(owlOptions);
 });
+
+
 
 

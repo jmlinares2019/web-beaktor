@@ -118,19 +118,23 @@
 
 %tooltip-popover{
     font-family: inherit;
-    top: 60px !important;
+    top: 55px !important;
 
-    @include desktop-up{
+    @include tablet-landscape-up{
         top: 90px !important;
     }
 
     @include phone-only{
         top: -20% !important;
-        &.bs-popover-right:not(.swatch){
+        &.bs-popover-right{
             left: -15% !important;
         }
         &.bs-popover-left{
             left: 15% !important;
+        }
+        &.bs-popover-top{
+            left: 7.5% !important;
+            top: 0 !important;
         }
     }
 

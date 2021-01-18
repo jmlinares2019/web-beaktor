@@ -17,6 +17,11 @@ footer{
         h2{
             font-weight: bold;
         }
+
+        a:hover{
+            color: $grey;
+            transition: color .5s;
+        }
     
         p{
             padding-bottom: 0;
@@ -85,6 +90,7 @@ footer{
                     padding-right: .5rem;
                 }
             }
+        
         }
     }
   

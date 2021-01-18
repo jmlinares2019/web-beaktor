@@ -1,17 +1,17 @@
 @font-face {
   font-family: 'Dsignes';
-  src: local("DsignesRegular"), url("../../fonts/DsignesRegular.woff2") format("woff2"), url("../../fonts/DsignesRegular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
+  src: local("DsignesRegular"), url("../../fonts/DsignesRegular.woff2") format("woff2"), url("../../fonts/DsignesRegular.woff") format("woff");
 }
 
 @font-face {
-  font-family: 'DsignesBold';
-  src: local("DsignesBold"), url("../../fonts/DsignesBold.woff2") format("woff2"), url("../../fonts/DsignesBold.woff") format("woff");
+  font-family: 'Dsignes';
   font-weight: bold;
   font-style: normal;
   font-display: swap;
+  src: local("DsignesBold"), url("../../fonts/DsignesBold.woff2") format("woff2"), url("../../fonts/DsignesBold.woff") format("woff");
 }
 
 .hero {
@@ -49,7 +49,7 @@
 }
 
 .hero .downfont.hero-title {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
 }
 
 @media (max-width: 767.98px) {
@@ -59,7 +59,7 @@
 }
 
 #legal .main-wrapper h2.section-title, #config .section-title {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   font-weight: bold;
   padding-bottom: 45px;
 }
@@ -154,83 +154,31 @@
   width: 25px;
 }
 
-@-webkit-keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-#config #cotas #cotas-details #cotaModal, #config #models-table #swatchModal {
-  overflow: visible;
-  padding-right: 0 !important;
-}
-
-@media (max-width: 575.98px) {
-  #config #cotas #cotas-details #cotaModal, #config #models-table #swatchModal {
-    padding-top: 60px;
-  }
-}
-
-@media (min-width: 576px) {
-  #config #cotas #cotas-details #cotaModal, #config #models-table #swatchModal {
-    position: absolute;
-    top: -30px;
-    left: 100%;
-  }
-}
-
-#config #cotas #cotas-details #cotaModal .modal-content, #config #models-table #swatchModal .modal-content {
-  padding-left: 2rem;
-  position: relative;
-}
-
-#config #cotas #cotas-details #cotaModal .modal-content .modal-header, #config #models-table #swatchModal .modal-content .modal-header {
-  padding-bottom: 0 !important;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  border-color: transparent;
-}
-
-#config #cotas #cotas-details #cotaModal .modal-content .modal-header h5.modal-title, #config #models-table #swatchModal .modal-content .modal-header h5.modal-title {
-  font-size: 0.9rem;
-  font-weight: bold;
-}
-
-#config #cotas #cotas-details #cotaModal .modal-content .modal-header img, #config #models-table #swatchModal .modal-content .modal-header img {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  width: 15px;
-  cursor: pointer;
+#config .popover {
+  font-family: inherit;
+  top: 55px !important;
 }
 
 @media (min-width: 992px) {
-  #config #cotas #cotas-details #cotaModal .modal-content .modal-header img, #config #models-table #swatchModal .modal-content .modal-header img {
-    width: 20px;
+  #config .popover {
+    top: 90px !important;
   }
 }
 
-#config #cotas #cotas-details #cotaModal .modal-content .modal-body, #config #models-table #swatchModal .modal-content .modal-body {
-  font-size: 0.8rem;
-  color: #AFADAD;
-}
-
-#config .popover {
-  font-family: inherit;
-  top: 60px !important;
+@media (max-width: 575.98px) {
+  #config .popover {
+    top: -20% !important;
+  }
+  #config .bs-popover-right.popover {
+    left: -15% !important;
+  }
+  #config .bs-popover-left.popover {
+    left: 15% !important;
+  }
+  #config .bs-popover-top.popover {
+    left: 7.5% !important;
+    top: 0 !important;
+  }
 }
 
 #config .popover .arrow::before, #config .popover .arrow::after {
@@ -374,19 +322,14 @@ html body *:focus {
           padding-inline-start: 0;
 }
 
-#config section:not(.container) {
+#config section:not(.container):not(#models-table) {
   padding-top: 80px;
 }
 
 @media (min-width: 768px) {
-  #config section:not(.container) {
+  #config section:not(.container):not(#models-table) {
     padding-top: 120px;
   }
-}
-
-#config.modal-open {
-  overflow: visible;
-  padding-right: 0 !important;
 }
 
 #config #cotas {
@@ -395,40 +338,40 @@ html body *:focus {
 }
 
 #config #cotas .profile-col, #config #cotas svg,
-#config #cotas img:not(.close-modal) {
+#config #cotas img {
   height: 330px;
 }
 
 @media (max-width: 575.98px) {
   #config #cotas .profile-col, #config #cotas svg,
-  #config #cotas img:not(.close-modal) {
+  #config #cotas img {
     margin-bottom: 20px;
   }
 }
 
 @media (min-width: 576px) and (max-width: 991.98px) {
   #config #cotas .profile-col, #config #cotas svg,
-  #config #cotas img:not(.close-modal) {
+  #config #cotas img {
     height: 350px;
   }
 }
 
 @media (min-width: 992px) {
   #config #cotas .profile-col, #config #cotas svg,
-  #config #cotas img:not(.close-modal) {
+  #config #cotas img {
     height: 570px;
   }
 }
 
 #config #cotas .profile-col .plus-icon, #config #cotas svg .plus-icon,
-#config #cotas img:not(.close-modal) .plus-icon {
+#config #cotas img .plus-icon {
   position: relative;
   -webkit-transition: fill .5s;
   transition: fill .5s;
 }
 
 #config #cotas .profile-col .plus-icon:hover, #config #cotas svg .plus-icon:hover,
-#config #cotas img:not(.close-modal) .plus-icon:hover {
+#config #cotas img .plus-icon:hover {
   fill: #212529;
 }
 
@@ -565,7 +508,7 @@ html body *:focus {
           animation-timing-function: ease-in-out;
 }
 
-@keyframes fade-in {
+@-webkit-keyframes fade-in {
   0% {
     opacity: 0;
   }
@@ -574,8 +517,13 @@ html body *:focus {
   }
 }
 
-#config #cotas #cotas-details #cotaModal {
-  left: 0;
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @media (max-width: 575.98px) {
@@ -608,51 +556,48 @@ html body *:focus {
 
 @media (min-width: 992px) {
   #config #choose-models .col-sm-6 {
-    padding-top: 200px;
+    padding-top: 175px;
   }
 }
 
-#config #choose-models .col-sm-6 .img-wrapper {
+#config #choose-models .col-sm-6 #animate-container {
   position: relative;
   width: 100%;
 }
 
-#config #choose-models .col-sm-6 .img-wrapper img:not(.null) {
-  -webkit-transition: width, bottom, left, 1s ease-in-out;
-  transition: width, bottom, left, 1s ease-in-out;
-}
-
-#config #choose-models .col-sm-6 .img-wrapper img.front {
+#config #choose-models .col-sm-6 #animate-container img.front {
   bottom: 0;
   left: 0;
 }
 
-#config #choose-models .col-sm-6 .img-wrapper img.front.animate {
+#config #choose-models .col-sm-6 #animate-container img.front.animate {
   width: 195px !important;
   position: absolute;
-  bottom: -125px;
+  bottom: 0;
   left: -45%;
+  -webkit-transition: width, bottom, left, 1s ease-in-out;
+  transition: width, bottom, left, 1s ease-in-out;
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
-  #config #choose-models .col-sm-6 .img-wrapper img.front.animate {
+  #config #choose-models .col-sm-6 #animate-container img.front.animate {
     bottom: -30%;
     left: -60%;
   }
 }
 
-#config #choose-models .col-sm-6 .img-wrapper img.null {
+#config #choose-models .col-sm-6 #animate-container img.null {
   position: absolute;
   top: 0;
   left: 0;
 }
 
-#config #choose-models .col-sm-6 .img-wrapper img.null.animate {
+#config #choose-models .col-sm-6 #animate-container img.null.animate {
   position: relative;
   opacity: 0;
 }
 
-#config #choose-models .col-sm-6 .img-wrapper img.back {
+#config #choose-models .col-sm-6 #animate-container img.back {
   position: absolute;
   left: 15%;
   top: -15%;
@@ -661,24 +606,30 @@ html body *:focus {
 }
 
 @media (min-width: 576px) {
-  #config #choose-models .col-sm-6 .img-wrapper img.back {
+  #config #choose-models .col-sm-6 #animate-container img.back {
     left: 40%;
     top: -25%;
   }
 }
 
-#config #choose-models .col-sm-6 .img-wrapper img.back.animate {
+#config #choose-models .col-sm-6 #animate-container img.back.animate {
   width: 195px !important;
   top: auto;
-  bottom: -125px;
+  bottom: 0;
   left: 60%;
+  -webkit-transition: width, bottom, left, 1s ease-in-out;
+  transition: width, bottom, left, 1s ease-in-out;
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
-  #config #choose-models .col-sm-6 .img-wrapper img.back.animate {
+  #config #choose-models .col-sm-6 #animate-container img.back.animate {
     bottom: -30%;
     left: 50%;
   }
+}
+
+#config #models-table .border-bottom {
+  padding-bottom: 45px;
 }
 
 @media (max-width: 575.98px) {
@@ -915,11 +866,6 @@ html body *:focus {
   }
 }
 
-#config #customize .customize-img {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-}
-
 @media (max-width: 767.98px) {
   #config #custom-models {
     overflow-x: scroll;
@@ -968,8 +914,8 @@ html body *:focus {
   position: fixed;
   width: 100%;
   top: 0;
-  z-index: 1055;
-  height: 54px;
+  z-index: 1065;
+  height: 60px;
   background-color: black;
 }
 
@@ -977,19 +923,54 @@ html body *:focus {
   color: white !important;
 }
 
+@media (min-width: 1200px) {
+  .navbar .nav-link {
+    padding-top: 1rem;
+  }
+}
+
+.navbar .navbar-brand {
+  padding-top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 1199.98px) {
+  .navbar .navbar-brand {
+    -ms-flex-item-align: start;
+        -ms-grid-row-align: start;
+        align-self: start;
+  }
+}
+
 .navbar .navbar-brand > img {
   width: 150px;
+}
+
+@media (max-width: 991.98px) {
+  .navbar .navbar-toggler {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-item-align: start;
+        align-self: start;
+  }
 }
 
 .navbar .navbar-collapse {
   background-color: black;
 }
 
-.navbar .navbar-collapse .nav-item {
-  padding: 0;
+@media (max-width: 991.98px) {
+  .navbar .nav-left {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
 }
 
-.navbar .cart {
+.navbar .nav-left .cart {
   width: 40px;
 }
 
@@ -1020,6 +1001,12 @@ footer .container h2, footer .container a, footer .container p {
 
 footer .container h2 {
   font-weight: bold;
+}
+
+footer .container a:hover {
+  color: #AFADAD;
+  -webkit-transition: color .5s;
+  transition: color .5s;
 }
 
 footer .container p {

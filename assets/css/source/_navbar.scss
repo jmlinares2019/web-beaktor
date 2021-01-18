@@ -2,27 +2,56 @@
     position: fixed;
     width: 100%;
     top: 0;
-    z-index: 1065; // override modals
-    height: 54px;
+    z-index: 1065; // overlap modals
+    height: 60px;
     background-color: black;
 
     .nav-link{
         color: white !important;
+
+        @include desktop-up{
+            padding-top: 1rem;
+        }
     }
 
-    .navbar-brand > img{
-        width: 150px;
+    .navbar-brand{
+        padding-top: 0;
+        display: flex;
+
+        @include desktop-down{
+            align-self: start;
+        }
+
+        > img{
+            width: 150px;
+        }
+    }
+
+    .navbar-toggler{
+
+        @include tablet-landscape-down{
+            display: flex;
+            align-self: start;
+        }
+        
     }
 
     .navbar-collapse{
         background-color: black;
-    
-        .nav-item{
-            padding: 0;
+    }
+
+    .nav-left{
+
+        @include tablet-landscape-down{
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        .cart{
+            width: 40px;
         }
     }
 
-    .cart{
-        width: 40px;
-    }
+    
 }
