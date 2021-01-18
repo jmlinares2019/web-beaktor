@@ -2,7 +2,7 @@
 
     //// General
 
-    section:not(.container){
+    section:not(.container):not(#models-table){
         padding-top: 80px;
 
         @include tablet-portrait-up{
@@ -182,16 +182,13 @@
             }
 
             @include tablet-landscape-up{
-                padding-top: 200px;
+                padding-top: 175px;
+                //&.animate --> padding-top: 60px;
             }
 
-            .img-wrapper{
+            #animate-container{
                 position: relative;
                 width: 100%;
-
-                img:not(.null){
-                    transition: width, bottom, left, 1s ease-in-out;
-                }
 
                 img.front{
                     bottom: 0;
@@ -199,8 +196,9 @@
                     &.animate{
                         width: 195px !important;
                         position: absolute;
-                        bottom: -125px;
+                        bottom: 0;
                         left: -45%;
+                        transition: width, bottom, left, 1s ease-in-out;
 
                         @include phone-to-tablet-portrait{
                             bottom: -30%;
@@ -233,8 +231,9 @@
                     &.animate{
                         width: 195px !important;
                         top: auto;
-                        bottom: -125px;
+                        bottom: 0;
                         left: 60%;
+                        transition: width, bottom, left, 1s ease-in-out;
 
                         @include phone-to-tablet-portrait{
                             bottom: -30%;
@@ -243,6 +242,7 @@
                     }
                 }
             }
+
         }
         
     }
