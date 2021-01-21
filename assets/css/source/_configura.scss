@@ -150,7 +150,7 @@
 
     #cotas-details{
 
-        .col-sm-9{ // give own class-name!
+        .col-sm-9{
 
             @include phone-only{
                 padding: 0;
@@ -173,70 +173,78 @@
 
     #choose-models{
 
-        .col-sm-6{ // give own class-name!
-
+        #animate-container{
             padding-top: 40px;
+            transition: padding 1s ease-in-out;
 
             @include phone-to-tablet-landscape{
-                padding-top: 100px;
+                &:not(.animate){
+                    padding-top: 100px;
+                }
             }
 
             @include tablet-landscape-up{
-                padding-top: 175px;
-                //&.animate --> padding-top: 60px;
+                &:not(.animate){
+                    padding-top: 175px;
+                }
             }
 
-            #animate-container{
+            .img-wrapper{
                 position: relative;
                 width: 100%;
 
+                img{
+                    transition: width, bottom, left, 1s ease-in-out;
+                }
+
                 img.front{
-                    bottom: 0;
+                    position: absolute;
                     left: 0;
+                    bottom: 0;
                     &.animate{
                         width: 195px !important;
-                        position: absolute;
-                        bottom: 0;
                         left: -45%;
-                        transition: width, bottom, left, 1s ease-in-out;
-
+                        
                         @include phone-to-tablet-portrait{
-                            bottom: -30%;
                             left: -60%;
                         }
-                    } 
+                    }
                 }
 
                 img.null{
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    &.animate{
-                        position: relative;
-                        opacity: 0;
+                    opacity: 0;
+
+                    @include tablet-landscape-up{
+                        &.animate{
+                            width: 50% !important;
+                        }
                     }
                 }
                 
                 img.back{
                     position: absolute; 
                     left: 15%;
-                    top: -15%;
                     bottom: 50px;
                     z-index: -1;
         
-                    @include phone-up{
+                    @include phone-to-tablet-landscape{
                         left: 40%;
-                        top: -25%;
+                        bottom: 100px;
                     }
+
+                    @include tablet-landscape-up{
+                        left: 40%;
+                        bottom: 150px;
+                    }
+
                     &.animate{
                         width: 195px !important;
                         top: auto;
-                        bottom: 0;
                         left: 60%;
+                        bottom: 0;
                         transition: width, bottom, left, 1s ease-in-out;
 
                         @include phone-to-tablet-portrait{
-                            bottom: -30%;
                             left: 50%;
                         }
                     }
@@ -244,7 +252,7 @@
             }
 
         }
-        
+           
     }
 
     #models-table{
@@ -263,7 +271,7 @@
                 bottom: 45px;
             }
 
-            .col-2{ // give own class-name!
+            .col-2{
 
                 .row{
                     flex-direction: column;
@@ -288,7 +296,7 @@
                 
             }
 
-            .col-md-9 > .row{ // give own class-name!
+            .col-md-9 > .row{
 
                 @include phone-only{
                     flex-wrap: nowrap;
@@ -313,7 +321,7 @@
         #table-colores,
         #table-materiales{
 
-            .col-sm-6 .row{ // give own class-name!
+            .col-sm-6 .row{
                 width: 100%;
                 padding-left: 15px;
 
