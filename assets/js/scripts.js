@@ -9,9 +9,10 @@ $(document).ready(function(){
 // Configura page scroll transitions
 
 $(window).scroll(function(){
-  // table models animation
-    if ( $(window).width() > 992 ){ // responsive trigger 
-      if ( window.scrollY > 1200 ){
+  // table models animation - responsive trigger
+    // tablet-lanscape up
+    if ( $(window).width() > 992 ){
+      if (window.scrollY > 1000){
         $('#animate-container').addClass('animate');
         $('.beaktor').addClass('animate');
       } else {
@@ -20,15 +21,28 @@ $(window).scroll(function(){
           $('.beaktor').removeClass('animate');
         }
       }
+      
+    // tablet-portrait to tablet-landscape  
     } else if ( $(window).width() < 991.98 && $(window).width() > 768 ){
-      if ( window.scrollY > 900 ){
+      if ( window.scrollY > 845 ){
         $('#animate-container').addClass('animate');
         $('.beaktor').addClass('animate');
+      } else {
+        if ( $('#animate-container').hasClass('animate') ){
+          $('#animate-container').removeClass('animate');
+          $('.beaktor').removeClass('animate');
+        }
       }
+    // tablet-portrait to phone-landscape  
     } else if ( $(window).width() < 767.98 && $(window).width() > 576 ){
-      if ( window.scrollY > 750 ){
+      if ( window.scrollY > 715 ){
         $('#animate-container').addClass('animate');
         $('.beaktor').addClass('animate');
+      } else {
+        if ( $('#animate-container').hasClass('animate') ){
+          $('#animate-container').removeClass('animate');
+          $('.beaktor').removeClass('animate');
+        }
       }
     } 
   // cotas animation
