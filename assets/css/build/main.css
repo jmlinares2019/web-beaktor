@@ -544,86 +544,93 @@ html body *:focus {
   }
 }
 
-#config #choose-models .col-sm-6 {
+#config #choose-models #animate-container {
   padding-top: 40px;
+  -webkit-transition: padding 1s ease-in-out;
+  transition: padding 1s ease-in-out;
 }
 
 @media (min-width: 576px) and (max-width: 991.98px) {
-  #config #choose-models .col-sm-6 {
+  #config #choose-models #animate-container:not(.animate) {
     padding-top: 100px;
   }
 }
 
 @media (min-width: 992px) {
-  #config #choose-models .col-sm-6 {
+  #config #choose-models #animate-container:not(.animate) {
     padding-top: 175px;
   }
 }
 
-#config #choose-models .col-sm-6 #animate-container {
+#config #choose-models #animate-container .img-wrapper {
   position: relative;
   width: 100%;
 }
 
-#config #choose-models .col-sm-6 #animate-container img.front {
-  bottom: 0;
-  left: 0;
-}
-
-#config #choose-models .col-sm-6 #animate-container img.front.animate {
-  width: 195px !important;
-  position: absolute;
-  bottom: 0;
-  left: -45%;
+#config #choose-models #animate-container .img-wrapper img {
   -webkit-transition: width, bottom, left, 1s ease-in-out;
   transition: width, bottom, left, 1s ease-in-out;
 }
 
+#config #choose-models #animate-container .img-wrapper img.front {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+#config #choose-models #animate-container .img-wrapper img.front.animate {
+  width: 195px !important;
+  left: -45%;
+}
+
 @media (min-width: 576px) and (max-width: 767.98px) {
-  #config #choose-models .col-sm-6 #animate-container img.front.animate {
-    bottom: -30%;
+  #config #choose-models #animate-container .img-wrapper img.front.animate {
     left: -60%;
   }
 }
 
-#config #choose-models .col-sm-6 #animate-container img.null {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-#config #choose-models .col-sm-6 #animate-container img.null.animate {
-  position: relative;
+#config #choose-models #animate-container .img-wrapper img.null {
   opacity: 0;
 }
 
-#config #choose-models .col-sm-6 #animate-container img.back {
+@media (min-width: 992px) {
+  #config #choose-models #animate-container .img-wrapper img.null.animate {
+    width: 50% !important;
+  }
+}
+
+#config #choose-models #animate-container .img-wrapper img.back {
   position: absolute;
   left: 15%;
-  top: -15%;
   bottom: 50px;
   z-index: -1;
 }
 
-@media (min-width: 576px) {
-  #config #choose-models .col-sm-6 #animate-container img.back {
+@media (min-width: 576px) and (max-width: 991.98px) {
+  #config #choose-models #animate-container .img-wrapper img.back {
     left: 40%;
-    top: -25%;
+    bottom: 100px;
   }
 }
 
-#config #choose-models .col-sm-6 #animate-container img.back.animate {
+@media (min-width: 992px) {
+  #config #choose-models #animate-container .img-wrapper img.back {
+    left: 40%;
+    bottom: 150px;
+  }
+}
+
+#config #choose-models #animate-container .img-wrapper img.back.animate {
   width: 195px !important;
   top: auto;
-  bottom: 0;
   left: 60%;
+  bottom: 0;
   -webkit-transition: width, bottom, left, 1s ease-in-out;
   transition: width, bottom, left, 1s ease-in-out;
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
-  #config #choose-models .col-sm-6 #animate-container img.back.animate {
-    bottom: -30%;
+  #config #choose-models #animate-container .img-wrapper img.back.animate {
     left: 50%;
   }
 }
