@@ -1,5 +1,9 @@
 #config{
 
+    div, section{
+        border: 1px solid royalblue;
+    }
+
     //// General
 
     section:not(.container):not(#models-table){
@@ -257,51 +261,48 @@
 
     #models-table{
 
-        .border-bottom{ // Bootstrap class
-            padding-bottom: 45px; // adds property
+        .border-bottom:not(.row-name){ // Adds properties to Bootstrap class
+            padding-bottom: 2.1rem; 
+
+            @include tablet-portrait-down{
+                border-color: transparent !important;
+            }
         }
 
-        @include phone-only{
-            overflow-x: scroll;
+        .border-bottom.row-name{ 
+            padding-bottom: .8rem;
         }
 
         .table-row{
             padding: {
-                top: 45px;
-                bottom: 45px;
+                top: 15px;
+                bottom: 15px;
             }
 
-            .col-2{
-
-                .row{
-                    flex-direction: column;
-    
-                    .row-icon > img{
-                        width: 35px;
-                    }
-            
-                    .row-name{
-                        padding-top: 1rem;
-                        color: $grey;
-                    }
+            @include phone-up{
+                padding: {
+                    top: 45px;
+                    bottom: 45px;
                 }
-    
             }
 
             .row-name{
+                font-size: 1rem;
                 color: $grey;
                 &::before{
                     @extend %row-icon;
+                    
+                }
+                &.border-bottom::before{
+                    @extend %row-icon;
+                    position: inherit;
+                    display: inline-block;
+                    margin-right: 1rem;
+                    
                 }
                 
             }
 
-            .col-md-9 > .row{
-
-                @include phone-only{
-                    flex-wrap: nowrap;
-                }
-            }
         } 
 
         #table-header h3{
@@ -316,21 +317,40 @@
         #table-conexiones ul.feat-list{
             padding-inline-start: 0.9em;
             font-weight: bold;
+
+            @include phone-only{
+                list-style-type: none;
+                text-align: center;
+            }
         }
 
         #table-colores,
         #table-materiales{
 
-            .col-sm-6 .row{
-                width: 100%;
-                padding-left: 15px;
+            .col-6 .row{
+                //width: 100%;
+                padding-left: 1rem;
+
+                @include phone-only{
+                    padding-left: 2.5rem;
+                }
 
                 .swatch{
                     position: relative;
                     width: 45px;
                     height: 45px;
                     padding: 0;
-                    margin-right: 0.5em;
+                    margin: {
+                        right: .5em;
+                        bottom: .5em;
+                    }
+                        @include phone-only{
+                            margin: {
+                                right: 1.4em;
+                                top: 1.4em;
+                            }
+                            
+                        }
                     border-radius: .5em;
                     cursor: pointer;
                     &:focus{
@@ -370,13 +390,48 @@
             ul.feat-list{
                 list-style-type: none;
                 padding-inline-start: 0;
+
+                @include phone-only{
+                    text-align: center;
+
+                    strong{
+                        display: block;
+                    }
+
+                }
+
             }
         }
 
         #table-cotas{
 
-            img{
-                width: 285px;
+            .col-6{
+                flex-wrap: wrap;
+            
+                img{
+                    height: 190px;
+
+                    @include phone-to-tablet-landscape{
+                        height: 150px;
+                    }
+
+                    @include phone-only{
+                        &.left-prof{
+                            order: 2;
+                            margin-top: 50px;
+                        }
+                        &.right-prof{
+                            order: 3;
+                            margin-top: 50px;
+                        }
+                        &.front{
+                            flex-basis: 100%;
+                            order: 1;
+                        }
+                    }
+                    
+                }
+
             }
         }
 
