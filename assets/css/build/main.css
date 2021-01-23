@@ -125,7 +125,7 @@
           box-shadow: inset .1em .1em 20px 0px #00000020;
 }
 
-#config #models-table .table-row .row-name::before {
+#config #models-table .table-row .row-name::before, #config #models-table .table-row .row-name.border-bottom::before {
   display: block;
   width: 35px;
   position: absolute;
@@ -320,6 +320,10 @@ html body *:focus {
   list-style-type: none;
   -webkit-padding-start: 0;
           padding-inline-start: 0;
+}
+
+#config div, #config section {
+  border: 1px solid royalblue;
 }
 
 #config section:not(.container):not(#models-table) {
@@ -635,46 +639,41 @@ html body *:focus {
   }
 }
 
-#config #models-table .border-bottom {
-  padding-bottom: 45px;
+#config #models-table .border-bottom:not(.row-name) {
+  padding-bottom: 2.1rem;
 }
 
-@media (max-width: 575.98px) {
-  #config #models-table {
-    overflow-x: scroll;
+@media (max-width: 767.98px) {
+  #config #models-table .border-bottom:not(.row-name) {
+    border-color: transparent !important;
   }
+}
+
+#config #models-table .border-bottom.row-name {
+  padding-bottom: .8rem;
 }
 
 #config #models-table .table-row {
-  padding-top: 45px;
-  padding-bottom: 45px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
-#config #models-table .table-row .col-2 .row {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-#config #models-table .table-row .col-2 .row .row-icon > img {
-  width: 35px;
-}
-
-#config #models-table .table-row .col-2 .row .row-name {
-  padding-top: 1rem;
-  color: #AFADAD;
+@media (min-width: 576px) {
+  #config #models-table .table-row {
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
 }
 
 #config #models-table .table-row .row-name {
+  font-size: 1rem;
   color: #AFADAD;
 }
 
-@media (max-width: 575.98px) {
-  #config #models-table .table-row .col-md-9 > .row {
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-  }
+#config #models-table .table-row .row-name.border-bottom::before {
+  position: inherit;
+  display: inline-block;
+  margin-right: 1rem;
 }
 
 #config #models-table #table-header h3 {
@@ -692,59 +691,82 @@ html body *:focus {
   font-weight: bold;
 }
 
-#config #models-table #table-colores .col-sm-6 .row,
-#config #models-table #table-materiales .col-sm-6 .row {
-  width: 100%;
-  padding-left: 15px;
+@media (max-width: 575.98px) {
+  #config #models-table #table-iluminacion ul.feat-list,
+  #config #models-table #table-conexiones ul.feat-list {
+    list-style-type: none;
+    text-align: center;
+  }
 }
 
-#config #models-table #table-colores .col-sm-6 .row .swatch,
-#config #models-table #table-materiales .col-sm-6 .row .swatch {
+#config #models-table #table-colores .col-6 .row,
+#config #models-table #table-materiales .col-6 .row {
+  padding-left: 1rem;
+}
+
+@media (max-width: 575.98px) {
+  #config #models-table #table-colores .col-6 .row,
+  #config #models-table #table-materiales .col-6 .row {
+    padding-left: 2.5rem;
+  }
+}
+
+#config #models-table #table-colores .col-6 .row .swatch,
+#config #models-table #table-materiales .col-6 .row .swatch {
   position: relative;
   width: 45px;
   height: 45px;
   padding: 0;
-  margin-right: 0.5em;
+  margin-right: .5em;
+  margin-bottom: .5em;
   border-radius: .5em;
   cursor: pointer;
 }
 
-#config #models-table #table-colores .col-sm-6 .row .swatch:focus,
-#config #models-table #table-materiales .col-sm-6 .row .swatch:focus {
+@media (max-width: 575.98px) {
+  #config #models-table #table-colores .col-6 .row .swatch,
+  #config #models-table #table-materiales .col-6 .row .swatch {
+    margin-right: 1.4em;
+    margin-top: 1.4em;
+  }
+}
+
+#config #models-table #table-colores .col-6 .row .swatch:focus,
+#config #models-table #table-materiales .col-6 .row .swatch:focus {
   cursor: auto;
   outline-width: 0px;
 }
 
 @media (max-width: 991.98px) {
-  #config #models-table #table-colores .col-sm-6 .row .swatch,
-  #config #models-table #table-materiales .col-sm-6 .row .swatch {
+  #config #models-table #table-colores .col-6 .row .swatch,
+  #config #models-table #table-materiales .col-6 .row .swatch {
     width: 35px;
     height: 35px;
   }
 }
 
-#config #models-table #table-colores .col-sm-6 .row .swatch img,
-#config #models-table #table-materiales .col-sm-6 .row .swatch img {
+#config #models-table #table-colores .col-6 .row .swatch img,
+#config #models-table #table-materiales .col-6 .row .swatch img {
   width: 100%;
 }
 
-#config #models-table #table-colores .col-sm-6 .row .swatch.blue,
-#config #models-table #table-materiales .col-sm-6 .row .swatch.blue {
+#config #models-table #table-colores .col-6 .row .swatch.blue,
+#config #models-table #table-materiales .col-6 .row .swatch.blue {
   background-color: #7595B3;
 }
 
-#config #models-table #table-colores .col-sm-6 .row .swatch.pink,
-#config #models-table #table-materiales .col-sm-6 .row .swatch.pink {
+#config #models-table #table-colores .col-6 .row .swatch.pink,
+#config #models-table #table-materiales .col-6 .row .swatch.pink {
   background-color: #F6D0D5;
 }
 
-#config #models-table #table-colores .col-sm-6 .row .swatch.green,
-#config #models-table #table-materiales .col-sm-6 .row .swatch.green {
+#config #models-table #table-colores .col-6 .row .swatch.green,
+#config #models-table #table-materiales .col-6 .row .swatch.green {
   background-color: #CBD6D0;
 }
 
-#config #models-table #table-colores .col-sm-6 .row .swatch.grey,
-#config #models-table #table-materiales .col-sm-6 .row .swatch.grey {
+#config #models-table #table-colores .col-6 .row .swatch.grey,
+#config #models-table #table-materiales .col-6 .row .swatch.grey {
   background-color: #D4D3D4;
 }
 
@@ -754,8 +776,50 @@ html body *:focus {
           padding-inline-start: 0;
 }
 
-#config #models-table #table-cotas img {
-  width: 285px;
+@media (max-width: 575.98px) {
+  #config #models-table #table-dimensiones ul.feat-list {
+    text-align: center;
+  }
+  #config #models-table #table-dimensiones ul.feat-list strong {
+    display: block;
+  }
+}
+
+#config #models-table #table-cotas .col-6 {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#config #models-table #table-cotas .col-6 img {
+  height: 190px;
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+  #config #models-table #table-cotas .col-6 img {
+    height: 150px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  #config #models-table #table-cotas .col-6 img.left-prof {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    margin-top: 50px;
+  }
+  #config #models-table #table-cotas .col-6 img.right-prof {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    margin-top: 50px;
+  }
+  #config #models-table #table-cotas .col-6 img.front {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
 }
 
 @media (min-width: 1200px) {
