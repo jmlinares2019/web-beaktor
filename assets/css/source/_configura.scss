@@ -27,13 +27,14 @@
 
     #cotas{
 
-        overflow: hidden;
+        //overflow: hidden;
         position: relative;
         .profile-col, svg,
         img{
-            height: 330px;
+            //height: 330px;
             
             @include phone-only{
+                height: 200px;
                 margin-bottom: 20px;
             }
 
@@ -116,12 +117,12 @@
         #cotas-details{
             position: absolute;
             top: 0;
-            left: 0;
+            //left: 0;
 
-            @include phone-only{
+            /* @include phone-only{
                 top: auto;
                 bottom: 30px;
-            }
+            } */
 
             @include desktop-up{
                 left: 12.5%;
