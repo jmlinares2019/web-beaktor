@@ -12,7 +12,7 @@ $(window).scroll(function(){
   // table models animation - responsive trigger
     // tablet-lanscape up
     if ( $(window).width() > 992 ){
-      if (window.scrollY > 1000){
+      if (window.scrollY > 1200){
         $('#animate-container').addClass('animate');
         $('.beaktor').addClass('animate');
       } else {
@@ -46,8 +46,7 @@ $(window).scroll(function(){
       }
     // phone only  
     } else if ( $(window).width() < 575.98 ){
-      console.log(window.scrollY);
-      if (window.scrollY > 1000 ){
+      if (window.scrollY > 600 ){
         $('#animate-container').addClass('animate');
         $('.beaktor').addClass('animate');
       } else {
@@ -59,7 +58,7 @@ $(window).scroll(function(){
 
     }
   // cotas animation
-  if (window.pageYOffset > 250){
+  if (window.pageYOffset > 50){
     $('#cotas-indicadores').addClass('trigger-animation');
     $('#front-profile').addClass('trigger-animation');
     $('#left-profile').addClass('trigger-animation');
