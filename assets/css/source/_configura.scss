@@ -212,6 +212,12 @@
                         @include phone-to-tablet-portrait{
                             left: -60%;
                         }
+
+                        @include phone-only{
+                            width: 90px !important;
+                            left: 0;
+                            bottom: -225px;
+                        }
                     }
                 }
 
@@ -221,6 +227,12 @@
                     @include tablet-landscape-up{
                         &.animate{
                             width: 50% !important;
+                        }
+                    }
+
+                    @include phone-only{
+                        &.animate{
+                            width: 0% !important;
                         }
                     }
                 }
@@ -251,6 +263,13 @@
                         @include phone-to-tablet-portrait{
                             left: 50%;
                         }
+
+                        @include phone-only{
+                            width: 90px !important;
+                            left: auto;
+                            right: 0;
+                            bottom: -225px;
+                        }
                     }
                 }
             }
@@ -279,11 +298,18 @@
                 bottom: 15px;
             }
 
+            @include phone-only{
+                &#table-header{
+                    padding-bottom: 120px;
+                }
+            }
+
             @include phone-up{
                 padding: {
                     top: 45px;
                     bottom: 45px;
                 }
+                
             }
 
             .row-name{

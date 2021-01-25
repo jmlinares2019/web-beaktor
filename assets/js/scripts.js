@@ -44,7 +44,20 @@ $(window).scroll(function(){
           $('.beaktor').removeClass('animate');
         }
       }
-    } 
+    // phone only  
+    } else if ( $(window).width() < 575.98 ){
+      console.log(window.scrollY);
+      if (window.scrollY > 1000 ){
+        $('#animate-container').addClass('animate');
+        $('.beaktor').addClass('animate');
+      } else {
+        if ( $('#animate-container').hasClass('animate') ){
+          $('#animate-container').removeClass('animate');
+          $('.beaktor').removeClass('animate');
+        }
+      }
+
+    }
   // cotas animation
   if (window.pageYOffset > 250){
     $('#cotas-indicadores').addClass('trigger-animation');
