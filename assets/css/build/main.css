@@ -161,22 +161,20 @@
 
 @media (min-width: 992px) {
   #config .popover {
-    top: 90px !important;
+    top: 100px !important;
   }
 }
 
 @media (max-width: 575.98px) {
-  #config .popover {
-    top: -20% !important;
-  }
   #config .bs-popover-right.popover {
-    left: -15% !important;
+    left: -12.5% !important;
   }
   #config .bs-popover-left.popover {
-    left: 15% !important;
+    left: 12.5% !important;
   }
   #config .bs-popover-top.popover {
-    left: 7.5% !important;
+    -webkit-transform: translate3d(50px, 1915px, 0) !important;
+            transform: translate3d(50px, 1915px, 0) !important;
     top: 0 !important;
   }
 }
@@ -322,10 +320,6 @@ html body *:focus {
           padding-inline-start: 0;
 }
 
-#config div, #config section {
-  border: 1px solid royalblue;
-}
-
 #config section:not(.container):not(#models-table) {
   padding-top: 80px;
 }
@@ -337,7 +331,14 @@ html body *:focus {
 }
 
 #config #cotas {
+  overflow: hidden;
   position: relative;
+}
+
+@media (max-width: 575.98px) {
+  #config #cotas.trigger-animation {
+    height: 475px;
+  }
 }
 
 @media (max-width: 575.98px) {
@@ -379,14 +380,8 @@ html body *:focus {
 }
 
 #config #cotas #front-profile.trigger-animation {
-  -webkit-animation-name: fade-out;
-          animation-name: fade-out;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
+  -webkit-animation: fade-out 1s ease-in-out forwards;
+          animation: fade-out 1s ease-in-out forwards;
 }
 
 @-webkit-keyframes fade-out {
@@ -412,14 +407,8 @@ html body *:focus {
 }
 
 #config #cotas #left-profile.trigger-animation {
-  -webkit-animation-name: slide-left;
-          animation-name: slide-left;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
+  -webkit-animation: slide-left 1s ease-in-out forwards;
+          animation: slide-left 1s ease-in-out forwards;
 }
 
 @-webkit-keyframes slide-left {
@@ -445,14 +434,8 @@ html body *:focus {
 }
 
 #config #cotas #right-profile.trigger-animation {
-  -webkit-animation-name: slide-right;
-          animation-name: slide-right;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
+  -webkit-animation: slide-right 1s ease-in-out forwards;
+          animation: slide-right 1s ease-in-out forwards;
 }
 
 @-webkit-keyframes slide-right {
@@ -476,31 +459,15 @@ html body *:focus {
 #config #cotas #cotas-details {
   position: absolute;
   top: 0;
-  /* @include phone-only{
-                top: auto;
-                bottom: 30px;
-            } */
 }
 
-@media (min-width: 1200px) {
-  #config #cotas #cotas-details {
-    left: 12.5%;
-  }
-}
-
-#config #cotas #cotas-details svg {
+#config #cotas #cotas-details #cotas-indicadores {
   opacity: 0;
 }
 
-#config #cotas #cotas-details svg.trigger-animation {
-  -webkit-animation-name: fade-in;
-          animation-name: fade-in;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
+#config #cotas #cotas-details #cotas-indicadores.trigger-animation {
+  -webkit-animation: fade-in 2s ease-in-out forwards, upscale 2s ease-in-out forwards;
+          animation: fade-in 2s ease-in-out forwards, upscale 2s ease-in-out forwards;
 }
 
 @-webkit-keyframes fade-in {
@@ -518,6 +485,25 @@ html body *:focus {
   }
   100% {
     opacity: 1;
+  }
+}
+
+@media (max-width: 575.98px) {
+  @-webkit-keyframes upscale {
+    50% {
+      height: 200px;
+    }
+    100% {
+      height: 350px;
+    }
+  }
+  @keyframes upscale {
+    50% {
+      height: 200px;
+    }
+    100% {
+      height: 350px;
+    }
   }
 }
 
