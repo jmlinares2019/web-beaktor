@@ -1,9 +1,5 @@
 #config{
 
-/*     div, section{
-        border: 1px solid royalblue;
-    } */
-
     //// General
 
     section:not(.container):not(#models-table){
@@ -352,7 +348,6 @@
         #table-materiales{
 
             .col-6 .row{
-                //width: 100%;
                 padding-left: 1rem;
 
                 @include phone-only{
