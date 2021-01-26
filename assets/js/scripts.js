@@ -120,10 +120,8 @@ var owlOptions = {
   } 
 }
 
-$('#config').ready(function(){
-  $(".owl-carousel").owlCarousel(owlOptions);
-});
-
-
-
-
+if (window.location.pathname == '/configura.html'){
+  $(function(){
+    $(".owl-carousel").owlCarousel(owlOptions);
+  });
+}
