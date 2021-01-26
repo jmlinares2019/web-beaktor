@@ -1,8 +1,8 @@
 #config{
 
-    div, section{
+/*     div, section{
         border: 1px solid royalblue;
-    }
+    } */
 
     //// General
 
@@ -26,12 +26,17 @@
     //// End General
 
     #cotas{
-
-        //overflow: hidden;
+        overflow: hidden;
         position: relative;
+        
+        @include phone-only{
+            &.trigger-animation{
+                height: 475px;
+            }
+        }
+        
         .profile-col, svg,
         img{
-            //height: 330px;
             
             @include phone-only{
                 height: 200px;
@@ -61,10 +66,7 @@
         #front-profile{
             opacity: 1;
                 &.trigger-animation{
-                    animation-name: fade-out;
-                    animation-duration: 2s;
-                    animation-fill-mode: forwards;
-                    animation-timing-function: ease-in-out;
+                    animation: fade-out 1s ease-in-out forwards;
                     @keyframes fade-out{
                         0%{
                             opacity: 1;
@@ -79,10 +81,7 @@
         #left-profile{
             right: 0;
             &.trigger-animation{
-                animation-name: slide-left;
-                animation-duration: 1s;
-                animation-fill-mode: forwards;
-                animation-timing-function: ease-in-out;
+                animation: slide-left 1s ease-in-out forwards;
                 @keyframes slide-left{
                     0%{
                         right: 0;
@@ -98,10 +97,7 @@
         #right-profile{
             left: 0;
             &.trigger-animation{
-                animation-name: slide-right;
-                animation-duration: 1s;
-                animation-fill-mode: forwards;
-                animation-timing-function: ease-in-out;
+                animation: slide-right 1s ease-in-out forwards;
                 @keyframes slide-right{
                     0%{
                         left: 0;
@@ -117,24 +113,12 @@
         #cotas-details{
             position: absolute;
             top: 0;
-            //left: 0;
 
-            /* @include phone-only{
-                top: auto;
-                bottom: 30px;
-            } */
-
-            @include desktop-up{
-                left: 12.5%;
-            }
-
-            svg{
+            #cotas-indicadores{
                 opacity: 0;
+                
                 &.trigger-animation{
-                    animation-name: fade-in;
-                    animation-duration: 2s;
-                    animation-fill-mode: forwards;
-                    animation-timing-function: ease-in-out;
+                    animation: fade-in 2s ease-in-out forwards, upscale 2s ease-in-out forwards;
                     @keyframes fade-in{
                         0%{
                             opacity: 0;
@@ -144,7 +128,20 @@
                         }
                     }
                 }
-                    
+                @include phone-only{
+                    &.trigger-animation-2{
+                        @keyframes upscale{
+                            50%{
+                                height: 200px;
+                            
+                            }
+                            100%{
+                                height: 350px;
+                            }
+                        }
+                    }
+                }
+                
             }
 
         }
