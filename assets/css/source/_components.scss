@@ -121,19 +121,18 @@
     top: 55px !important;
 
     @include tablet-landscape-up{
-        top: 90px !important;
+        top: 100px !important;
     }
 
     @include phone-only{
-        top: -20% !important;
         &.bs-popover-right{
-            left: -15% !important;
+            left: -12.5% !important;
         }
         &.bs-popover-left{
-            left: 15% !important;
+            left: 12.5% !important;
         }
         &.bs-popover-top{
-            left: 7.5% !important;
+            transform: translate3d(50px, 1915px, 0) !important;
             top: 0 !important;
         }
     }
