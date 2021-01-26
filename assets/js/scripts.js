@@ -8,65 +8,47 @@ $(document).ready(function(){
 
 // Configura page scroll transitions
 
-$(window).scroll(function(){
-  // cotas animation
-  if (window.pageYOffset > 50){
-    $('#cotas-indicadores').addClass('trigger-animation-2');
-    $('#cotas-indicadores').addClass('trigger-animation');
-    $('#front-profile').addClass('trigger-animation');
-    $('#left-profile').addClass('trigger-animation');
-    $('#right-profile').addClass('trigger-animation');
-    $('#cotas').addClass('trigger-animation');
+function beaktorAnimateBack(animated){
+  if ( animated.length > 0 ){
+    animated.removeClass('animate');
   }
-  // table models animation - responsive trigger
-    // tablet-lanscape up
-    if ( $(window).width() > 992 ){
-      if (window.scrollY > 1200){
-        $('#animate-container').addClass('animate');
-        $('.beaktor').addClass('animate');
-      } else {
-        if ( $('#animate-container').hasClass('animate') ){
-          $('#animate-container').removeClass('animate');
-          $('.beaktor').removeClass('animate');
-        }
-      }
-      
-    // tablet-portrait to tablet-landscape  
-    } else if ( $(window).width() < 991.98 && $(window).width() >= 768 ){
-      if ( window.scrollY > 845 ){
-        $('#animate-container').addClass('animate');
-        $('.beaktor').addClass('animate');
-      } else {
-        if ( $('#animate-container').hasClass('animate') ){
-          $('#animate-container').removeClass('animate');
-          $('.beaktor').removeClass('animate');
-        }
-      }
-    // tablet-portrait to phone-landscape  
-    } else if ( $(window).width() < 767.98 && $(window).width() >= 576 ){
-      if ( window.scrollY > 715 ){
-        $('#animate-container').addClass('animate');
-        $('.beaktor').addClass('animate');
-      } else {
-        if ( $('#animate-container').hasClass('animate') ){
-          $('#animate-container').removeClass('animate');
-          $('.beaktor').removeClass('animate');
-        }
-      }
-    // phone only  
-    } else if ( $(window).width() < 575.98 ){
-      if (window.scrollY > 600 ){
-        $('#animate-container').addClass('animate');
-        $('.beaktor').addClass('animate');
-      } else {
-        if ( $('#animate-container').hasClass('animate') ){
-          $('#animate-container').removeClass('animate');
-          $('.beaktor').removeClass('animate');
-        }
-      }
+}
 
+if ( $('body').is('#config') ){ // Trigger carousel only @ /configura.html
+  $(window).scroll(function(){
+    var $scrollDown = window.scrollY;
+    // cotas animation
+    var animatable = $('.will-animate');
+    if ( $scrollDown > 50){
+      animatable.addClass('trigger-animation');
     }
-});
+    // table models animation - responsive trigger
+    var $deviceWidth = $(window).width();
+    var animatables = $('.to-animate');
+    var animated = $('.animate');
+      // tablet-lanscape up
+      if ( $deviceWidth > 992 ){
+        if ( $scrollDown > 1200){
+          animatables.addClass('animate');
+        } else { beaktorAnimateBack(animated) }
+      // tablet-portrait to tablet-landscape  
+      } else if ( $deviceWidth < 991.98 && $deviceWidth >= 768 ){
+        if ( $scrollDown > 845 ){
+          animatables.addClass('animate');
+        } else { beaktorAnimateBack(animated) }
+      // tablet-portrait to phone-landscape  
+      } else if ( $deviceWidth < 767.98 && $deviceWidth >= 576 ){
+        if ( $scrollDown > 715 ){
+          animatables.addClass('animate');
+        } else { beaktorAnimateBack(animated) }
+      // phone only  
+      } else if ( $deviceWidth < 575.98 ){
+        if ( $scrollDown > 600 ){
+          animatables.addClass('animate');
+        } else { beaktorAnimateBack(animated) }
+      }
+  });
+}
 
 // Initialize tooltip-popovers
 
@@ -120,8 +102,8 @@ var owlOptions = {
   } 
 }
 
-if (window.location.pathname == '/configura.html'){
-  $(function(){
-    $(".owl-carousel").owlCarousel(owlOptions);
-  });
-}
+$(function(){
+    if ( $('body').is('#config') ){ // Trigger carousel only @ /configura.html
+      $(".owl-carousel").owlCarousel(owlOptions);
+  }
+});
