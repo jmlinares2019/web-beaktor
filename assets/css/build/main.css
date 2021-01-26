@@ -125,7 +125,7 @@
           box-shadow: inset .1em .1em 20px 0px #00000020;
 }
 
-#config #models-table .table-row .row-name::before {
+#config #models-table .table-row .row-name::before, #config #models-table .table-row .row-name.border-bottom::before {
   display: block;
   width: 35px;
   position: absolute;
@@ -161,22 +161,20 @@
 
 @media (min-width: 992px) {
   #config .popover {
-    top: 90px !important;
+    top: 100px !important;
   }
 }
 
 @media (max-width: 575.98px) {
-  #config .popover {
-    top: -20% !important;
-  }
   #config .bs-popover-right.popover {
-    left: -15% !important;
+    left: -12.5% !important;
   }
   #config .bs-popover-left.popover {
-    left: 15% !important;
+    left: 12.5% !important;
   }
   #config .bs-popover-top.popover {
-    left: 7.5% !important;
+    -webkit-transform: translate3d(50px, 1915px, 0) !important;
+            transform: translate3d(50px, 1915px, 0) !important;
     top: 0 !important;
   }
 }
@@ -337,14 +335,16 @@ html body *:focus {
   position: relative;
 }
 
-#config #cotas .profile-col, #config #cotas svg,
-#config #cotas img {
-  height: 330px;
+@media (max-width: 575.98px) {
+  #config #cotas.trigger-animation {
+    height: 475px;
+  }
 }
 
 @media (max-width: 575.98px) {
   #config #cotas .profile-col, #config #cotas svg,
   #config #cotas img {
+    height: 200px;
     margin-bottom: 20px;
   }
 }
@@ -380,14 +380,8 @@ html body *:focus {
 }
 
 #config #cotas #front-profile.trigger-animation {
-  -webkit-animation-name: fade-out;
-          animation-name: fade-out;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
+  -webkit-animation: fade-out 1s ease-in-out forwards;
+          animation: fade-out 1s ease-in-out forwards;
 }
 
 @-webkit-keyframes fade-out {
@@ -413,14 +407,8 @@ html body *:focus {
 }
 
 #config #cotas #left-profile.trigger-animation {
-  -webkit-animation-name: slide-left;
-          animation-name: slide-left;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
+  -webkit-animation: slide-left 1s ease-in-out forwards;
+          animation: slide-left 1s ease-in-out forwards;
 }
 
 @-webkit-keyframes slide-left {
@@ -446,14 +434,8 @@ html body *:focus {
 }
 
 #config #cotas #right-profile.trigger-animation {
-  -webkit-animation-name: slide-right;
-          animation-name: slide-right;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
+  -webkit-animation: slide-right 1s ease-in-out forwards;
+          animation: slide-right 1s ease-in-out forwards;
 }
 
 @-webkit-keyframes slide-right {
@@ -477,35 +459,15 @@ html body *:focus {
 #config #cotas #cotas-details {
   position: absolute;
   top: 0;
-  left: 0;
 }
 
-@media (max-width: 575.98px) {
-  #config #cotas #cotas-details {
-    top: auto;
-    bottom: 30px;
-  }
-}
-
-@media (min-width: 1200px) {
-  #config #cotas #cotas-details {
-    left: 12.5%;
-  }
-}
-
-#config #cotas #cotas-details svg {
+#config #cotas #cotas-details #cotas-indicadores {
   opacity: 0;
 }
 
-#config #cotas #cotas-details svg.trigger-animation {
-  -webkit-animation-name: fade-in;
-          animation-name: fade-in;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
+#config #cotas #cotas-details #cotas-indicadores.trigger-animation {
+  -webkit-animation: fade-in 2s ease-in-out forwards, upscale 2s ease-in-out forwards;
+          animation: fade-in 2s ease-in-out forwards, upscale 2s ease-in-out forwards;
 }
 
 @-webkit-keyframes fade-in {
@@ -523,6 +485,25 @@ html body *:focus {
   }
   100% {
     opacity: 1;
+  }
+}
+
+@media (max-width: 575.98px) {
+  @-webkit-keyframes upscale {
+    50% {
+      height: 200px;
+    }
+    100% {
+      height: 350px;
+    }
+  }
+  @keyframes upscale {
+    50% {
+      height: 200px;
+    }
+    100% {
+      height: 350px;
+    }
   }
 }
 
@@ -589,6 +570,14 @@ html body *:focus {
   }
 }
 
+@media (max-width: 575.98px) {
+  #config #choose-models #animate-container .img-wrapper img.front.animate {
+    width: 90px !important;
+    left: 0;
+    bottom: -225px;
+  }
+}
+
 #config #choose-models #animate-container .img-wrapper img.null {
   opacity: 0;
 }
@@ -596,6 +585,12 @@ html body *:focus {
 @media (min-width: 992px) {
   #config #choose-models #animate-container .img-wrapper img.null.animate {
     width: 50% !important;
+  }
+}
+
+@media (max-width: 575.98px) {
+  #config #choose-models #animate-container .img-wrapper img.null.animate {
+    width: 0% !important;
   }
 }
 
@@ -635,46 +630,56 @@ html body *:focus {
   }
 }
 
-#config #models-table .border-bottom {
-  padding-bottom: 45px;
+@media (max-width: 575.98px) {
+  #config #choose-models #animate-container .img-wrapper img.back.animate {
+    width: 90px !important;
+    left: auto;
+    right: 0;
+    bottom: -225px;
+  }
 }
 
-@media (max-width: 575.98px) {
-  #config #models-table {
-    overflow-x: scroll;
+#config #models-table .border-bottom:not(.row-name) {
+  padding-bottom: 2.1rem;
+}
+
+@media (max-width: 767.98px) {
+  #config #models-table .border-bottom:not(.row-name) {
+    border-color: transparent !important;
   }
+}
+
+#config #models-table .border-bottom.row-name {
+  padding-bottom: .8rem;
 }
 
 #config #models-table .table-row {
-  padding-top: 45px;
-  padding-bottom: 45px;
-}
-
-#config #models-table .table-row .col-2 .row {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-#config #models-table .table-row .col-2 .row .row-icon > img {
-  width: 35px;
-}
-
-#config #models-table .table-row .col-2 .row .row-name {
-  padding-top: 1rem;
-  color: #AFADAD;
-}
-
-#config #models-table .table-row .row-name {
-  color: #AFADAD;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 @media (max-width: 575.98px) {
-  #config #models-table .table-row .col-md-9 > .row {
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
+  #config #models-table .table-row#table-header {
+    padding-bottom: 120px;
   }
+}
+
+@media (min-width: 576px) {
+  #config #models-table .table-row {
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
+}
+
+#config #models-table .table-row .row-name {
+  font-size: 1rem;
+  color: #AFADAD;
+}
+
+#config #models-table .table-row .row-name.border-bottom::before {
+  position: inherit;
+  display: inline-block;
+  margin-right: 1rem;
 }
 
 #config #models-table #table-header h3 {
@@ -692,59 +697,82 @@ html body *:focus {
   font-weight: bold;
 }
 
-#config #models-table #table-colores .col-sm-6 .row,
-#config #models-table #table-materiales .col-sm-6 .row {
-  width: 100%;
-  padding-left: 15px;
+@media (max-width: 575.98px) {
+  #config #models-table #table-iluminacion ul.feat-list,
+  #config #models-table #table-conexiones ul.feat-list {
+    list-style-type: none;
+    text-align: center;
+  }
 }
 
-#config #models-table #table-colores .col-sm-6 .row .swatch,
-#config #models-table #table-materiales .col-sm-6 .row .swatch {
+#config #models-table #table-colores .col-6 .row,
+#config #models-table #table-materiales .col-6 .row {
+  padding-left: 1rem;
+}
+
+@media (max-width: 575.98px) {
+  #config #models-table #table-colores .col-6 .row,
+  #config #models-table #table-materiales .col-6 .row {
+    padding-left: 2.5rem;
+  }
+}
+
+#config #models-table #table-colores .col-6 .row .swatch,
+#config #models-table #table-materiales .col-6 .row .swatch {
   position: relative;
   width: 45px;
   height: 45px;
   padding: 0;
-  margin-right: 0.5em;
+  margin-right: .5em;
+  margin-bottom: .5em;
   border-radius: .5em;
   cursor: pointer;
 }
 
-#config #models-table #table-colores .col-sm-6 .row .swatch:focus,
-#config #models-table #table-materiales .col-sm-6 .row .swatch:focus {
+@media (max-width: 575.98px) {
+  #config #models-table #table-colores .col-6 .row .swatch,
+  #config #models-table #table-materiales .col-6 .row .swatch {
+    margin-right: 1.4em;
+    margin-top: 1.4em;
+  }
+}
+
+#config #models-table #table-colores .col-6 .row .swatch:focus,
+#config #models-table #table-materiales .col-6 .row .swatch:focus {
   cursor: auto;
   outline-width: 0px;
 }
 
 @media (max-width: 991.98px) {
-  #config #models-table #table-colores .col-sm-6 .row .swatch,
-  #config #models-table #table-materiales .col-sm-6 .row .swatch {
+  #config #models-table #table-colores .col-6 .row .swatch,
+  #config #models-table #table-materiales .col-6 .row .swatch {
     width: 35px;
     height: 35px;
   }
 }
 
-#config #models-table #table-colores .col-sm-6 .row .swatch img,
-#config #models-table #table-materiales .col-sm-6 .row .swatch img {
+#config #models-table #table-colores .col-6 .row .swatch img,
+#config #models-table #table-materiales .col-6 .row .swatch img {
   width: 100%;
 }
 
-#config #models-table #table-colores .col-sm-6 .row .swatch.blue,
-#config #models-table #table-materiales .col-sm-6 .row .swatch.blue {
+#config #models-table #table-colores .col-6 .row .swatch.blue,
+#config #models-table #table-materiales .col-6 .row .swatch.blue {
   background-color: #7595B3;
 }
 
-#config #models-table #table-colores .col-sm-6 .row .swatch.pink,
-#config #models-table #table-materiales .col-sm-6 .row .swatch.pink {
+#config #models-table #table-colores .col-6 .row .swatch.pink,
+#config #models-table #table-materiales .col-6 .row .swatch.pink {
   background-color: #F6D0D5;
 }
 
-#config #models-table #table-colores .col-sm-6 .row .swatch.green,
-#config #models-table #table-materiales .col-sm-6 .row .swatch.green {
+#config #models-table #table-colores .col-6 .row .swatch.green,
+#config #models-table #table-materiales .col-6 .row .swatch.green {
   background-color: #CBD6D0;
 }
 
-#config #models-table #table-colores .col-sm-6 .row .swatch.grey,
-#config #models-table #table-materiales .col-sm-6 .row .swatch.grey {
+#config #models-table #table-colores .col-6 .row .swatch.grey,
+#config #models-table #table-materiales .col-6 .row .swatch.grey {
   background-color: #D4D3D4;
 }
 
@@ -754,8 +782,50 @@ html body *:focus {
           padding-inline-start: 0;
 }
 
-#config #models-table #table-cotas img {
-  width: 285px;
+@media (max-width: 575.98px) {
+  #config #models-table #table-dimensiones ul.feat-list {
+    text-align: center;
+  }
+  #config #models-table #table-dimensiones ul.feat-list strong {
+    display: block;
+  }
+}
+
+#config #models-table #table-cotas .col-6 {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#config #models-table #table-cotas .col-6 img {
+  height: 190px;
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+  #config #models-table #table-cotas .col-6 img {
+    height: 150px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  #config #models-table #table-cotas .col-6 img.left-prof {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    margin-top: 50px;
+  }
+  #config #models-table #table-cotas .col-6 img.right-prof {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    margin-top: 50px;
+  }
+  #config #models-table #table-cotas .col-6 img.front {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
 }
 
 @media (min-width: 1200px) {

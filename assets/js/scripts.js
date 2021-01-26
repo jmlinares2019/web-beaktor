@@ -9,10 +9,19 @@ $(document).ready(function(){
 // Configura page scroll transitions
 
 $(window).scroll(function(){
+  // cotas animation
+  if (window.pageYOffset > 50){
+    $('#cotas-indicadores').addClass('trigger-animation-2');
+    $('#cotas-indicadores').addClass('trigger-animation');
+    $('#front-profile').addClass('trigger-animation');
+    $('#left-profile').addClass('trigger-animation');
+    $('#right-profile').addClass('trigger-animation');
+    $('#cotas').addClass('trigger-animation');
+  }
   // table models animation - responsive trigger
     // tablet-lanscape up
     if ( $(window).width() > 992 ){
-      if (window.scrollY > 1000){
+      if (window.scrollY > 1200){
         $('#animate-container').addClass('animate');
         $('.beaktor').addClass('animate');
       } else {
@@ -23,7 +32,7 @@ $(window).scroll(function(){
       }
       
     // tablet-portrait to tablet-landscape  
-    } else if ( $(window).width() < 991.98 && $(window).width() > 768 ){
+    } else if ( $(window).width() < 991.98 && $(window).width() >= 768 ){
       if ( window.scrollY > 845 ){
         $('#animate-container').addClass('animate');
         $('.beaktor').addClass('animate');
@@ -34,7 +43,7 @@ $(window).scroll(function(){
         }
       }
     // tablet-portrait to phone-landscape  
-    } else if ( $(window).width() < 767.98 && $(window).width() > 576 ){
+    } else if ( $(window).width() < 767.98 && $(window).width() >= 576 ){
       if ( window.scrollY > 715 ){
         $('#animate-container').addClass('animate');
         $('.beaktor').addClass('animate');
@@ -44,14 +53,19 @@ $(window).scroll(function(){
           $('.beaktor').removeClass('animate');
         }
       }
-    } 
-  // cotas animation
-  if (window.pageYOffset > 250){
-    $('#cotas-indicadores').addClass('trigger-animation');
-    $('#front-profile').addClass('trigger-animation');
-    $('#left-profile').addClass('trigger-animation');
-    $('#right-profile').addClass('trigger-animation');
-  }
+    // phone only  
+    } else if ( $(window).width() < 575.98 ){
+      if (window.scrollY > 600 ){
+        $('#animate-container').addClass('animate');
+        $('.beaktor').addClass('animate');
+      } else {
+        if ( $('#animate-container').hasClass('animate') ){
+          $('#animate-container').removeClass('animate');
+          $('.beaktor').removeClass('animate');
+        }
+      }
+
+    }
 });
 
 // Initialize tooltip-popovers
@@ -69,7 +83,7 @@ $(function () {
 });
 
 $(function () {
-  if ( $(window).width() < 576 ){
+  if ( $(window).width() < 575.98 ){
     $('.color-popover').popover({
       placement: 'top'
     });
