@@ -19,6 +19,10 @@
         @extend %tooltip-popover;
     }
 
+    button:not([role=presentation]){
+        @extend %beak-button;
+    }
+
     //// End General
 
     #cotas{
@@ -236,14 +240,16 @@
                     left: 15%;
                     bottom: 50px;
                     z-index: -1;
+
+                    @include phone-up{
+                        left: 40%;
+                    }
         
                     @include phone-to-tablet-landscape{
-                        left: 40%;
                         bottom: 100px;
                     }
 
                     @include tablet-landscape-up{
-                        left: 40%;
                         bottom: 150px;
                     }
 
@@ -292,19 +298,19 @@
                 bottom: 15px;
             }
 
-            @include phone-only{
-                &#table-header{
-                    padding-bottom: 120px;
+                @include phone-only{
+                    &#table-header{
+                        padding-bottom: 120px;
+                    }
                 }
-            }
 
-            @include phone-up{
-                padding: {
-                    top: 45px;
-                    bottom: 45px;
+                @include phone-up{
+                    padding: {
+                        top: 45px;
+                        bottom: 45px;
+                    }
+                    
                 }
-                
-            }
 
             .row-name{
                 font-size: 1rem;
@@ -355,37 +361,8 @@
                 }
 
                 .swatch{
-                    position: relative;
-                    width: 45px;
-                    height: 45px;
-                    padding: 0;
-                    margin: {
-                        right: .5em;
-                        bottom: .5em;
-                    }
-                        @include phone-only{
-                            margin: {
-                                right: 1.4em;
-                                top: 1.4em;
-                            }
-                            
-                        }
-                    border-radius: .5em;
-                    cursor: pointer;
-                    &:focus{
-                        cursor: auto;
-                        outline-width: 0px;
-                    }
-
-                    @include tablet-landscape-down{
-                        width: 35px;
-                        height: 35px;
-                    }
-    
-                    img{
-                        width: 100%;
-                    }
-    
+                    @extend %swatch;
+                    // colors
                     &.blue{
                         background-color: $blueswatch;
                     }
@@ -398,7 +375,6 @@
                     &.grey{
                         background-color: $greyswacth;
                     }
-                        
                 }
                 
             }
@@ -465,9 +441,6 @@
                     text-align: center;
                 }
 
-                button{
-                    @extend %beak-button;
-                }
             }
 
         }
@@ -482,13 +455,10 @@
     }
 
     #beakart-carousel{
-        background-image: url(../../img/beakart_frame.jpg);
-        background-repeat: no-repeat;
-        background-position: center top;
-        background-size: contain;
+        background: url(../../img/beakart_frame.jpg) center top / contain no-repeat;
         height: 360px;
 
-        .owl-stage{
+        .owl-stage{ // re-styles Owl Carousel 
             display: flex !important;
             padding-top: 5px;
 
@@ -562,10 +532,6 @@
                 bottom: -80px;
                 left: 47%;
             }
-
-            button{
-                @extend %beak-button;
-            }
         }
 
     }
@@ -574,29 +540,20 @@
 
         @include tablet-portrait-down{
             overflow-x: scroll;
+
+            .row.imgs-wrapper{
+                flex-wrap: nowrap;
+                
+                img{
+                    width: 250px !important;
+                    
+                }
+            }
         }
 
-        .row.imgs-wrapper{
-            
-            @include tablet-portrait-down{
-                flex-wrap: nowrap;
-            }
+        .btn-wrapper{
+            padding-top: 40px;
 
-            img{
-                width: 100%;
-
-                @include tablet-portrait-down{
-                    width: 250px;
-                }
-            }
-
-            .btn-wrapper{
-                padding-top: 40px;
-
-                button{
-                    @extend %beak-button;
-                }
-            }
         }
     }
 
@@ -611,9 +568,6 @@
                justify-content: space-around;
            }
 
-           button{
-               @extend %beak-button;
-           }
         }
 
    }

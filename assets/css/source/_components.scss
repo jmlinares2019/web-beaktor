@@ -2,10 +2,7 @@
     height: 355px;
     width: 100%;
     padding-top: 50px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-color: #f9f9f9;
+    background: #f9f9f9 bottom / contain no-repeat;
 
     @include tablet-portrait-to-landscape{
         height: 300px;
@@ -41,9 +38,38 @@
     padding-bottom: 45px;
 }
 
+%swatch{
+    position: relative;
+    width: 45px;
+    height: 45px;
+    @include tablet-landscape-down{
+        width: 35px;
+        height: 35px;
+    }
+    padding: 0;
+    border-radius: .5em;
+    margin: {
+        right: .5em;
+        bottom: .5em;
+    }
+        @include phone-only{
+            margin: {
+                right: 1.4em;
+                top: 1.4em;
+            }
+            
+        }
+    // states
+    cursor: pointer;
+    &:focus{
+        cursor: auto;
+        outline-width: 0px;
+    }   
+}
+
 %dropdown-icon{
     content: url(../../img/vec/boton_mas_activo.svg);
-    display: inline-flex;
+    display: block;
     width: 20px;
     position: absolute;
     top: -5px;
@@ -73,6 +99,7 @@
         left: 1rem;
         right: 1rem;
     }
+    // states
     &:hover{
         background-image: linear-gradient(90deg, $beakpink, $beakblue);
         &::after{
@@ -97,6 +124,7 @@
     width: 35px;
     position: absolute;
     top: -30px;
+    // different icons
     &.iluminacion{
         content: url('../../img/vec/iluminacion.svg');
     }
@@ -116,7 +144,7 @@
     }
 }
 
-%tooltip-popover{
+%tooltip-popover{ // Swatches tooltip-popovers (re-styles Bootstrap's)
     font-family: inherit;
     top: 55px !important;
 
@@ -152,7 +180,7 @@
     .popover-header{
         font-size: 0.9rem;
         font-weight: bold;
-        background: transparent;
+        background-color: transparent;
         position: relative;
         &::before{
             content: url(../../img/vec/boton_menos_popup.svg);

@@ -18,10 +18,7 @@
   height: 355px;
   width: 100%;
   padding-top: 50px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: bottom;
-  background-color: #f9f9f9;
+  background: #f9f9f9 bottom / contain no-repeat;
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -64,11 +61,43 @@
   padding-bottom: 45px;
 }
 
+#config #models-table #table-colores .col-6 .row .swatch,
+#config #models-table #table-materiales .col-6 .row .swatch {
+  position: relative;
+  width: 45px;
+  height: 45px;
+  padding: 0;
+  border-radius: .5em;
+  margin-right: .5em;
+  margin-bottom: .5em;
+  cursor: pointer;
+}
+
+@media (max-width: 991.98px) {
+  #config #models-table #table-colores .col-6 .row .swatch,
+  #config #models-table #table-materiales .col-6 .row .swatch {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  #config #models-table #table-colores .col-6 .row .swatch,
+  #config #models-table #table-materiales .col-6 .row .swatch {
+    margin-right: 1.4em;
+    margin-top: 1.4em;
+  }
+}
+
+#config #models-table #table-colores .col-6 .row .swatch:focus,
+#config #models-table #table-materiales .col-6 .row .swatch:focus {
+  cursor: auto;
+  outline-width: 0px;
+}
+
 #legal .main-wrapper h2.section-title::before {
   content: url(../../img/vec/boton_mas_activo.svg);
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: block;
   width: 20px;
   position: absolute;
   top: -5px;
@@ -90,7 +119,7 @@
   opacity: 1;
 }
 
-#config #models-table #table-buttons .btn-wrapper button, #config #beakart-carousel .btn-wrapper button, #config #custom-models .row.imgs-wrapper .btn-wrapper button, #config #download .download-btns button {
+#config button:not([role=presentation]) {
   position: relative;
   font-size: 0.9rem;
   font-weight: bold;
@@ -101,12 +130,12 @@
   padding-right: 1rem;
 }
 
-#config #models-table #table-buttons .btn-wrapper button:hover, #config #beakart-carousel .btn-wrapper button:hover, #config #custom-models .row.imgs-wrapper .btn-wrapper button:hover, #config #download .download-btns button:hover {
+#config button:hover:not([role=presentation]) {
   background-image: -webkit-gradient(linear, left top, right top, from(#FAD0C5), to(#99BCCE));
   background-image: linear-gradient(90deg, #FAD0C5, #99BCCE);
 }
 
-#config #models-table #table-buttons .btn-wrapper button:hover::after, #config #beakart-carousel .btn-wrapper button:hover::after, #config #custom-models .row.imgs-wrapper .btn-wrapper button:hover::after, #config #download .download-btns button:hover::after {
+#config button:not([role=presentation]):hover::after {
   content: '';
   position: absolute;
   top: 0;
@@ -120,7 +149,7 @@
   mix-blend-mode: color;
 }
 
-#config #models-table #table-buttons .btn-wrapper button:active, #config #beakart-carousel .btn-wrapper button:active, #config #custom-models .row.imgs-wrapper .btn-wrapper button:active, #config #download .download-btns button:active {
+#config button:active:not([role=presentation]) {
   -webkit-box-shadow: inset .1em .1em 20px 0px #00000020;
           box-shadow: inset .1em .1em 20px 0px #00000020;
 }
@@ -191,7 +220,7 @@
 #config .popover .popover-header {
   font-size: 0.9rem;
   font-weight: bold;
-  background: transparent;
+  background-color: transparent;
   position: relative;
 }
 
@@ -601,16 +630,20 @@ html body *:focus {
   z-index: -1;
 }
 
-@media (min-width: 576px) and (max-width: 991.98px) {
+@media (min-width: 576px) {
   #config #choose-models #animate-container .img-wrapper img.back {
     left: 40%;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+  #config #choose-models #animate-container .img-wrapper img.back {
     bottom: 100px;
   }
 }
 
 @media (min-width: 992px) {
   #config #choose-models #animate-container .img-wrapper img.back {
-    left: 40%;
     bottom: 150px;
   }
 }
@@ -717,45 +750,6 @@ html body *:focus {
   }
 }
 
-#config #models-table #table-colores .col-6 .row .swatch,
-#config #models-table #table-materiales .col-6 .row .swatch {
-  position: relative;
-  width: 45px;
-  height: 45px;
-  padding: 0;
-  margin-right: .5em;
-  margin-bottom: .5em;
-  border-radius: .5em;
-  cursor: pointer;
-}
-
-@media (max-width: 575.98px) {
-  #config #models-table #table-colores .col-6 .row .swatch,
-  #config #models-table #table-materiales .col-6 .row .swatch {
-    margin-right: 1.4em;
-    margin-top: 1.4em;
-  }
-}
-
-#config #models-table #table-colores .col-6 .row .swatch:focus,
-#config #models-table #table-materiales .col-6 .row .swatch:focus {
-  cursor: auto;
-  outline-width: 0px;
-}
-
-@media (max-width: 991.98px) {
-  #config #models-table #table-colores .col-6 .row .swatch,
-  #config #models-table #table-materiales .col-6 .row .swatch {
-    width: 35px;
-    height: 35px;
-  }
-}
-
-#config #models-table #table-colores .col-6 .row .swatch img,
-#config #models-table #table-materiales .col-6 .row .swatch img {
-  width: 100%;
-}
-
 #config #models-table #table-colores .col-6 .row .swatch.blue,
 #config #models-table #table-materiales .col-6 .row .swatch.blue {
   background-color: #7595B3;
@@ -846,10 +840,7 @@ html body *:focus {
 }
 
 #config #beakart-carousel {
-  background-image: url(../../img/beakart_frame.jpg);
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-size: contain;
+  background: url(../../img/beakart_frame.jpg) center top/contain no-repeat;
   height: 360px;
 }
 
@@ -947,26 +938,16 @@ html body *:focus {
   #config #custom-models {
     overflow-x: scroll;
   }
-}
-
-@media (max-width: 767.98px) {
   #config #custom-models .row.imgs-wrapper {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
   }
-}
-
-#config #custom-models .row.imgs-wrapper img {
-  width: 100%;
-}
-
-@media (max-width: 767.98px) {
   #config #custom-models .row.imgs-wrapper img {
-    width: 250px;
+    width: 250px !important;
   }
 }
 
-#config #custom-models .row.imgs-wrapper .btn-wrapper {
+#config #custom-models .btn-wrapper {
   padding-top: 40px;
 }
 
@@ -1092,7 +1073,7 @@ footer .container p {
           margin-block-end: 0;
 }
 
-footer .container .back-up {
+footer .container #scroll-up img {
   width: 30px;
   -webkit-filter: brightness(10);
           filter: brightness(10);
@@ -1139,24 +1120,26 @@ footer .container .footer-legal {
   padding-top: 40px;
 }
 
-footer .container .footer-legal .col-8 {
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+@media (max-width: 767.98px) {
+  footer .container .footer-legal .col-md-6 {
+    margin-bottom: 1rem;
+  }
 }
 
-footer .container .footer-legal a {
+footer .container .footer-legal .col-md-6 a {
+  text-align: center;
   text-decoration: underline;
   padding-right: 2.5rem;
 }
 
 @media (min-width: 768px) and (max-width: 1199.98px) {
-  footer .container .footer-legal a {
+  footer .container .footer-legal .col-md-6 a {
     padding-right: 1rem;
   }
 }
 
 @media (max-width: 767.98px) {
-  footer .container .footer-legal a {
+  footer .container .footer-legal .col-md-6 a {
     padding-right: .5rem;
   }
 }
