@@ -1,3 +1,11 @@
+// Smooth 'back-to-top' footer link
+$(document).ready(function(){
+  $('#scroll-up').click(function(){
+    $('html, body').animate({ scrollTop: 0 }, 600);
+      return false;
+  });
+});
+
 // Legal page dropdown
 $(document).ready(function(){
     $('.section-title').click(function(){
@@ -7,7 +15,6 @@ $(document).ready(function(){
   });
 
 // Configura page scroll transitions
-
 function beaktorAnimateBack(animated){
   if ( animated.length > 0 ){
     animated.removeClass('animate');
@@ -31,16 +38,19 @@ if ( $('body').is('#config') ){ // Trigger carousel only @ /configura.html
         if ( $scrollDown > 1200){
           animatables.addClass('animate');
         } else { beaktorAnimateBack(animated) }
+
       // tablet-portrait to tablet-landscape  
       } else if ( $deviceWidth < 991.98 && $deviceWidth >= 768 ){
         if ( $scrollDown > 845 ){
           animatables.addClass('animate');
         } else { beaktorAnimateBack(animated) }
+
       // tablet-portrait to phone-landscape  
       } else if ( $deviceWidth < 767.98 && $deviceWidth >= 576 ){
         if ( $scrollDown > 715 ){
           animatables.addClass('animate');
         } else { beaktorAnimateBack(animated) }
+
       // phone only  
       } else if ( $deviceWidth < 575.98 ){
         if ( $scrollDown > 600 ){
@@ -51,7 +61,6 @@ if ( $('body').is('#config') ){ // Trigger carousel only @ /configura.html
 }
 
 // Initialize tooltip-popovers
-
 $(function () {
   $('.left-popover').popover({
     placement: 'left' 
@@ -77,7 +86,6 @@ $(function () {
 });
 
 // Configura page BeakArt Owl Carousel
-
 var owlOptions = {
   loop: true,
   center: true,
