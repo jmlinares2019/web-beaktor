@@ -19,7 +19,7 @@
         @extend %tooltip-popover;
     }
 
-    button:not([role=presentation]){
+    button:not([role=presentation]):not(.navbar-toggler){
         @extend %beak-button;
     }
 
