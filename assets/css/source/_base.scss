@@ -73,3 +73,72 @@
     
     }
 }
+
+/*---------- BLOG ---------- */
+
+#blog-index{
+
+    section, div{
+        border: 1px solid firebrick;
+    }
+
+    .hero{
+
+        .social{ // create component!
+            padding: 0;
+            flex-wrap: wrap;
+    
+            .social-icon{ 
+                padding: {
+                    top: 10px;
+                    right: 0.5rem;
+                }
+    
+                img{
+                    width: 30px;
+                    mix-blend-mode: exclusion;
+
+                    @include tablet-landscape-down{
+                        width: 20px;
+                    }
+                }
+    
+            }  
+            
+        }
+    }
+
+    #follow-us{
+
+        .social-icons{ // create component!
+            padding: 0;
+            flex-wrap: wrap;
+    
+            .social-icon{
+                padding: {
+                    top: 10px;
+                    right: 0.5rem;
+                }
+    
+                img{
+                    width: 30px;
+                    mix-blend-mode: exclusion;
+
+                    @include tablet-landscape-down{
+                        width: 20px;
+                    }
+                }
+    
+            }
+        }
+    }
+}
+
+/* unused (but just-in-case) classes --> remove?
+
+.blog-module
+
+
+*/
+
+
