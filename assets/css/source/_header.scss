@@ -1,10 +1,16 @@
 .hero{
     @extend %hero;
-    background-image: url(../../img/header_beaktor.jpg);
+    &.bg-image{
+        background-image: url(../../img/header_beaktor.jpg);
 
-    @include tablet-portrait-down{
-        background-image: url(../../img/header_beaktor_mobile.jpg);
+        @include tablet-portrait-down{
+            background-image: url(../../img/header_beaktor_mobile.jpg);
+        }
     }
+    &.blog-hero{
+        height: 290px;
+    }
+    
 
     .hero-title{
         @extend %hero-title;
