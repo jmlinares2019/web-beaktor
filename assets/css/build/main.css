@@ -349,6 +349,61 @@ html body *:focus {
           padding-inline-start: 0;
 }
 
+/*---------- BLOG ---------- */
+#blog-index section, #blog-index div {
+  border: 1px solid firebrick;
+}
+
+#blog-index .hero .social {
+  padding: 0;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#blog-index .hero .social .social-icon {
+  padding-top: 10px;
+  padding-right: 0.5rem;
+}
+
+#blog-index .hero .social .social-icon img {
+  width: 30px;
+  mix-blend-mode: exclusion;
+}
+
+@media (max-width: 991.98px) {
+  #blog-index .hero .social .social-icon img {
+    width: 20px;
+  }
+}
+
+#blog-index #follow-us .social-icons {
+  padding: 0;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#blog-index #follow-us .social-icons .social-icon {
+  padding-top: 10px;
+  padding-right: 0.5rem;
+}
+
+#blog-index #follow-us .social-icons .social-icon img {
+  width: 30px;
+  mix-blend-mode: exclusion;
+}
+
+@media (max-width: 991.98px) {
+  #blog-index #follow-us .social-icons .social-icon img {
+    width: 20px;
+  }
+}
+
+/* unused (but just-in-case) classes --> remove?
+
+.blog-module
+
+
+*/
 #config section:not(.container):not(#models-table) {
   padding-top: 80px;
 }
@@ -1032,14 +1087,18 @@ html body *:focus {
   width: 40px;
 }
 
-.hero {
+.hero.bg-image {
   background-image: url(../../img/header_beaktor.jpg);
 }
 
 @media (max-width: 767.98px) {
-  .hero {
+  .hero.bg-image {
     background-image: url(../../img/header_beaktor_mobile.jpg);
   }
+}
+
+.hero.blog-hero {
+  height: 290px;
 }
 
 footer {
