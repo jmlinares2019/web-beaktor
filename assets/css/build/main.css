@@ -350,8 +350,20 @@ html body *:focus {
 }
 
 /*---------- BLOG ---------- */
-#blog-index section, #blog-index div {
-  border: 1px solid firebrick;
+#blog-index {
+  /* section, div{
+        border: 1px solid firebrick;
+    } */
+}
+
+#blog-index .container {
+  padding-top: 100px;
+}
+
+#blog-index .hero .hero-description {
+  font-size: 1.5rem;
+  color: #AFADAD;
+  margin-bottom: 1.5rem;
 }
 
 #blog-index .hero .social {
@@ -366,7 +378,7 @@ html body *:focus {
 }
 
 #blog-index .hero .social .social-icon img {
-  width: 30px;
+  width: 25px;
   mix-blend-mode: exclusion;
 }
 
@@ -376,33 +388,178 @@ html body *:focus {
   }
 }
 
-#blog-index #follow-us .social-icons {
+#blog-index .mini-module {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #AFADAD;
+  margin-bottom: 20px;
+}
+
+#blog-index .module-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding-bottom: 1rem;
+  margin-bottom: 1.25rem;
+  border-bottom: 2px solid #46454a;
+}
+
+#blog-index .slide-text {
+  bottom: 0;
+  padding: .5rem 2rem;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#blog-index .slide-text .main-post-title {
+  font-size: 1.7rem;
+  color: white;
+}
+
+#blog-index .slide-text .main-post-meta {
+  color: white;
+}
+
+#blog-index .post-text {
+  padding-top: 25px;
+}
+
+#blog-index .post-title {
+  font-size: 1rem;
+  line-height: 1.1rem;
+  font-weight: bold;
+}
+
+#blog-index .post-title.border-bottom {
+  padding-bottom: 25px;
+  border-color: black !important;
+  margin-bottom: 16px;
+}
+
+#blog-index .post-author {
+  font-size: .8rem;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+
+#blog-index .post-date-pub {
+  font-size: .8rem;
+  margin-bottom: 0;
+  color: #AFADAD;
+  text-align: right;
+}
+
+#blog-index .post-date-pub.after-icon::after {
+  content: url(../../img/read-more-icon.png);
+  padding-left: .7rem;
+}
+
+#blog-index .read-more,
+#blog-index .tag {
+  font-size: .9rem;
+  color: grey;
+  text-decoration: underline;
+}
+
+#blog-index #posts-index .highlighted-posts > .row {
+  margin-bottom: 50px;
+}
+
+#blog-index #posts-index .other-posts .text-wrapper {
+  padding-left: 1.5rem;
+}
+
+#blog-index #sidebar {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 28.35%;
+          flex: 0 0 28.35%;
+  max-width: 30%;
+}
+
+#blog-index #sidebar > .row {
+  margin-bottom: 50px;
+}
+
+#blog-index #sidebar #about-us p {
+  font-size: .9rem;
+  line-height: 1.1rem;
+}
+
+#blog-index #sidebar #follow-us .social-icons {
   padding: 0;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
-#blog-index #follow-us .social-icons .social-icon {
-  padding-top: 10px;
+#blog-index #sidebar #follow-us .social-icons .social-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   padding-right: 0.5rem;
 }
 
-#blog-index #follow-us .social-icons .social-icon img {
-  width: 30px;
+#blog-index #sidebar #follow-us .social-icons .social-icon img {
+  width: 15px;
   mix-blend-mode: exclusion;
 }
 
 @media (max-width: 991.98px) {
-  #blog-index #follow-us .social-icons .social-icon img {
+  #blog-index #sidebar #follow-us .social-icons .social-icon img {
     width: 20px;
   }
+}
+
+#blog-index #sidebar #sidebar-posts .nav-tab {
+  font-size: 1rem;
+  font-weight: initial;
+  color: #AFADAD;
+}
+
+#blog-index #sidebar #sidebar-posts .nav-tab a {
+  padding-left: 0;
+}
+
+#blog-index #sidebar #sidebar-posts .nav-tab a.active {
+  font-weight: bold;
+  color: black;
+}
+
+#blog-index #sidebar #sidebar-posts .nav-tabs,
+#blog-index #sidebar #sidebar-posts .nav-link {
+  border-color: transparent;
+}
+
+#blog-index #sidebar #sidebar-posts .tab-pane > .sidebar-post:first-child {
+  padding-top: 1.25rem;
+  border-top: 2px solid #46454a;
+}
+
+#blog-index #sidebar #sidebar-posts .sidebar-post .text-wrapper {
+  padding: 0;
+}
+
+#blog-index #sidebar #tags .module-title::after {
+  content: url(../../img/tag-icon.png);
+  display: inline-block;
+  position: absolute;
+  right: 0;
 }
 
 /* unused (but just-in-case) classes --> remove?
 
 .blog-module
+.tecnico.emocional.espacial etc.
 
+.*-wrapper
+.slide-img
 
+.sidebar-post / .mini-module
 */
 #config section:not(.container):not(#models-table) {
   padding-top: 80px;
