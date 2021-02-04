@@ -24,6 +24,7 @@
     &.downfont{
         font-size: $big;
     }
+    line-height: 1;
     bottom: 40px;
     &.long-text{
         @include tablet-portrait-down{
