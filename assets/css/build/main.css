@@ -398,7 +398,7 @@ html body *:focus {
 #blog-index .module-title {
   font-size: 1.5rem;
   font-weight: bold;
-  padding-bottom: 1rem;
+  padding-bottom: .6rem;
   margin-bottom: 1.25rem;
   border-bottom: 2px solid #46454a;
 }
@@ -411,7 +411,16 @@ html body *:focus {
 
 #blog-index .slide-text .main-post-title {
   font-size: 1.7rem;
+  font-weight: bold;
   color: white;
+}
+
+#blog-index .slide-text .main-post-title::after {
+  content: '';
+  display: block;
+  width: 30%;
+  padding-top: 1rem;
+  border-bottom: 1px solid white;
 }
 
 #blog-index .slide-text .main-post-meta {
@@ -428,7 +437,14 @@ html body *:focus {
   font-weight: bold;
 }
 
-#blog-index .post-title.border-bottom {
+#blog-index .post-excerpt,
+#blog-index .about-us-excerpt {
+  font-size: .9rem;
+  line-height: 1.1rem;
+}
+
+#blog-index .post-excerpt.border-bottom,
+#blog-index .about-us-excerpt.border-bottom {
   padding-bottom: 25px;
   border-color: black !important;
   margin-bottom: 16px;
@@ -507,11 +523,6 @@ html body *:focus {
 
 #blog-index #sidebar > .row {
   margin-bottom: 50px;
-}
-
-#blog-index #sidebar #about-us p {
-  font-size: .9rem;
-  line-height: 1.1rem;
 }
 
 #blog-index #sidebar #follow-us .social-icons {
