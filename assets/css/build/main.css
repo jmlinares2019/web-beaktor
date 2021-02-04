@@ -350,10 +350,8 @@ html body *:focus {
 }
 
 /*---------- BLOG ---------- */
-#blog-index {
-  /* section, div{
-        border: 1px solid firebrick;
-    } */
+#blog-index section, #blog-index div {
+  border: 1px solid firebrick;
 }
 
 #blog-index .container {
@@ -434,13 +432,13 @@ html body *:focus {
 }
 
 #blog-index .post-author {
-  font-size: .8rem;
+  font-size: .7rem;
   margin-bottom: 0;
   text-transform: uppercase;
 }
 
 #blog-index .post-date-pub {
-  font-size: .8rem;
+  font-size: .7rem;
   margin-bottom: 0;
   color: #AFADAD;
   text-align: right;
@@ -462,15 +460,29 @@ html body *:focus {
   margin-bottom: 50px;
 }
 
+#blog-index #posts-index .flat-pic {
+  max-height: 260px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 #blog-index #posts-index .other-posts .text-wrapper {
   padding-left: 1.5rem;
 }
 
-#blog-index #sidebar {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 28.35%;
-          flex: 0 0 28.35%;
-  max-width: 30%;
+@media (max-width: 991.98px) {
+  #blog-index #posts-index .other-posts img {
+    width: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  #blog-index #sidebar {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 28.35%;
+            flex: 0 0 28.35%;
+    max-width: 30%;
+  }
 }
 
 #blog-index #sidebar > .row {
@@ -507,12 +519,9 @@ html body *:focus {
 #blog-index #sidebar #follow-us .social-icons .social-icon img {
   width: 15px;
   mix-blend-mode: exclusion;
-}
-
-@media (max-width: 991.98px) {
-  #blog-index #sidebar #follow-us .social-icons .social-icon img {
-    width: 20px;
-  }
+  /* @include tablet-landscape-down{
+                            width: 10px;
+                        } */
 }
 
 #blog-index #sidebar #sidebar-posts .nav-tab {
@@ -540,8 +549,20 @@ html body *:focus {
   border-top: 2px solid #46454a;
 }
 
-#blog-index #sidebar #sidebar-posts .sidebar-post .text-wrapper {
-  padding: 0;
+#blog-index #sidebar #sidebar-posts .sidebar-post {
+  /* .text-wrapper{
+                    padding: 0;
+                } */
+}
+
+#blog-index #sidebar #sidebar-posts .sidebar-post .img-wrapper {
+  padding-right: 0;
+}
+
+@media (max-width: 991.98px) {
+  #blog-index #sidebar #sidebar-posts .sidebar-post img {
+    width: 100%;
+  }
 }
 
 #blog-index #sidebar #tags .module-title::after {
