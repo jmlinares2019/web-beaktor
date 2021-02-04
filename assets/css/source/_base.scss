@@ -74,7 +74,7 @@
     }
 }
 
-/*---------- BLOG ---------- */
+/*---------- BLOG ---------- */ // OWn _partial!!
 
 #blog-index{
 
@@ -128,7 +128,7 @@
     .module-title{
         font-size: 1.5rem;
         font-weight: bold;
-        padding-bottom: 1rem;
+        padding-bottom: .6rem;
         margin-bottom: 1.25rem;
         border-bottom: 2px solid #46454a;
     }
@@ -140,7 +140,15 @@
 
         .main-post-title{
             font-size: 1.7rem;
+            font-weight: bold;
             color: white;
+            &::after{
+                content: '';
+                display: block;
+                width: 30%;
+                padding-top: 1rem;
+                border-bottom: 1px solid white;
+            }
         }
 
         .main-post-meta{
@@ -156,6 +164,12 @@
         font-size: 1rem;
         line-height: 1.1rem;
         font-weight: bold;
+    }
+
+    .post-excerpt,
+    .about-us-excerpt{
+        font-size: .9rem;
+        line-height: 1.1rem;
         &.border-bottom{
             padding-bottom: 25px;
             border-color: black !important;
@@ -245,14 +259,6 @@
 
         > .row{
             margin-bottom: 50px;
-        }
-
-        #about-us{
-
-            p{
-                font-size: .9rem;
-                line-height: 1.1rem;
-            }
         }
 
         #follow-us{
