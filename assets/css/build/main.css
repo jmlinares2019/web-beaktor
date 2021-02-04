@@ -390,9 +390,12 @@ html body *:focus {
 }
 
 #blog-index .mini-module {
-  padding-bottom: 20px;
-  border-bottom: 1px solid #AFADAD;
   margin-bottom: 20px;
+}
+
+#blog-index .mini-module.border-bottom {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #AFADAD !important;
 }
 
 #blog-index .module-title {
