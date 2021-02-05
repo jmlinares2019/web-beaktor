@@ -21,7 +21,7 @@ function beaktorAnimateBack(animated){
   }
 }
 
-if ( $('body').is('#config') ){ // Trigger carousel only @ /configura.html
+if ( $('body').is('#config') ){ // Load jQuery animation only @ /configura.html
   $(window).scroll(function(){
     var $scrollDown = window.scrollY;
     // cotas animation
@@ -85,8 +85,10 @@ $(function () {
   }
 });
 
-// Configura page BeakArt Owl Carousel
-var owlOptions = {
+// Owl Carousel
+
+// Configura page Owl Carousel options 
+var configOwlOptions = {
   loop: true,
   center: true,
   autoplay: true,
@@ -110,8 +112,22 @@ var owlOptions = {
   } 
 }
 
+// Blog index page Owl Carousel options 
+
+var blogOwlOptions = {
+  items: 1,
+  loop: true,
+  autoplay: true,
+  dots: true,
+  nav: true,
+  autoplayHoverPause: true
+}
+
 $(function(){
     if ( $('body').is('#config') ){ // Trigger carousel only @ /configura.html
-      $(".owl-carousel").owlCarousel(owlOptions);
+      $(".owl-carousel").owlCarousel(configOwlOptions);
+  } else if ( $('body').is('#blog-index') ){ // Trigger carousel only @ /blog.html
+      $(".owl-carousel").owlCarousel(blogOwlOptions);
+    
   }
 });
