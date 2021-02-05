@@ -14,8 +14,13 @@
 <!-- Bootstrap CSS-->
   <link rel="stylesheet" href="assets/css/build/bootstrap.min.css">
 
+<!-- OWL Carousel CSS-->
+  <link rel="stylesheet" href="assets/css/build/owl.carousel.min.css">
+  <link rel="stylesheet" href="assets/css/build/owl.theme.default.min.css">  
+
 <!--Custom CSS -->
   <link rel="stylesheet" href="assets/css/build/main.css">
+
 </head>
 
 <body id="blog-index">
@@ -93,22 +98,66 @@
               <div class="highlighted-posts">
 
                 <section class="row">
-                    <div class="col blog-module slide-posts">
+                    <div class="col blog-module carousel-posts">
                       <h3 class="module-title">Últimas entradas</h3>
-                      <div class="img-wrapper position-relative">
-                        <img class="slide-img w-100" src="assets/img/blog-index-thumbnail.jpg" alt="lorem-ipsum">
-                        <div class="slide-text position-absolute w-100">
-                          <div class="row post-text">
-                            <div class="col">
-                              <h4 class="main-post-title">Lorem ipsum dolor sit amet, consectetuer</h4>
+                      <div class="owl-carousel owl-theme position-relative">
+                        <div class="carousel-post">
+                          <div class="img-wrapper position-relative">
+                            <img class="slide-img w-100" src="assets/img/blog-index-slide.jpg" alt="lorem-ipsum">
+                            <div class="slide-text position-absolute w-100">
+                              <div class="row post-text">
+                                <div class="col">
+                                  <h4 class="main-post-title">Lorem ipsum dolor sit amet, consectetuer</h4>
+                                </div>
+                              </div>
+                              <div class="row main-post-meta">
+                                <div class="col">
+                                  <h5 class="post-author">Bruno Galindo</h5>
+                                </div>
+                                <div class="col">
+                                  <h6 class="post-date-pub">12 Sep 20</h6>
+                                </div>
+                              </div>
                             </div>
                           </div>
-                          <div class="row main-post-meta">
-                            <div class="col">
-                              <h5 class="post-author">Bruno Galindo</h5>
+                        </div>
+                        <div class="carousel-post">
+                          <div class="img-wrapper position-relative">
+                            <img class="slide-img w-100" src="assets/img/blog-index-slide.jpg" alt="lorem-ipsum">
+                            <div class="slide-text position-absolute w-100">
+                              <div class="row post-text">
+                                <div class="col">
+                                  <h4 class="main-post-title">Sed diam nonummy nibhipiscing elit</h4>
+                                </div>
+                              </div>
+                              <div class="row main-post-meta">
+                                <div class="col">
+                                  <h5 class="post-author">Bruno Galindo</h5>
+                                </div>
+                                <div class="col">
+                                  <h6 class="post-date-pub">12 Sep 20</h6>
+                                </div>
+                              </div>
                             </div>
-                            <div class="col">
-                              <h6 class="post-date-pub">12 Sep 20</h6>
+                          </div>
+                        </div>
+                        <div class="carousel-post">
+                          <div class="img-wrapper position-relative">
+                            <img class="slide-img w-100" src="assets/img/blog-index-slide-2.jpg" alt="lorem-ipsum">
+                            <div class="slide-text position-absolute w-100">
+                              <div class="row post-text">
+                                <div class="col">
+                                  <h4 class="main-post-title">Excepteur sint occaecat cupidatat non proident</h4>
+                                </div>
+                              </div>
+                              <div class="row main-post-meta">
+                                <div class="col">
+                                  <h5 class="post-author">Bruno Galindo</h5>
+                                </div>
+                                <div class="col">
+                                  <h6 class="post-date-pub">12 Sep 20</h6>
+                                </div>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -592,6 +641,9 @@
     
   <!-- Bootstrap JS -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Owl Carousel JS -->
+    <script src="assets/js/owl.carousel.min.js"></script> 
   
   <!-- Custom JS -->
     <script src="assets/js/scripts.js"></script>
