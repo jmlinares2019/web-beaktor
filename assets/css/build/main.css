@@ -490,6 +490,56 @@ html body *:focus {
   }
 }
 
+#blog-index #posts-index .owl-carousel,
+#blog-index #posts-index .owl-stage-outer {
+  max-height: 450px;
+}
+
+#blog-index #posts-index .owl-carousel .owl-item.active,
+#blog-index #posts-index .owl-stage-outer .owl-item.active {
+  width: unset !important;
+}
+
+#blog-index #posts-index .owl-carousel .owl-nav,
+#blog-index #posts-index .owl-stage-outer .owl-nav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  margin-top: 0 !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#blog-index #posts-index .owl-carousel .owl-nav [class^=owl-],
+#blog-index #posts-index .owl-stage-outer .owl-nav [class^=owl-] {
+  -webkit-transform: scale(3);
+          transform: scale(3);
+  -webkit-filter: brightness(10);
+          filter: brightness(10);
+  padding: 0 1rem !important;
+}
+
+#blog-index #posts-index .owl-carousel .owl-nav [class^=owl-]:hover,
+#blog-index #posts-index .owl-stage-outer .owl-nav [class^=owl-]:hover {
+  background: transparent;
+}
+
+#blog-index #posts-index .owl-carousel .owl-dots,
+#blog-index #posts-index .owl-stage-outer .owl-dots {
+  position: absolute;
+  top: 25px;
+  width: 100%;
+}
+
+#blog-index #posts-index .owl-carousel .owl-dots .owl-dot.active span,
+#blog-index #posts-index .owl-stage-outer .owl-dots .owl-dot.active span {
+  background: white;
+}
+
 #blog-index #posts-index .flat-module img {
   max-height: 260px;
   -o-object-fit: cover;
