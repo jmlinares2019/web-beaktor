@@ -220,6 +220,7 @@
             }
         }
 
+        // Owl Carousel re-styling
         .owl-carousel,
         .owl-stage-outer{
             max-height: 450px;
@@ -236,16 +237,13 @@
                 display: flex;
                 justify-content: space-between;
 
-                .owl-prev{
+                [class^=owl-]{
                     transform: scale(3);
                     filter: brightness(10);
-                    padding-left: .5rem !important;    
-                }
-
-                .owl-next{
-                    transform: scale(3);
-                    filter: brightness(10);
-                    padding-right: .5rem !important;
+                    padding: 0 1rem !important;
+                    &:hover{
+                        background: transparent;
+                    }
                 }
 
             }
@@ -254,6 +252,10 @@
                 position: absolute;
                 top: 25px;
                 width: 100%;
+
+                .owl-dot.active span{
+                    background: white;
+                }
 
             }
 
