@@ -78,9 +78,9 @@
 
 #blog-index{
 
-    /* section, div{
+    section, div{
         border: 1px solid firebrick;
-    } */
+    }
 
     .container{
         padding-top: 100px;
@@ -212,12 +212,13 @@
         .highlighted-posts > .row{
             margin-bottom: 2.5rem;
 
-            @include tablet-portrait-down{
+            @include tablet-landscape-down{
 
                 .right-module{
                     padding-top: 1.5rem;
                 }
             }
+
         }
 
         // Owl Carousel re-styling
@@ -273,6 +274,13 @@
 
             .text-wrapper{
                 padding-left: 1.5rem;
+
+                @include tablet-landscape-to-desktop{
+
+                    .post-date-pub{
+                        padding-top: .25rem;
+                    }
+                }
             }
 
             @include tablet-landscape-down{
