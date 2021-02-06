@@ -220,6 +220,47 @@
             }
         }
 
+        // Owl Carousel re-styling
+        .owl-carousel,
+        .owl-stage-outer{
+            max-height: 450px;
+
+            .owl-item.active{
+                width: unset !important; // temporary fix (for last fixes?) 
+            }
+
+            .owl-nav{
+                position: absolute;
+                top: 50%;
+                width: 100%;
+                margin-top: 0 !important;
+                display: flex;
+                justify-content: space-between;
+
+                [class^=owl-]{
+                    transform: scale(3);
+                    filter: brightness(10);
+                    padding: 0 1rem !important;
+                    &:hover{
+                        background: transparent;
+                    }
+                }
+
+            }
+
+            .owl-dots{
+                position: absolute;
+                top: 25px;
+                width: 100%;
+
+                .owl-dot.active span{
+                    background: white;
+                }
+
+            }
+
+        }
+
         .flat-module{
 
             img{
