@@ -78,9 +78,9 @@
 
 #blog-index{
 
-    section, div{
+    /* section, div{
         border: 1px solid firebrick;
-    }
+    } */
 
     .container{
         padding-top: 100px;
@@ -135,29 +135,6 @@
         border-bottom: 2px solid #46454a;
     }
 
-    .slide-text{
-        bottom: 0;
-        padding: .5rem 2rem;
-        background-color: rgba(0, 0, 0, .5);
-
-        .main-post-title{
-            font-size: 1.7rem;
-            font-weight: bold;
-            color: white;
-            &::after{
-                content: '';
-                display: block;
-                width: 30%;
-                padding-top: 1rem;
-                border-bottom: 1px solid white;
-            }
-        }
-
-        .main-post-meta{
-            color: white;
-        }
-    }
-
     .post-text{
         padding-top: 25px;
     }
@@ -199,8 +176,8 @@
         }
     }
 
-    .read-more,
-    .tag{
+    .read-more-link,
+    .tag-link{
             font-size: .9rem;
             color: grey;
             text-decoration: underline;
@@ -212,52 +189,95 @@
         .highlighted-posts > .row{
             margin-bottom: 2.5rem;
 
-            @include tablet-landscape-down{
+            .carousel-post{
 
-                .right-module{
-                    padding-top: 1.5rem;
-                }
-            }
+                .slide-text{
+                    bottom: 0;
+                    padding: .5rem 2rem;
+                    background-color: rgba(0, 0, 0, .5);
 
-        }
+                    .main-post-text{
 
-        // Owl Carousel re-styling
-        .owl-carousel,
-        .owl-stage-outer{
-            max-height: 450px;
+                        @include desktop-up{
+                            padding-top: 25px;
+                        }
 
-            .owl-item.active{
-                width: unset !important; // temporary fix (for last fixes?) 
-            }
-
-            .owl-nav{
-                position: absolute;
-                top: 50%;
-                width: 100%;
-                margin-top: 0 !important;
-                display: flex;
-                justify-content: space-between;
-
-                [class^=owl-]{
-                    transform: scale(3);
-                    filter: brightness(10);
-                    padding: 0 1rem !important;
-                    &:hover{
-                        background: transparent;
+                        .main-post-title{
+                            font-weight: bold;
+                            color: white;
+                            line-height: 1;
+                            @include desktop-up{
+                                font-size: 1.7rem;
+                                &::after{
+                                    content: '';
+                                    display: block;
+                                    width: 30%;
+                                    padding-top: 1rem;
+                                    border-bottom: 1px solid white;
+                                }
+                            }
+                            @include phone-only{
+                                font-size: 1.2rem;
+                            }
+                            
+                        }
+                    }
+            
+                    .main-post-meta{
+                        color: white;
                     }
                 }
 
             }
 
-            .owl-dots{
-                position: absolute;
-                top: 25px;
-                width: 100%;
+            // Owl Carousel re-styling
+            .owl-carousel{
 
-                .owl-dot.active span{
-                    background: white;
+                .owl-nav{
+                    position: absolute;
+                    top: 40%;
+                    width: 100%;
+                    margin-top: 0 !important;
+                    display: flex;
+                    justify-content: space-between;
+
+                    [class^=owl-]{
+                        transform: scale(3);
+                        filter: brightness(10);
+                        padding: 0 .5rem !important;
+                        @include phone-up{
+                            padding: 0 1rem !important;
+                        }
+                        &:hover{
+                            background: transparent;
+                        }
+                    }
+
                 }
 
+                .owl-dots{
+                    position: absolute;
+                    width: 100%;
+                    top: 10px;
+                    @include phone-up{
+                        top: 25px;
+                    }
+                    
+                    .owl-dot.active span{
+                        background: white;
+                    }
+
+                }
+
+            }
+
+
+
+            @include tablet-landscape-down{
+
+                .right-module{
+                    padding-top: 1.5rem;
+                }
             }
 
         }
