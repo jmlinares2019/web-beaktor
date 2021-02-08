@@ -406,30 +406,6 @@ html body *:focus {
   border-bottom: 2px solid #46454a;
 }
 
-#blog-index .slide-text {
-  bottom: 0;
-  padding: .5rem 2rem;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-#blog-index .slide-text .main-post-title {
-  font-size: 1.7rem;
-  font-weight: bold;
-  color: white;
-}
-
-#blog-index .slide-text .main-post-title::after {
-  content: '';
-  display: block;
-  width: 30%;
-  padding-top: 1rem;
-  border-bottom: 1px solid white;
-}
-
-#blog-index .slide-text .main-post-meta {
-  color: white;
-}
-
 #blog-index .post-text {
   padding-top: 25px;
 }
@@ -473,8 +449,8 @@ html body *:focus {
   padding-left: .7rem;
 }
 
-#blog-index .read-more,
-#blog-index .tag {
+#blog-index .read-more-link,
+#blog-index .tag-link {
   font-size: .9rem;
   color: grey;
   text-decoration: underline;
@@ -484,26 +460,50 @@ html body *:focus {
   margin-bottom: 2.5rem;
 }
 
-@media (max-width: 767.98px) {
-  #blog-index #posts-index .highlighted-posts > .row .right-module {
-    padding-top: 1.5rem;
+#blog-index #posts-index .highlighted-posts > .row .carousel-post .slide-text {
+  bottom: 0;
+  padding: .5rem 2rem;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+@media (min-width: 1200px) {
+  #blog-index #posts-index .highlighted-posts > .row .carousel-post .slide-text .main-post-text {
+    padding-top: 25px;
   }
 }
 
-#blog-index #posts-index .owl-carousel,
-#blog-index #posts-index .owl-stage-outer {
-  max-height: 450px;
+#blog-index #posts-index .highlighted-posts > .row .carousel-post .slide-text .main-post-text .main-post-title {
+  font-weight: bold;
+  color: white;
+  line-height: 1;
 }
 
-#blog-index #posts-index .owl-carousel .owl-item.active,
-#blog-index #posts-index .owl-stage-outer .owl-item.active {
-  width: unset !important;
+@media (min-width: 1200px) {
+  #blog-index #posts-index .highlighted-posts > .row .carousel-post .slide-text .main-post-text .main-post-title {
+    font-size: 1.7rem;
+  }
+  #blog-index #posts-index .highlighted-posts > .row .carousel-post .slide-text .main-post-text .main-post-title::after {
+    content: '';
+    display: block;
+    width: 30%;
+    padding-top: 1rem;
+    border-bottom: 1px solid white;
+  }
 }
 
-#blog-index #posts-index .owl-carousel .owl-nav,
-#blog-index #posts-index .owl-stage-outer .owl-nav {
+@media (max-width: 575.98px) {
+  #blog-index #posts-index .highlighted-posts > .row .carousel-post .slide-text .main-post-text .main-post-title {
+    font-size: 1.2rem;
+  }
+}
+
+#blog-index #posts-index .highlighted-posts > .row .carousel-post .slide-text .main-post-meta {
+  color: white;
+}
+
+#blog-index #posts-index .highlighted-posts > .row .owl-carousel .owl-nav {
   position: absolute;
-  top: 50%;
+  top: 40%;
   width: 100%;
   margin-top: 0 !important;
   display: -webkit-box;
@@ -514,30 +514,44 @@ html body *:focus {
           justify-content: space-between;
 }
 
-#blog-index #posts-index .owl-carousel .owl-nav [class^=owl-],
-#blog-index #posts-index .owl-stage-outer .owl-nav [class^=owl-] {
+#blog-index #posts-index .highlighted-posts > .row .owl-carousel .owl-nav [class^=owl-] {
   -webkit-transform: scale(3);
           transform: scale(3);
   -webkit-filter: brightness(10);
           filter: brightness(10);
-  padding: 0 1rem !important;
+  padding: 0 .5rem !important;
 }
 
-#blog-index #posts-index .owl-carousel .owl-nav [class^=owl-]:hover,
-#blog-index #posts-index .owl-stage-outer .owl-nav [class^=owl-]:hover {
+@media (min-width: 576px) {
+  #blog-index #posts-index .highlighted-posts > .row .owl-carousel .owl-nav [class^=owl-] {
+    padding: 0 1rem !important;
+  }
+}
+
+#blog-index #posts-index .highlighted-posts > .row .owl-carousel .owl-nav [class^=owl-]:hover {
   background: transparent;
 }
 
-#blog-index #posts-index .owl-carousel .owl-dots,
-#blog-index #posts-index .owl-stage-outer .owl-dots {
+#blog-index #posts-index .highlighted-posts > .row .owl-carousel .owl-dots {
   position: absolute;
-  top: 25px;
   width: 100%;
+  top: 10px;
 }
 
-#blog-index #posts-index .owl-carousel .owl-dots .owl-dot.active span,
-#blog-index #posts-index .owl-stage-outer .owl-dots .owl-dot.active span {
+@media (min-width: 576px) {
+  #blog-index #posts-index .highlighted-posts > .row .owl-carousel .owl-dots {
+    top: 25px;
+  }
+}
+
+#blog-index #posts-index .highlighted-posts > .row .owl-carousel .owl-dots .owl-dot.active span {
   background: white;
+}
+
+@media (max-width: 991.98px) {
+  #blog-index #posts-index .highlighted-posts > .row .right-module {
+    padding-top: 1.5rem;
+  }
 }
 
 #blog-index #posts-index .flat-module img {
@@ -548,6 +562,12 @@ html body *:focus {
 
 #blog-index #posts-index .other-posts .text-wrapper {
   padding-left: 1.5rem;
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  #blog-index #posts-index .other-posts .text-wrapper .post-date-pub {
+    padding-top: .25rem;
+  }
 }
 
 @media (max-width: 991.98px) {
