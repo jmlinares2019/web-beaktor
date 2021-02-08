@@ -118,6 +118,8 @@ var blogOwlOptions = {
   items: 1,
   loop: true,
   autoplay: true,
+  singleItem: true,
+  autoHeight: true, 
   dots: true,
   nav: true,
   autoplayHoverPause: true
