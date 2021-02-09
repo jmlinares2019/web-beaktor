@@ -112,8 +112,7 @@ var configOwlOptions = {
   } 
 }
 
-// Blog index page Owl Carousel options 
-
+// Blog index page Owl Carousel options
 var blogOwlOptions = {
   items: 1,
   loop: true,
@@ -133,3 +132,4 @@ $(function(){
     
   }
 });
+

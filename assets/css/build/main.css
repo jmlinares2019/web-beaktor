@@ -56,6 +56,34 @@
   }
 }
 
+#blog-index .hero .social,
+#blog-detail .hero .social, #blog-index #sidebar #follow-us .social,
+#blog-detail #sidebar #follow-us .social, footer .container .social {
+  padding: 0;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+#blog-index .hero .social .social-icon, #blog-detail .hero .social .social-icon, #blog-index #sidebar #follow-us .social .social-icon, #blog-detail #sidebar #follow-us .social .social-icon, footer .container .social .social-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-right: 0.5rem;
+}
+
+#blog-index .hero .social .social-icon img, #blog-detail .hero .social .social-icon img, #blog-index #sidebar #follow-us .social .social-icon img, #blog-detail #sidebar #follow-us .social .social-icon img, footer .container .social .social-icon img {
+  width: 1.25rem;
+}
+
 #legal .main-wrapper h2.section-title, #config .section-title {
   font-size: 2.2rem;
   font-weight: bold;
@@ -969,7 +997,6 @@ html body *:focus {
   }
 }
 
-/*---------- BLOG ---------- */
 #blog-index .container,
 #blog-detail .container {
   padding-top: 100px;
@@ -984,28 +1011,14 @@ html body *:focus {
 
 #blog-index .hero .social,
 #blog-detail .hero .social {
-  padding: 0;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 #blog-index .hero .social .social-icon,
 #blog-detail .hero .social .social-icon {
-  padding-top: 10px;
-  padding-right: 0.5rem;
-}
-
-#blog-index .hero .social .social-icon img,
-#blog-detail .hero .social .social-icon img {
-  width: 25px;
-  mix-blend-mode: exclusion;
-}
-
-@media (max-width: 991.98px) {
-  #blog-index .hero .social .social-icon img,
-  #blog-detail .hero .social .social-icon img {
-    width: 20px;
-  }
+  display: unset;
 }
 
 #blog-index .mini-module,
@@ -1232,9 +1245,25 @@ html body *:focus {
 
 #blog-index #posts-index .highlighted-posts > .row .flat-module img,
 #blog-detail #posts-index .highlighted-posts > .row .flat-module img {
-  max-height: 260px;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  max-height: 140px;
+}
+
+@media (min-width: 1200px) {
+  #blog-index #posts-index .highlighted-posts > .row .flat-module img,
+  #blog-detail #posts-index .highlighted-posts > .row .flat-module img {
+    max-height: 260px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  #blog-index #posts-index .highlighted-posts > .row .flat-module img,
+  #blog-detail #posts-index .highlighted-posts > .row .flat-module img {
+    max-height: 100px;
+  }
 }
 
 #blog-index #posts-index .other-posts .text-wrapper,
@@ -1282,55 +1311,9 @@ html body *:focus {
   margin-bottom: 50px;
 }
 
-#blog-index #sidebar #follow-us .social-icons,
-#blog-detail #sidebar #follow-us .social-icons {
-  padding: 0;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-}
-
-#blog-index #sidebar #follow-us .social-icons .social-icon,
-#blog-detail #sidebar #follow-us .social-icons .social-icon {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding-right: 0.5rem;
-}
-
-#blog-index #sidebar #follow-us .social-icons .social-icon img,
-#blog-detail #sidebar #follow-us .social-icons .social-icon img {
-  width: 15px;
-  mix-blend-mode: exclusion;
-  /* @include tablet-landscape-down{
-                            width: 10px;
-                        } */
-}
-
-#blog-index #sidebar #sidebar-posts .nav-tab,
-#blog-detail #sidebar #sidebar-posts .nav-tab {
-  font-size: 1rem;
-  font-weight: initial;
-  color: #AFADAD;
-}
-
-#blog-index #sidebar #sidebar-posts .nav-tab a,
-#blog-detail #sidebar #sidebar-posts .nav-tab a {
-  padding-left: 0;
-}
-
-#blog-index #sidebar #sidebar-posts .nav-tab a.active,
-#blog-detail #sidebar #sidebar-posts .nav-tab a.active {
-  font-weight: bold;
-  color: black;
+#blog-index #sidebar #follow-us .social img,
+#blog-detail #sidebar #follow-us .social img {
+  width: .9rem !important;
 }
 
 #blog-index #sidebar #sidebar-posts .nav-tabs,
@@ -1338,6 +1321,24 @@ html body *:focus {
 #blog-detail #sidebar #sidebar-posts .nav-tabs,
 #blog-detail #sidebar #sidebar-posts .nav-link {
   border-color: transparent;
+  padding-left: 0;
+}
+
+#blog-index #sidebar #sidebar-posts .nav-tabs .nav-tab,
+#blog-index #sidebar #sidebar-posts .nav-link .nav-tab,
+#blog-detail #sidebar #sidebar-posts .nav-tabs .nav-tab,
+#blog-detail #sidebar #sidebar-posts .nav-link .nav-tab {
+  font-size: 1rem;
+  font-weight: initial;
+  color: #AFADAD;
+}
+
+#blog-index #sidebar #sidebar-posts .nav-tabs.active .nav-tab,
+#blog-index #sidebar #sidebar-posts .nav-link.active .nav-tab,
+#blog-detail #sidebar #sidebar-posts .nav-tabs.active .nav-tab,
+#blog-detail #sidebar #sidebar-posts .nav-link.active .nav-tab {
+  font-weight: bold;
+  color: black;
 }
 
 #blog-index #sidebar #sidebar-posts .tab-pane > .sidebar-post:first-child,
@@ -1366,16 +1367,6 @@ html body *:focus {
   right: 0;
 }
 
-/* unused (but just-in-case) classes --> remove?
-
-.blog-module
-.tecnico.emocional.espacial etc.
-
-.*-wrapper
-.slide-img
-
-.sidebar-post / .mini-module
-*/
 .navbar {
   position: fixed;
   width: 100%;
@@ -1507,24 +1498,17 @@ footer .container .footer-menus ul {
           padding-inline-start: 0;
 }
 
-footer .container .social {
-  padding: 0;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+@media (max-width: 575.98px) {
+  footer .container .social {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
-footer .container .social .social-icon {
-  padding-top: 10px;
-  padding-right: 0.5rem;
-}
-
-footer .container .social .social-icon img {
-  width: 30px;
-}
-
-@media (max-width: 991.98px) {
-  footer .container .social .social-icon img {
-    width: 20px;
+@media (min-width: 992px) {
+  footer .container .social img {
+    width: 1.5rem !important;
   }
 }
 
