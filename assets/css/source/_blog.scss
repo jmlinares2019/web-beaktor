@@ -311,24 +311,21 @@
 
         #sidebar-posts{
 
-            .nav-tab{
-                font-size: 1rem;
-                font-weight: initial;
-                color: $grey;
-        
-                a{
-                    padding-left: 0;
-                    &.active{
-                        font-weight: bold;
-                        color: black;
-                    }
-    
-                }
-            }
-            
             .nav-tabs,
             .nav-link{
                 border-color: transparent;
+                padding-left: 0;
+                .nav-tab{
+                    font-size: 1rem;
+                    font-weight: initial;
+                    color: $grey;
+                }
+                &.active{
+                    .nav-tab{
+                        font-weight: bold;
+                        color: black;
+                    }
+                }
             }
 
             .tab-pane > .sidebar-post:first-child{
@@ -368,14 +365,3 @@
 
 
 }
-
-/* unused (but just-in-case) classes --> remove?
-
-.blog-module
-.tecnico.emocional.espacial etc.
-
-.*-wrapper
-.slide-img
-
-.sidebar-post / .mini-module
-*/
