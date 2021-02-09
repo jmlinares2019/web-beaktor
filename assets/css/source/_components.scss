@@ -33,6 +33,24 @@
     }
 }
 
+%social-icons{
+    padding: 0;
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    .social-icon{
+        display: flex;
+        padding-right: 0.5rem;
+
+        img{
+            width: 1.25rem;
+        }
+
+    }
+}
+
 %section-title{
     font-size: $big;
     font-weight: bold;

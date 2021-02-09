@@ -50,24 +50,18 @@ footer{
         }
     
         .social{
-            padding: 0;
-            flex-wrap: wrap;
-    
-            .social-icon{
-                padding: {
-                    top: 10px;
-                    right: 0.5rem;
-                }
+            @extend %social-icons;
+
+            @include phone-only{
+                justify-content: center;
+            }
     
                 img{
-                    width: 30px;
-
-                    @include tablet-landscape-down{
-                        width: 20px;
+                    @include tablet-landscape-up{
+                        width: 1.5rem !important;
                     }
+
                 }
-    
-            }  
             
         }
         
